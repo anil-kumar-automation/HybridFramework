@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class ExplicitWaiting extends Robot {
+public class ExplicitWaiting  {
 
     public WebDriver driver;
 
-    /*Select using WebElements*/
+
 
     /**
      * To Wait Until Element to be Clickable

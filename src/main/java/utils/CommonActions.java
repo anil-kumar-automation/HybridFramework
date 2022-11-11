@@ -14,11 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-import org.testng.annotations.Parameters;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
@@ -26,9 +22,10 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
-public class CommonActions {
+public class CommonActions{
     public static WebDriver driver;
 
+    /* To launching browser with user input */
     public void launchBrowser(String browser) throws IOException {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -52,15 +49,11 @@ public class CommonActions {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        /*if (browser.equalsIgnoreCase("chrome")) {
-            driver.get(url1);
-        } else {
-            driver.get(url);
-        }*/
 
     }
 
-    public void navigateHrmurl() throws IOException {
+    /* navigate Efrom application*/
+    public void navigateEfromurl() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
         prop.load(fis);
@@ -69,6 +62,7 @@ public class CommonActions {
 
     }
 
+    /* navigate snapdeal application*/
     public void navigateSanpdealurl() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
@@ -84,10 +78,20 @@ public class CommonActions {
         element.click();
     }
 
-    /* To Type at the specified location */
+    //For sendkeys Action
     public void sendKeysWebElement(WebElement element, String text) {
+        waitForElement(element, 5);
+        element.click();
+        element.clear();
         element.sendKeys(text);
     }
+
+    public WebElement waitForElement(WebElement elementName, long waitTimeSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeSeconds));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementName));
+        return element;
+    }
+
 
     /* To Type at the specified location before it clear the present text  */
     public void sendKeysAndClearClick(WebElement element, String text) {
@@ -96,12 +100,13 @@ public class CommonActions {
         element.sendKeys(text);
     }
 
+    /*To Wait Until Element to be Visible*/
     public void explicitWaitVisibilityOfElement(By element, long timeInSeconds) {
         WebDriverWait elementToBeVisible = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         elementToBeVisible.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
-
+    /*To Wait Until Element to be Clickable*/
     public void explicitWaitElementToBeClickable(By element, long timeInSeconds) {
         WebDriverWait clickableWait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         clickableWait.until(ExpectedConditions.elementToBeClickable(element));
@@ -123,12 +128,6 @@ public class CommonActions {
     public void javaScriptExecutorClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("return arguments[0].click();", element);
     }
-
-    /*public void sendkeysJavaScript(WebElement element, String text) {
-      WebElement ele = waitForElement(element, 20);
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
-        js.executeScript("arguments[0].value='" + text + "';", ele);
-    }*/
 
 
     /* To Perform Select all Dropdown Option's  */

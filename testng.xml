@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestSuite" data-provider-thread-count="2"  parallel="tests">
+<suite name="TestSuite" thread-count="1" parallel="tests">
     <listeners>
         <listener class-name="listeners.ExtentReportNg"/>
     </listeners>
 
     <test name="ChromeTest">
         <classes>
-            <class name="tests.HrmTestcases"></class>
+            <class name="tests.EfromPrivilegeTest"></class>
         </classes>
     </test>
 
     <test name="EdgeTest">
         <classes>
-            <class name="tests.SnapdealTestcases"></class>
+            <class name="tests.EfromViewStatusTest"></class>
         </classes>
     </test>
 

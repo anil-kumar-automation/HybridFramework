@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class Robot {
+public class Robot  {
 
     /* To Press ENTER Key using Robot */
     public void hitEnter() throws Exception {

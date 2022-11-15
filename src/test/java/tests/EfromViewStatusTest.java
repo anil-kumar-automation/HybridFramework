@@ -5,10 +5,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.EformDetails;
 import page.LoginForEform;
+import page.LoginForEformWithDB;
 import page.ViewStatusPg;
 import utils.CommonActions;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 
 public class EfromViewStatusTest {
@@ -16,7 +18,7 @@ public class EfromViewStatusTest {
     public CommonActions ca;
     public LoginForEform loginForEform;
     public ViewStatusPg vsp;
-
+    public LoginForEformWithDB loginForEformWithDB;
     /*-----------------------------------Test Scenario TS_02----------------------------------------*/
 
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
@@ -27,12 +29,20 @@ public class EfromViewStatusTest {
         ca.navigateEfromurl();
     }
 
-    /*TC_03 :This method is used to login using credential*/
+   /* *//*TC_03 :This method is used to login using credential*//*
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginForEform();
         loginForEform.logIn();
         loginForEform.logInAndClosePopUp();
+    }*/
+
+    /* TC_03 :This method is used to login using credential */
+    @Test(priority = 2)
+    public void EnterCredentialsTestWithDB() throws InterruptedException, IOException, SQLException {
+        loginForEformWithDB = new LoginForEformWithDB();
+        loginForEformWithDB.logIn();
+        loginForEformWithDB.logInAndClosePopUp();
     }
 
     /*TC_03, TC_04 :This method is click menu Hamburger  and view status option*/

@@ -17,6 +17,7 @@ public class EfromPrivilegeTest {
     public EformDetails ef;
     public ViewStatusPg vsp;
 
+
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
 
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/

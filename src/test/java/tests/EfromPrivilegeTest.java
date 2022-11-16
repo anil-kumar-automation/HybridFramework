@@ -90,27 +90,4 @@ public class EfromPrivilegeTest {
     }
 
 }
-/*  *//*-----------------------------------Test Scenario TS_02----------------------------------------*//*
-
- *//*TC_11 : This method is used to click menu Hamburger and view status*//*
-    public void userClicksOnViewStatusButton() throws InterruptedException {
-
-        vsp.Clickmenu();
-        vsp.ClickViewStatusBtn();
-
-    }
-
-    *//*TC_11 : This method is used to enter Eform number*//*
-    public void userFillsEFormNoAs() throws InterruptedException {
-        Thread.sleep(3000);
-        vsp.EnterEformNO();
-    }
-
-    *//*TC_11 : This method is used to submit Eform*//*
-    public void userClicksOnSubmitButton() throws InterruptedException {
-        Thread.sleep(3000);
-        vsp.ClickSubmitBtn();
-    }*/
-
-
 

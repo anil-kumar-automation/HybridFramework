@@ -1,11 +1,10 @@
 package utils;
 
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -14,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -22,26 +22,20 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
-public class CommonActions{
+public class CommonActions {
     public static WebDriver driver;
 
     /* To launching browser with user input */
     public void launchBrowser(String browser) throws IOException {
         if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.setHeadless(false);
             driver = new ChromeDriver(options);
-        } else if (browser.equalsIgnoreCase("InternetExplorer")) {
-            WebDriverManager.iedriver().setup();
-            InternetExplorerOptions ieo = new InternetExplorerOptions();
-            driver = new InternetExplorerDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-
+            EdgeOptions eo = new EdgeOptions();
+            eo.setHeadless(false);
+            driver = new EdgeDriver(eo);
         } else if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
             FirefoxOptions fo = new FirefoxOptions();
             fo.setHeadless(false);
             driver = new FirefoxDriver(fo);

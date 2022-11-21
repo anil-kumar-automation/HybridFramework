@@ -13,7 +13,7 @@
 
     <test name="EdgeTest">
         <classes>
-            <class name="tests.EfromViewStatusTest"></class>
+            <class name="tests.EfromViewStatusDbTest"></class>
         </classes>
     </test>
 

@@ -1,8 +1,6 @@
 package tests;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import page.EformDetails;
 import page.LoginForEform;
 import page.LoginForEformWithDB;
@@ -13,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class EfromViewStatusTest {
+public class EfromViewStatusDbTest {
 
     public CommonActions ca;
     public LoginForEform loginForEform;
@@ -29,7 +27,7 @@ public class EfromViewStatusTest {
         ca.navigateEfromurl();
     }
 
-   /* *//*TC_03 :This method is used to login using credential*//*
+    /* *//*TC_03 :This method is used to login using credential*//*
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginForEform();
@@ -70,7 +68,7 @@ public class EfromViewStatusTest {
     }
 
     /* this is help to quit browser*/
-    @Test(priority = 7)
+    @Test(priority = 10)
     public void QuitTest() {
         ca = new LoginForEform();
         ca.tearDown();

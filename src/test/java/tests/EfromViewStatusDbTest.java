@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.*;
-import page.EformDetails;
+import page.LoginEformWithDataProvider;
 import page.LoginForEform;
 import page.LoginForEformWithDB;
 import page.ViewStatusPg;
@@ -23,17 +23,10 @@ public class EfromViewStatusDbTest {
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
         ca = new LoginForEform();
-        ca.launchBrowser("chrome");
+        ca.launchBrowser("edge");
         ca.navigateEfromurl();
     }
 
-    /* *//*TC_03 :This method is used to login using credential*//*
-    @Test(priority = 2)
-    public void EnterCredentialsTest() throws InterruptedException, IOException {
-        loginForEform = new LoginForEform();
-        loginForEform.logIn();
-        loginForEform.logInAndClosePopUp();
-    }*/
 
     /* TC_03 :This method is used to login using credential */
     @Test(priority = 2)

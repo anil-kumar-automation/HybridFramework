@@ -14,23 +14,24 @@ import java.util.Map;
 
 
 public class  ExcelReader {
+    /*This method is used to read excel file using File path and Sheet name parameter*/
     public List<Map<String, String>> getData(String excelFilePath, String sheetName)
             throws InvalidFormatException, IOException {
         Sheet sheet = getSheetByName(excelFilePath, sheetName);
         return readSheet(sheet);
     }
-
+    /*This method is used to read excel file using File path and Sheet number parameter*/
     public List<Map<String, String>> getData(String excelFilePath, int sheetNumber)
             throws InvalidFormatException, IOException {
         Sheet sheet = getSheetByIndex(excelFilePath, sheetNumber);
         return readSheet(sheet);
     }
-
+    /*This method is used to fetch workbook  using File path and Sheet name parameter*/
     private Sheet getSheetByName(String excelFilePath, String sheetName) throws IOException, InvalidFormatException {
         Sheet sheet = getWorkBook(excelFilePath).getSheet(sheetName);
         return sheet;
     }
-
+    /*This method is used to fetch workbook  using File path and Sheet number parameter*/
     private Sheet getSheetByIndex(String excelFilePath, int sheetNumber) throws IOException, InvalidFormatException {
         Sheet sheet = getWorkBook(excelFilePath).getSheetAt(sheetNumber);
         return sheet;
@@ -39,7 +40,7 @@ public class  ExcelReader {
     private Workbook getWorkBook(String excelFilePath) throws IOException, InvalidFormatException {
         return WorkbookFactory.create(new File(excelFilePath));
     }
-
+    /* This is reading method to fetch value from sheet*/
     private List<Map<String, String>> readSheet(Sheet sheet) {
         Row row;
         int totalRow = sheet.getPhysicalNumberOfRows();
@@ -59,7 +60,7 @@ public class  ExcelReader {
         }
         return excelRows;
     }
-
+    /*This method is fetch Header row count*/
     private int getHeaderRowNumber(Sheet sheet) {
         Row row;
         int totalRow = sheet.getLastRowNum();
@@ -86,11 +87,11 @@ public class  ExcelReader {
         }
         return (-1);
     }
-
+    /*This method is used to fetch Roe count*/
     private Row getRow(Sheet sheet, int rowNumber) {
         return sheet.getRow(rowNumber);
     }
-
+    /*This method is used to fetch cell value from workbook*/
     private LinkedHashMap<String, String> getCellValue(Sheet sheet, Row row, int currentColumn) {
         LinkedHashMap<String, String> columnMapdata = new LinkedHashMap<String, String>();
         Cell cell;
@@ -147,5 +148,6 @@ public class  ExcelReader {
         }
         return columnMapdata;
     }
+
 
 }

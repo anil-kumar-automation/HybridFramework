@@ -1,5 +1,6 @@
 package utils;
 
+import page.LoginEformWithDataProvider;
 import page.LoginForEformWithDB;
 
 import java.io.FileInputStream;
@@ -9,8 +10,6 @@ import java.sql.*;
 import java.util.Properties;
 
 public class DBConnection {
-
-
     FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
     Properties properties = new Properties();
 
@@ -38,7 +37,7 @@ public class DBConnection {
     public Connection connectToOracle() throws SQLException, IOException {
         properties.load(fis);
         //Registering the Driver
-       // DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+        // DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
         //Getting the connection
         String oracleUrl = properties.getProperty("oracleUrl");
         Connection oracleCon = DriverManager.getConnection(oracleUrl, properties.getProperty("oracleUserName"), properties.getProperty("oraclePassword"));

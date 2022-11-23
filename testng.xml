@@ -7,13 +7,13 @@
 
     <test name="ChromeTest">
         <classes>
-            <class name="tests.SnapdealTest"></class>
+            <class name="tests.EfromLoginMultipleSetDataTest"></class>
         </classes>
     </test>
 
     <test name="EdgeTest">
         <classes>
-            <class name="tests.EfromLoginMultipleTest"></class>
+            <class name="tests.SnapdealScenariosTest"></class>
         </classes>
     </test>
 

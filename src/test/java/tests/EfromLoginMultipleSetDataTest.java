@@ -10,7 +10,7 @@ import utils.CommonActions;
 import java.io.IOException;
 
 
-public class EfromLoginMultipleTest {
+public class EfromLoginMultipleSetDataTest {
 
     public CommonActions ca;
 
@@ -26,9 +26,16 @@ public class EfromLoginMultipleTest {
         ca.navigateEfromurl();
     }
 
-    /*TC_03 :This method is used to login using credential*/
-    @Test(dataProvider = "excelSheetNameAsMethodName", dataProviderClass = ExcelDataProvider.class)
+   /* *//*TC_03 :This method is used to login using credential*//*
+    @Test(dataProvider = "singleSheetExcelRead", dataProviderClass = ExcelDataProvider.class)
     public void EnterCredentialsTest(String username, String password) throws Exception {
+        loginForEformDp = new LoginEformWithDataProvider(username, password);
+        loginForEformDp.logInThroughDataProvider();
+    }*/
+
+   /* TC_03 :This method is used to login using credential*/
+    @Test(dataProvider = "multiSheetExcelRead", dataProviderClass = ExcelDataProvider.class)
+    public void EnteOnCredentialsTest(String username, String password) throws Exception {
         loginForEformDp = new LoginEformWithDataProvider(username, password);
         loginForEformDp.logInThroughDataProvider();
     }

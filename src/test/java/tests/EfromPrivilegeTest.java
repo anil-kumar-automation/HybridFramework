@@ -83,6 +83,7 @@ public class EfromPrivilegeTest {
         ef.clickOnSubmitbtn();
     }
 
+    /* it's help to quit the browsers*/
     @Test(priority = 10)
     public void QuitTest() {
         ca = new LoginForEform();

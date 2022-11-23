@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.*;
-import page.EformDetails;
+import page.LoginEformWithDataProvider;
 import page.LoginForEform;
 import page.LoginForEformWithDB;
 import page.ViewStatusPg;
@@ -27,21 +27,21 @@ public class EfromViewStatusDbTest {
         ca.navigateEfromurl();
     }
 
-    /* *//*TC_03 :This method is used to login using credential*//*
+    /*TC_03 :This method is used to login using credential*/
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginForEform();
         loginForEform.logIn();
         loginForEform.logInAndClosePopUp();
-    }*/
+    }
 
-    /* TC_03 :This method is used to login using credential */
+    /*  *//* TC_03 :This method is used to login using credential *//*
     @Test(priority = 2)
     public void EnterCredentialsTestWithDB() throws InterruptedException, IOException, SQLException {
         loginForEformWithDB = new LoginForEformWithDB();
         loginForEformWithDB.logIn();
         loginForEformWithDB.logInAndClosePopUp();
-    }
+    }*/
 
     /*TC_03, TC_04 :This method is click menu Hamburger  and view status option*/
     @Test(priority = 4)

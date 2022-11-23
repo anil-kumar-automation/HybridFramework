@@ -67,5 +67,4 @@ public class LoginForEformWithDB extends CommonActions {
     public void logInAndClosePopUp() {
         clickingOnWebElement(closeform, 3);
     }
-
 }

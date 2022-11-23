@@ -7,7 +7,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import page.*;
 import utils.CommonActions;
 
@@ -15,7 +18,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 
-public class SnapdealTest {
+public class SnapdealScenariosTest {
     public CommonActions ca;
 
     @BeforeMethod
@@ -63,48 +66,40 @@ public class SnapdealTest {
 
     @Test(dataProvider = "excel-data")
     public void BluetoothItemWithEdgeBrowser(String searchName) throws Exception {
-        SearchItemData si = new SearchItemData();
+        SnapdealScenarios s = new SnapdealScenarios();
         Thread.sleep(3000);
-        si.enterItemInSearch().sendKeys(searchName);
+        s.enterItemInSearch().sendKeys(searchName);
         Thread.sleep(3000);
-        si.ClickSearchButton();
+        s.ClickSearchButton();
         Reporter.log("successfully  search the Bluetooth item", true);
-        VerifySearchResults vsr = new VerifySearchResults();
         ca.explicitWaitVisibilityOfElement(By.xpath("//div[@class='search-result-txt-section  marT12']/span[@style='color: #212121; font-weight: normal']"), 5);
-        String actualString = vsr.VerifysearchCriteria().getText();
+        String actualString = s.VerifysearchCriteria().getText();
         System.out.println(actualString);
         Assert.assertTrue(actualString.contains("We've got"));
         Reporter.log("successfully verified search result", true);
-        SortBy sb = new SortBy();
-        sb.ClickonSortby();
+        s.ClickonSortby();
         Thread.sleep(2000);
-        sb.clickpopularity();
+        s.clickpopularity();
         Reporter.log("successfully Sorted with Popularity", true);
-        SelectPriceRange spr = new SelectPriceRange();
-        spr.clickFristPriceRange();
+        s.clickFristPriceRange();
         Thread.sleep(3000);
-        spr.clickLastPriceRange();
+        s.clickLastPriceRange();
         Thread.sleep(3000);
-        spr.clickonGOButton();
+        s.clickonGOButton();
         Reporter.log("successfully Selected Range 700 to 3000", true);
-        SaveFristItemNdPriceInExcel sfite = new SaveFristItemNdPriceInExcel();
         Thread.sleep(5000);
-        sfite.ExcelWriter();
+        s.ExcelWriter();
         Reporter.log("successfully Written the frist  Item & price  Data in excel", true);
-        SelectFristItem sfi = new SelectFristItem();
-        sfi.clickOnFristIteam();
+        s.clickOnFristIteam();
         ca.windowHandler();
         Reporter.log("successfully moved to another tab", true);
-        AddToCart atc = new AddToCart();
-        atc.SelectAddtoCart();
+        s.SelectAddtoCart();
         Reporter.log("successfully clicked the AddToCart", true);
-        VerifyAddToCartItem vai = new VerifyAddToCartItem();
-        vai.clickonviewCart();
+        s.clickonviewCart();
         Thread.sleep(3000);
-        RemoveCartAndVerify rcv = new RemoveCartAndVerify();
-        rcv.clickRemoveCart();
+        s.clickRemoveCart();
         Thread.sleep(3000);
-        String verifedremovecart = rcv.verifyremoveCart().getText();
+        String verifedremovecart = s.verifyremoveCart().getText();
         System.out.println(verifedremovecart);
         Assert.assertEquals(verifedremovecart, "Shopping Cart is empty!");
         Reporter.log("successfully verified remove cart item", true);

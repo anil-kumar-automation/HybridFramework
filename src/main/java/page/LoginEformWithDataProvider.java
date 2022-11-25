@@ -6,8 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
 
 public class LoginEformWithDataProvider extends CommonActions {
-    String username;
-    String password;
+
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
     WebElement uname;
@@ -21,17 +20,16 @@ public class LoginEformWithDataProvider extends CommonActions {
     @FindBy(xpath = "//div[@class='modal-footer border-top-0']/child::button[1]")
     WebElement closeform;
 
+
+
+
     //Constructor to get the multiple data sets to automate.
-    public LoginEformWithDataProvider(String username, String password) {
+    public LoginEformWithDataProvider() {
         PageFactory.initElements(driver, this);
-        this.username = username;
-        System.out.println(username);
-        this.password = password;
-        System.out.println(password);
     }
 
     /* This method is used to fill the credential from DataBase  */
-    public void logInThroughDataProvider() throws Exception {
+    public void logInThroughDataProvider(String username, String password) throws Exception {
         sendKeysWebElement(uname, username);
         Thread.sleep(2000);
         sendKeysWebElement(Password, password);

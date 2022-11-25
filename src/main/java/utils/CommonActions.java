@@ -110,13 +110,6 @@ public class CommonActions {
         element.sendKeys(text);
     }
 
-    public WebElement waitForElement(WebElement elementName, long waitTimeSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeSeconds));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementName));
-        return element;
-    }
-
-
     /* To Type at the specified location before it clear the present text  */
     public void sendKeysAndClearClick(WebElement element, String text) {
         element.click();

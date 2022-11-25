@@ -11,10 +11,6 @@ import java.util.List;
 
 public class ExplicitWaiting extends CommonActions  {
 
-    //public WebDriver driver;
-
-
-
     /**
      * To Wait Until Element to be Clickable
      */

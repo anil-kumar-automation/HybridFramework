@@ -5,14 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonAction1;
-import utils.CommonActions;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class LoginForEform extends CommonActions {
+public class LoginForEformDriver extends CommonAction1 {
+    WebDriver driver;
 
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
@@ -27,10 +26,13 @@ public class LoginForEform extends CommonActions {
     @FindBy(xpath = "//div[@class='modal-footer border-top-0']/child::button[1]")
     WebElement closeform;
 
-    public LoginForEform() {
-        PageFactory.initElements(driver, this);
-    }
 
+
+    public LoginForEformDriver(WebDriver rDriver) {
+        driver = rDriver;
+
+        PageFactory.initElements(rDriver, this);
+    }
 
     /* This method is used to fill the credential from property  */
     public void logIn() throws IOException, InterruptedException {

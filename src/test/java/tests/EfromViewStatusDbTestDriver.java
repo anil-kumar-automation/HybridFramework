@@ -1,34 +1,33 @@
 package tests;
 
-import org.testng.annotations.*;
-import page.LoginForEform;
-import page.LoginForEformWithDB;
-import page.ViewStatusPage;
+import factory.DriverFactory;
+import org.testng.annotations.Test;
+import page.*;
+import utils.CommonAction1;
 import utils.CommonActions;
 
 import java.io.IOException;
 
 
-public class EfromViewStatusDbTest {
+public class EfromViewStatusDbTestDriver {
 
-    public CommonActions ca;
-    public LoginForEform loginForEform;
-    public ViewStatusPage vsp;
-    public LoginForEformWithDB loginForEformWithDB;
+    public DriverFactory df;
+    public CommonAction1 ca;
+    public LoginForEformDriver loginForEform;
+    public ViewStatusPageDriver vsp;
     /*-----------------------------------Test Scenario TS_02----------------------------------------*/
 
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
-        ca = new LoginForEform();
-        ca.launchBrowser("chrome");
-        ca.navigateEfromurl();
+        df = new DriverFactory();
+        df.init_driver("chrome");
     }
 
     /*TC_03 :This method is used to login using credential*/
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
-        loginForEform = new LoginForEform();
+        loginForEform = new LoginForEformDriver(DriverFactory.getDriver());
         loginForEform.logIn();
         loginForEform.logInAndClosePopUp();
     }
@@ -44,7 +43,7 @@ public class EfromViewStatusDbTest {
     /*TC_03, TC_04 :This method is click menu Hamburger  and view status option*/
     @Test(priority = 3)
     public void userClicksOnViewStatusButton() throws InterruptedException {
-        vsp = new ViewStatusPage();
+        vsp = new ViewStatusPageDriver(DriverFactory.getDriver());
         vsp.Clickmenu();
         vsp.ClickViewStatusBtn();
 
@@ -52,23 +51,22 @@ public class EfromViewStatusDbTest {
 
     /*TC_11 : This method is used to enter Eform number*/
     @Test(priority = 4)
-    public void userFillsEFormNoAs() {
-        vsp = new ViewStatusPage();
+    public void userFillsEFormNoAs() throws InterruptedException {
+        vsp = new ViewStatusPageDriver(DriverFactory.getDriver());
         vsp.EnterEformNO();
     }
 
     /*TC_11 : This method is used to submit Eform*/
     @Test(priority = 5)
     public void userClicksOnSubmitButton() throws InterruptedException {
-        vsp = new ViewStatusPage();
+        vsp = new ViewStatusPageDriver(DriverFactory.getDriver());
         vsp.ClickSubmitBtn();
     }
 
     /* this is help to quit browser*/
     @Test(priority = 6)
     public void QuitTest() {
-        ca = new LoginForEform();
-        ca.tearDown();
+        DriverFactory.getDriver().quit();
     }
 
 }

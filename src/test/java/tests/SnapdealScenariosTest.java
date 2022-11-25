@@ -67,9 +67,9 @@ public class SnapdealScenariosTest {
     @Test(dataProvider = "excel-data")
     public void BluetoothItemWithEdgeBrowser(String searchName) throws Exception {
         SnapdealScenarios s = new SnapdealScenarios();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         s.enterItemInSearch().sendKeys(searchName);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         s.ClickSearchButton();
         Reporter.log("successfully  search the Bluetooth item", true);
         ca.explicitWaitVisibilityOfElement(By.xpath("//div[@class='search-result-txt-section  marT12']/span[@style='color: #212121; font-weight: normal']"), 5);
@@ -82,9 +82,9 @@ public class SnapdealScenariosTest {
         s.clickpopularity();
         Reporter.log("successfully Sorted with Popularity", true);
         s.clickFristPriceRange();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         s.clickLastPriceRange();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         s.clickonGOButton();
         Reporter.log("successfully Selected Range 700 to 3000", true);
         Thread.sleep(5000);
@@ -96,9 +96,9 @@ public class SnapdealScenariosTest {
         s.SelectAddtoCart();
         Reporter.log("successfully clicked the AddToCart", true);
         s.clickonviewCart();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         s.clickRemoveCart();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         String verifedremovecart = s.verifyremoveCart().getText();
         System.out.println(verifedremovecart);
         Assert.assertEquals(verifedremovecart, "Shopping Cart is empty!");

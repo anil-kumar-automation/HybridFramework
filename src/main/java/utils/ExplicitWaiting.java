@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class ExplicitWaiting extends CommonActions  {
+public class ExplicitWaiting  {
+    public WebDriver driver;
 
     /**
      * To Wait Until Element to be Clickable

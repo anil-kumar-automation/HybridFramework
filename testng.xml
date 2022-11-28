@@ -5,15 +5,15 @@
         <listener class-name="listeners.ExtentReportNg"/>
     </listeners>
 
-    <!--<test name="ChromeTest">
+    <test name="ChromeTest">
+        <classes>
+            <class name="tests.EfromPrivilegeRequestTest"></class>
+        </classes>
+    </test>
+
+    <test name="ChromeTest1">
         <classes>
             <class name="tests.EfromAdditionSoftwareRequestTest"></class>
-        </classes>
-    </test>-->
-
-    <test name="EdgeTest">
-        <classes>
-            <class name="tests.SnapdealScenariosTest"></class>
         </classes>
     </test>
 

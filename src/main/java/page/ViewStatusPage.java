@@ -1,11 +1,13 @@
 package page;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
 
 public class ViewStatusPage extends CommonActions {
+    WebDriver driver;
 
     /* it's finding menu element in eform Application */
     @FindBy(xpath = "//div[@class='noti__item js-item-menu']//img")
@@ -27,8 +29,9 @@ public class ViewStatusPage extends CommonActions {
     @FindBy(xpath = "//div[@class='card-body']//div[1]//div[3]//b[1]")
     WebElement VerifyApprovedStatus;
 
-    public ViewStatusPage() {
-        PageFactory.initElements(driver, this);
+    public ViewStatusPage(WebDriver rDriver) {
+        driver = rDriver;
+        PageFactory.initElements(rDriver, this);
     }
 
     /* This method is used for click on menu button */
@@ -42,7 +45,7 @@ public class ViewStatusPage extends CommonActions {
     }
 
     /* This method is used for enter the eform number in text box */
-    public void EnterEformNO() {
+    public void EnterEformNO() throws InterruptedException {
         sendKeysWebElement(eform, "435536");
     }
 

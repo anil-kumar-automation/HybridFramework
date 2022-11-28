@@ -1,5 +1,6 @@
 package page;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,16 +13,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class LoginForEformWithDB extends CommonActions {
-    String username;
-    String password;
-
-    //Constructor to get the multiple data sets to automate.
-    public LoginForEformWithDB(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
+public class LoginEformPage extends CommonActions {
+    WebDriver driver;
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
     WebElement uname;
@@ -35,31 +28,54 @@ public class LoginForEformWithDB extends CommonActions {
     @FindBy(xpath = "//div[@class='modal-footer border-top-0']/child::button[1]")
     WebElement closeform;
 
-    public LoginForEformWithDB() {
-        PageFactory.initElements(driver, this);
+
+    //Constructor to get the multiple data sets to automate.
+    public LoginEformPage(WebDriver rDriver) {
+        driver = rDriver;
+
+        PageFactory.initElements(rDriver, this);
     }
 
     /* This method is used to fill the credential from DataBase  */
-    public void logIn() throws IOException, InterruptedException, SQLException {
+    public void logInThroughDataProvider(String username, String password) throws Exception {
+        sendKeysWebElement(uname, username);
+        Thread.sleep(2000);
+        sendKeysWebElement(Password, password);
+        clickingOnWebElement(submit, 1);
+
+    }
+
+    /* This method is used to fill the credential from property  */
+    public void logIn() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
         Properties prop = new Properties();
         prop.load(fis);
-        String choice=prop.getProperty("connectionChoice");
+        sendKeysWebElement(uname, prop.getProperty("username"));
+        Thread.sleep(2000);
+        sendKeysWebElement(Password, prop.getProperty("password"));
+        clickingOnWebElement(submit, 1);
+    }
+
+    /* This method is used to fill the credential from DataBase  */
+    public void logInDb(String username, String password) throws IOException, InterruptedException, SQLException {
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+        Properties prop = new Properties();
+        prop.load(fis);
+        String choice = prop.getProperty("connectionChoice");
         DBConnection db = new DBConnection();
-        if(choice.equals("Sql")){
+        if (choice.equals("Sql")) {
             Connection sqlCon = db.creatingConnection();
             db.ExtractDataFromMySQL(sqlCon);
-            sendKeysWebElement(uname,username);
+            sendKeysWebElement(uname, username);
             Thread.sleep(2000);
-            sendKeysWebElement(Password,password);
+            sendKeysWebElement(Password, password);
             clickingOnWebElement(submit, 1);
-        }
-        else if(choice.equals("Oracle")){
+        } else if (choice.equals("Oracle")) {
             Connection oracleCon = db.connectToOracle();
             db.ExtractDataFromOracle(oracleCon);
-            sendKeysWebElement(uname,username);
+            sendKeysWebElement(uname, username);
             Thread.sleep(2000);
-            sendKeysWebElement(Password,password);
+            sendKeysWebElement(Password, password);
             clickingOnWebElement(submit, 1);
         }
     }

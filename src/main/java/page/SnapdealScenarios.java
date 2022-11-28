@@ -2,6 +2,7 @@ package page;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class SnapdealScenarios extends CommonActions {
-
+    WebDriver driver;
     @FindBy(xpath = "//div[@id='add-cart-button-id']")
     WebElement clickAddtoCart;
 
@@ -63,11 +64,12 @@ public class SnapdealScenarios extends CommonActions {
     @FindBy(xpath = "//div[@class='search-result-txt-section  marT12']/span[@style='color: #212121; font-weight: normal']")
     WebElement SearchResult;
 
+    public SnapdealScenarios(WebDriver rDriver) {
+        driver = rDriver;
 
-
-    public SnapdealScenarios() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(rDriver, this);
     }
+
 
     public void SelectAddtoCart() {
         clickingOnWebElement(clickAddtoCart, 2);
@@ -120,25 +122,23 @@ public class SnapdealScenarios extends CommonActions {
         clickingOnWebElement(SearchButton, 5);
     }
 
-    public void clickOnFristIteam()
-    {
-        List<WebElement> ClickFristItem = Item ;
-        for(int i=1;i<=1;i++)
-        {
+    public void clickOnFristIteam() {
+        List<WebElement> ClickFristItem = Item;
+        for (int i = 1; i <= 1; i++) {
             ClickFristItem.get(i).click();
         }
     }
 
     public void clickFristPriceRange() {
-        sendKeysAndClearClick(clickFristPrice,"700");
+        sendKeysAndClearClick(clickFristPrice, "700");
     }
 
     public void clickLastPriceRange() {
-        sendKeysAndClearClick(clickLastPrice,"3000");
+        sendKeysAndClearClick(clickLastPrice, "3000");
     }
 
     public void clickonGOButton() {
-        clickingOnWebElement(clickGoButton,2);
+        clickingOnWebElement(clickGoButton, 2);
     }
 
     public void ClickonSortby() {
@@ -150,7 +150,7 @@ public class SnapdealScenarios extends CommonActions {
     }
 
     public void clickonviewCart() {
-        clickingOnWebElement(clickViewCart,2);
+        clickingOnWebElement(clickViewCart, 2);
     }
 
     public WebElement ChecktheAddCartIteamRnot() {

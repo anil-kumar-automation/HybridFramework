@@ -1,5 +1,6 @@
 package page;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,8 +8,8 @@ import utils.CommonActions;
 
 import java.util.Collections;
 
-public class EformAdditionSoftwareRequestPage extends CommonActions {
-
+public class EfromAdditionSoftwareRequestPage extends CommonActions {
+    WebDriver driver;
     /* it's finding menu element in eform Application */
     @FindBy(xpath = "//div[@class='noti__item js-item-menu']//img")
     WebElement menu;
@@ -90,9 +91,10 @@ public class EformAdditionSoftwareRequestPage extends CommonActions {
     @FindBy(xpath = "//button[normalize-space()='OK']")
     WebElement okbtn;
 
-    /*initializing the page objects*/
-    public EformAdditionSoftwareRequestPage() {
-        PageFactory.initElements(driver, this);
+    public EfromAdditionSoftwareRequestPage(WebDriver rDriver) {
+        driver = rDriver;
+
+        PageFactory.initElements(rDriver, this);
     }
 
 
@@ -139,7 +141,7 @@ public class EformAdditionSoftwareRequestPage extends CommonActions {
     }
 
 
-    public void enterRemark() {
+    public void enterRemark() throws InterruptedException {
         sendKeysWebElement(remark, "For project purpose");
         scrollDown("window.scrollBy(0, 430)");
     }

@@ -1,5 +1,6 @@
 package tests;
 
+import BrowserFactory.DriverFactory;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -20,11 +21,13 @@ import java.io.IOException;
 
 public class SnapdealScenariosTest {
     public CommonActions ca;
+    public DriverFactory df;
 
     @BeforeMethod
     public void launch() throws IOException {
         ca = new CommonActions();
-        ca.launchBrowser("edge");
+        DriverFactory df = new DriverFactory();
+        df.init_driver("edge");
         ca.navigateSanpdealurl();
     }
 
@@ -66,7 +69,7 @@ public class SnapdealScenariosTest {
 
     @Test(dataProvider = "excel-data")
     public void BluetoothItemWithEdgeBrowser(String searchName) throws Exception {
-        SnapdealScenarios s = new SnapdealScenarios();
+        SnapdealScenarios s = new SnapdealScenarios(DriverFactory.getDriver());
         Thread.sleep(2000);
         s.enterItemInSearch().sendKeys(searchName);
         Thread.sleep(2000);

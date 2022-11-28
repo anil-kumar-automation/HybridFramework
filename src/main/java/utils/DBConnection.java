@@ -1,8 +1,5 @@
 package utils;
 
-import page.LoginEformWithDataProvider;
-import page.LoginForEformWithDB;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -70,7 +67,6 @@ public class DBConnection {
             System.out.println("password:" + password);
             System.out.println("*****************************");
             System.out.println();
-            LoginForEformWithDB loginForEformWithDB = new LoginForEformWithDB(userName, password);
         }
         System.out.println();
     }
@@ -87,7 +83,6 @@ public class DBConnection {
             System.out.println("password:" + password);
             System.out.println("*********************************");
             System.out.println();
-            LoginForEformWithDB loginForEformWithDB = new LoginForEformWithDB(userName, password);
         }
         System.out.println();
 

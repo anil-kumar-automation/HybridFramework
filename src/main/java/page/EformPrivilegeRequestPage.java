@@ -1,6 +1,7 @@
 package page;
 
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,7 @@ import utils.CommonActions;
 
 public class EformPrivilegeRequestPage extends CommonActions {
 
+    WebDriver driver;
     /* it's finding menu element in eform Application */
     @FindBy(xpath = "//div[@class='noti__item js-item-menu']//img")
     WebElement menu;
@@ -69,8 +71,10 @@ public class EformPrivilegeRequestPage extends CommonActions {
     WebElement submitbtn;
 
     /*initializing the page objects*/
-    public EformPrivilegeRequestPage() {
-        PageFactory.initElements(driver, this);
+    public EformPrivilegeRequestPage(WebDriver rDriver) {
+        driver = rDriver;
+
+        PageFactory.initElements(rDriver, this);
     }
 
     /* This method is used to click menu and select request type */
@@ -88,16 +92,14 @@ public class EformPrivilegeRequestPage extends CommonActions {
 
     /* This method is used to fill location details */
     public void enterLocationDetails() throws InterruptedException {
-        Thread.sleep(3000);
         selectDropDownValue(assetType, "value", "Desktop");
-        Thread.sleep(3000);
         selectDropDownValue(assetNumber, "value", "Z/IND42/S/LPC");
         sendKeysWebElement(assetNo, "6574");
         sendKeysWebElement(extensionNumber, "0000");
         scrollDown("window.scrollBy(0, 430);");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         selectDropDownValue(location, "value", "IND42-A1SLG/ZCBI");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         sendKeysWebElement(deskNumber, "00");
     }
 
@@ -108,9 +110,9 @@ public class EformPrivilegeRequestPage extends CommonActions {
 
     /* This method is used to enter remark details */
     public void enterRemark() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         sendKeysWebElement(remark, "For project purpose");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         scrollDown("window.scrollBy(0, 400);");
     }
 

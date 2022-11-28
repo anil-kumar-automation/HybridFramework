@@ -1,21 +1,18 @@
 package tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import BrowserFactory.DriverFactory;
 import org.testng.annotations.Test;
-import page.EformAdditionSoftwareRequestPage;
-import page.EformPrivilegeRequestPage;
-import page.LoginForEform;
-import page.ViewStatusPage;
+import page.EfromAdditionSoftwareRequestPage;
+import page.LoginEformPage;
 import utils.CommonActions;
 
 import java.io.IOException;
 
 public class EfromAdditionSoftwareRequestTest {
     public CommonActions ca;
-    public LoginForEform loginForEform;
-    public EformAdditionSoftwareRequestPage easr;
+    public DriverFactory df;
+    public LoginEformPage loginForEform;
+    public EfromAdditionSoftwareRequestPage easr;
 
 
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
@@ -23,15 +20,16 @@ public class EfromAdditionSoftwareRequestTest {
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
+        DriverFactory df = new DriverFactory();
         ca = new CommonActions();
-        ca.launchBrowser("chrome");
+        df.init_driver("chrome");
         ca.navigateEfromurl();
     }
 
     /*TC_03 :This method is used to login using credential*/
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
-        loginForEform = new LoginForEform();
+        loginForEform = new LoginEformPage(DriverFactory.getDriver());
         loginForEform.logIn();
         loginForEform.logInAndClosePopUp();
     }
@@ -39,7 +37,7 @@ public class EfromAdditionSoftwareRequestTest {
 
     @Test(priority = 3)
     public void userOnAdditionalSoftwareTest() throws InterruptedException {
-        easr = new EformAdditionSoftwareRequestPage();
+        easr = new EfromAdditionSoftwareRequestPage(DriverFactory.getDriver());
         easr.clickOnMenu();
         easr.selectProjectName();
         easr.EnteringLocationDetails();
@@ -52,7 +50,7 @@ public class EfromAdditionSoftwareRequestTest {
 
     @Test(priority = 4)
     public void ClickSubmitTest() throws InterruptedException {
-        easr = new EformAdditionSoftwareRequestPage();
+        easr = new EfromAdditionSoftwareRequestPage(DriverFactory.getDriver());
         easr.clickOnSubmitbtn();
     }
 
@@ -63,4 +61,5 @@ public class EfromAdditionSoftwareRequestTest {
         ca = new CommonActions();
         ca.tearDown();
     }
+
 }

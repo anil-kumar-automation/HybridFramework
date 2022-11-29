@@ -1,5 +1,6 @@
 package BrowserFactory;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,11 +15,11 @@ import java.util.concurrent.TimeUnit;
 public class DriverFactory {
 
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    Logger log = Logger.getLogger(DriverFactory.class);
 
     /* for browser launching */
     public WebDriver init_driver(String browser) {
 
-        System.out.println("browser name is: " + browser);
 
         if (browser.equals("chrome")) {
             ChromeOptions co = new ChromeOptions();
@@ -35,12 +36,14 @@ public class DriverFactory {
         } else {
             System.out.println("Please pass the correct browser value: " + browser);
         }
+        log.info("browser name is: " + browser);
+        log.info("launching " + browser + " browser");
 
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         /*DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));*/
         getDriver().manage().window().maximize();
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         getDriver().manage().deleteAllCookies();
-        DriverFactory.getDriver().get("https://eformsnew.zensar.com/eformsDev/Login");
+       /*DriverFactory.getDriver().get("https://eformsnew.zensar.com/eformsDev/Login");*/
         return getDriver();
     }
 

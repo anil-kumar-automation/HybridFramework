@@ -1,6 +1,7 @@
 package tests;
 
 import BrowserFactory.DriverFactory;
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import page.EfromAdditionSoftwareRequestPage;
 import page.LoginEformPage;
@@ -9,10 +10,12 @@ import utils.CommonActions;
 import java.io.IOException;
 
 public class EfromAdditionSoftwareRequestTest {
+
     public CommonActions ca;
     public DriverFactory df;
     public LoginEformPage loginForEform;
     public EfromAdditionSoftwareRequestPage easr;
+    Logger log = Logger.getLogger(EfromAdditionSoftwareRequestTest.class);
 
 
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
@@ -20,10 +23,15 @@ public class EfromAdditionSoftwareRequestTest {
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
+        log.info("****************************** Starting test cases execution  *****************************************");
         DriverFactory df = new DriverFactory();
         ca = new CommonActions();
         df.init_driver("chrome");
-        ca.navigateEfromurl();
+        ca.navigateEformmurl();
+        log.info("entering eform application URL");
+        log.warn("Hey this just a warning message");
+        log.fatal("hey this is just fatal error message");
+        log.debug("this is debug message");
     }
 
     /*TC_03 :This method is used to login using credential*/
@@ -31,6 +39,7 @@ public class EfromAdditionSoftwareRequestTest {
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginEformPage(DriverFactory.getDriver());
         loginForEform.logIn();
+        log.info("successfully entered credentials");
         loginForEform.logInAndClosePopUp();
     }
 
@@ -39,12 +48,19 @@ public class EfromAdditionSoftwareRequestTest {
     public void userOnAdditionalSoftwareTest() throws InterruptedException {
         easr = new EfromAdditionSoftwareRequestPage(DriverFactory.getDriver());
         easr.clickOnMenu();
+        log.info("successfully clicked Menu icon");
         easr.selectProjectName();
+        log.info("successfully selected project name on AdditionSoftwareRequest page");
         easr.EnteringLocationDetails();
+        log.info("successfully filled location on AdditionSoftwareRequest page");
         easr.SelectUserDetails();
+        log.info("selected user details on AdditionSoftwareRequest page");
         easr.RequirementDetails();
+        log.info("entered requirement details on AdditionSoftwareRequest page");
         easr.acceptTndC();
+        log.info("successfully checked accepted checkbox on AdditionSoftwareRequest page");
         easr.enterRemark();
+        log.info("successfully typed remark description on AdditionSoftwareRequest page");
     }
 
 
@@ -52,6 +68,7 @@ public class EfromAdditionSoftwareRequestTest {
     public void ClickSubmitTest() throws InterruptedException {
         easr = new EfromAdditionSoftwareRequestPage(DriverFactory.getDriver());
         easr.clickOnSubmitbtn();
+        log.info("successfully clicked submit button on AdditionSoftwareRequest page");
     }
 
 
@@ -60,6 +77,7 @@ public class EfromAdditionSoftwareRequestTest {
     public void QuitTest() {
         ca = new CommonActions();
         ca.tearDown();
+        log.info("Browser is closed");
     }
 
 }

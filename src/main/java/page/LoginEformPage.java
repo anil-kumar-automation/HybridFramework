@@ -47,7 +47,7 @@ public class LoginEformPage extends CommonActions {
 
     /* This method is used to fill the credential from property  */
     public void logIn() throws IOException, InterruptedException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         Properties prop = new Properties();
         prop.load(fis);
         sendKeysWebElement(uname, prop.getProperty("username"));
@@ -58,7 +58,7 @@ public class LoginEformPage extends CommonActions {
 
     /* This method is used to fill the credential from DataBase  */
     public void logInDb(String username, String password) throws IOException, InterruptedException, SQLException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         Properties prop = new Properties();
         prop.load(fis);
         String choice = prop.getProperty("connectionChoice");

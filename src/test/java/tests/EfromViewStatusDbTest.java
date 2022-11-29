@@ -1,6 +1,7 @@
 package tests;
 
 import BrowserFactory.DriverFactory;
+import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import page.LoginEformPage;
 import page.ViewStatusPage;
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 
 
 public class EfromViewStatusDbTest {
-
+    Logger log = Logger.getLogger(EfromViewStatusDbTest.class);
     public DriverFactory df;
     public CommonActions ca;
     public LoginEformPage loginForEform;
@@ -24,6 +25,7 @@ public class EfromViewStatusDbTest {
         df = new DriverFactory();
         DriverFactory df = new DriverFactory();
         df.init_driver("chrome");
+        log.info("entering eform application URL");
     }
 
    /*TC_03 :This method is used to login using credential*/
@@ -31,6 +33,7 @@ public class EfromViewStatusDbTest {
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginEformPage(DriverFactory.getDriver());
         loginForEform.logIn();
+        log.info("successfully entered credentials");
         loginForEform.logInAndClosePopUp();
     }
 
@@ -48,7 +51,9 @@ public class EfromViewStatusDbTest {
     public void userClicksOnViewStatusButton() throws InterruptedException {
         vsp = new ViewStatusPage(DriverFactory.getDriver());
         vsp.Clickmenu();
+        log.info("successfully clicked Menu icon");
         vsp.ClickViewStatusBtn();
+        log.info("successfully clicked view status button");
 
     }
 
@@ -57,6 +62,7 @@ public class EfromViewStatusDbTest {
     public void userFillsEFormNoAs() throws InterruptedException {
         vsp = new ViewStatusPage(DriverFactory.getDriver());
         vsp.EnterEformNO();
+        log.info("successfully entered eform number");
     }
 
     /*TC_11 : This method is used to submit Eform*/
@@ -64,6 +70,7 @@ public class EfromViewStatusDbTest {
     public void userClicksOnSubmitButton() throws InterruptedException {
         vsp = new ViewStatusPage(DriverFactory.getDriver());
         vsp.ClickSubmitBtn();
+        log.info("successfully clicked submit button on view status page");
     }
 
     /* this is help to quit browser*/
@@ -71,6 +78,7 @@ public class EfromViewStatusDbTest {
     public void QuitTest() {
         ca = new CommonActions();
         ca.tearDown();
+        log.info("Browser is closed");
     }
 
 }

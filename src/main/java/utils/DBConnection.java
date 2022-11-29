@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.Properties;
 
 public class DBConnection {
-    FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+    FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
     Properties properties = new Properties();
 
     public DBConnection() throws FileNotFoundException {

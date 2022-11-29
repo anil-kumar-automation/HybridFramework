@@ -19,9 +19,9 @@ import java.util.Set;
 public class CommonActions {
 
     /* navigate Efrom application*/
-    public void navigateEfromurl() throws IOException {
+    public void navigateEformmurl() throws IOException {
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         prop.load(fis);
         String url1 = prop.getProperty("url1");
         DriverFactory.getDriver().get(url1);
@@ -31,7 +31,7 @@ public class CommonActions {
     /* navigate snapdeal application*/
     public void navigateSanpdealurl() throws IOException {
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.Properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         prop.load(fis);
         String url = prop.getProperty("url");
         DriverFactory.getDriver().get(url);

@@ -2,6 +2,7 @@ package tests;
 
 import BrowserFactory.DriverFactory;
 import controllers.ExcelDataProvider;
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 
 public class EfromLoginMultipleSetOfDataTest {
-
+    Logger log = Logger.getLogger(EfromLoginMultipleSetOfDataTest.class);
     public CommonActions ca;
     public DriverFactory df;
 
@@ -26,7 +27,8 @@ public class EfromLoginMultipleSetOfDataTest {
         DriverFactory df = new DriverFactory();
         ca = new CommonActions();
         df.init_driver("chrome");
-        ca.navigateEfromurl();
+        ca.navigateEformmurl();
+        log.info("entering eform application URL");
     }
 
     /* TC_03 :This method is used to login using credential*/
@@ -34,6 +36,7 @@ public class EfromLoginMultipleSetOfDataTest {
     public void EnteOnCredentialsTest(String username, String password) throws Exception {
         loginefrompage = new LoginEformPage(DriverFactory.getDriver());
         loginefrompage.logInThroughDataProvider(username, password);
+        log.info("successfully entered credentials");
     }
 
     /* it's help to quit the browsers*/
@@ -41,6 +44,7 @@ public class EfromLoginMultipleSetOfDataTest {
     public void QuitTest() {
         ca = new CommonActions();
         ca.tearDown();
+        log.info("Browser is closed");
     }
 
 }

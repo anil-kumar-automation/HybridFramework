@@ -1,6 +1,7 @@
 package tests;
 
 import BrowserFactory.DriverFactory;
+import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import page.EformPrivilegeRequestPage;
 import page.LoginEformPage;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 
 public class EfromPrivilegeRequestTest {
-
+    Logger log = Logger.getLogger(EfromPrivilegeRequestTest.class);
     public CommonActions ca;
     public DriverFactory df;
     public LoginEformPage loginForEform;
@@ -25,7 +26,8 @@ public class EfromPrivilegeRequestTest {
         ca = new CommonActions();
         DriverFactory df = new DriverFactory();
         df.init_driver("chrome");
-        ca.navigateEfromurl();
+        ca.navigateEformmurl();
+        log.info("entering eform application URL");
     }
 
     /*TC_03 :This method is used to login using credential*/
@@ -33,6 +35,7 @@ public class EfromPrivilegeRequestTest {
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginEformPage(DriverFactory.getDriver());
         loginForEform.logIn();
+        log.info("successfully entered credentials");
         loginForEform.logInAndClosePopUp();
     }
 
@@ -41,6 +44,7 @@ public class EfromPrivilegeRequestTest {
     public void userIsOnPrivilegeRequestPageTest() {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.clickOnMenu();
+        log.info("successfully clicked Menu icon");
     }
 
     /*TC_05 : This method is used to select project name */
@@ -48,6 +52,7 @@ public class EfromPrivilegeRequestTest {
     public void userSelectProjectTest() throws InterruptedException {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.selectProjectName();
+        log.info("successfully selected project name on PrivilegeRequest page");
     }
 
     /*TC_06 ,TC_07 : This method is used to fill required information of Location */
@@ -55,6 +60,7 @@ public class EfromPrivilegeRequestTest {
     public void userFillsLocationDetailsTest() throws InterruptedException {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.enterLocationDetails();
+        log.info("successfully entered location details on PrivilegeRequest page");
     }
 
     /*TC_08 : This method is used to fill host details */
@@ -62,6 +68,7 @@ public class EfromPrivilegeRequestTest {
     public void userFillsRequirementDetailsTest() throws InterruptedException {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.hostName();
+        log.info("successfully entered hostname on PrivilegeRequest page");
     }
 
     /*TC_09 : This method is used to for remark */
@@ -69,6 +76,7 @@ public class EfromPrivilegeRequestTest {
     public void userFillsRemarksTest() throws InterruptedException {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.enterRemark();
+        log.info("successfully entered remarks on PrivilegeRequest page");
     }
 
     /*TC_10 : This method is used for check box to accpet terms */
@@ -76,6 +84,7 @@ public class EfromPrivilegeRequestTest {
     public void userClickOnCheckboxTest() {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.clickOnCheckBox();
+        log.info("successfully checked accepted checkbox on PrivilegeRequest page");
     }
 
     /*TC_11 : This method is used to submit E-form*/
@@ -83,6 +92,7 @@ public class EfromPrivilegeRequestTest {
     public void userClickOnSubmitButtonTest() {
         ef = new EformPrivilegeRequestPage(DriverFactory.getDriver());
         ef.clickOnSubmitbtn();
+        log.info("successfully clicked submit button on PrivilegeRequest page");
     }
 
     /* it's help to quit the browsers*/
@@ -90,6 +100,7 @@ public class EfromPrivilegeRequestTest {
     public void QuitTest() {
         ca = new CommonActions();
         ca.tearDown();
+        log.info("Browser is closed");
     }
 
 }

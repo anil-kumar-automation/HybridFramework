@@ -4,6 +4,7 @@ import BrowserFactory.DriverFactory;
 import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import page.LoginEformPage;
+import page.LoginForEformWithDB;
 import page.ViewStatusPage;
 import utils.CommonActions;
 
@@ -17,6 +18,7 @@ public class EfromViewStatusDbTest {
     public CommonActions ca;
     public LoginEformPage loginForEform;
     public ViewStatusPage vsp;
+    public LoginForEformWithDB lb;
     /*-----------------------------------Test Scenario TS_02----------------------------------------*/
 
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
@@ -28,24 +30,23 @@ public class EfromViewStatusDbTest {
         log.info("entering eform application URL");
     }
 
-   /*TC_03 :This method is used to login using credential*/
+  /* *//*TC_03 :This method is used to login using credential*//*
     @Test(priority = 2)
     public void EnterCredentialsTest() throws InterruptedException, IOException {
         loginForEform = new LoginEformPage(DriverFactory.getDriver());
         loginForEform.logIn();
         log.info("successfully entered credentials");
         loginForEform.logInAndClosePopUp();
-    }
-
-    /* TC_03 :This method is used to login using credential *//*
-    @Test(priority = 2)
-    public void EnterCredentialsTestWithDB(String username, String password) throws InterruptedException, IOException, SQLException {
-
-        loginForEform = new LoginEformPage(DriverFactory.getDriver());
-        loginForEform.logInDb(username, password);
-        loginForEform.logInAndClosePopUp();
     }*/
 
+    /*TC_03 :This method is used to login using credential*/
+    @Test(priority = 2)
+    public void EnterCredentialsTestWithDb() throws Exception {
+        lb = new LoginForEformWithDB(DriverFactory.getDriver());
+        lb.logIn();
+        log.info("successfully entered credentials");
+        lb.logInAndClosePopUp();
+    }
     /*TC_03, TC_04 :This method is click menu Hamburger  and view status option*/
     @Test(priority = 3)
     public void userClicksOnViewStatusButton() throws InterruptedException {

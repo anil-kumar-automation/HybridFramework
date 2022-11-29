@@ -56,30 +56,6 @@ public class LoginEformPage extends CommonActions {
         clickingOnWebElement(submit, 1);
     }
 
-    /* This method is used to fill the credential from DataBase  */
-    public void logInDb(String username, String password) throws IOException, InterruptedException, SQLException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
-        Properties prop = new Properties();
-        prop.load(fis);
-        String choice = prop.getProperty("connectionChoice");
-        DBConnection db = new DBConnection();
-        if (choice.equals("Sql")) {
-            Connection sqlCon = db.creatingConnection();
-            db.ExtractDataFromMySQL(sqlCon);
-            sendKeysWebElement(uname, username);
-            Thread.sleep(2000);
-            sendKeysWebElement(Password, password);
-            clickingOnWebElement(submit, 1);
-        } else if (choice.equals("Oracle")) {
-            Connection oracleCon = db.connectToOracle();
-            db.ExtractDataFromOracle(oracleCon);
-            sendKeysWebElement(uname, username);
-            Thread.sleep(2000);
-            sendKeysWebElement(Password, password);
-            clickingOnWebElement(submit, 1);
-        }
-    }
-
     public void logInAndClosePopUp() {
         clickingOnWebElement(closeform, 3);
     }

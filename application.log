@@ -1,39 +1,35 @@
-2022-11-29 11:59:53,613  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
-2022-11-29 12:00:04,893  INFO [TestNG-tests-2] DriverFactory:39 - browser name is: chrome
-2022-11-29 12:00:04,896  INFO [TestNG-tests-2] DriverFactory:40 - launching chrome browser
-2022-11-29 12:00:04,893  INFO [TestNG-tests-1] DriverFactory:39 - browser name is: chrome
-2022-11-29 12:00:04,899  INFO [TestNG-tests-1] DriverFactory:40 - launching chrome browser
-2022-11-29 12:00:09,950  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:30 - entering eform application URL
-2022-11-29 12:00:10,652  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:31 - entering eform application URL
-2022-11-29 12:00:10,652  WARN [TestNG-tests-2] EfromAdditionSoftwareRequestTest:32 - Hey this just a warning message
-2022-11-29 12:00:10,653 FATAL [TestNG-tests-2] EfromAdditionSoftwareRequestTest:33 - hey this is just fatal error message
-2022-11-29 12:00:10,653 DEBUG [TestNG-tests-2] EfromAdditionSoftwareRequestTest:34 - this is debug message
-2022-11-29 12:00:12,623  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:38 - successfully entered credentials
-2022-11-29 12:00:13,340  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
-2022-11-29 12:00:16,079  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:47 - successfully clicked Menu icon
-2022-11-29 12:00:16,591  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:51 - successfully clicked Menu icon
-2022-11-29 12:00:19,239  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:55 - successfully selected project name on PrivilegeRequest page
-2022-11-29 12:00:19,762  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:53 - successfully selected project name on AdditionSoftwareRequest page
-2022-11-29 12:00:20,778  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:55 - successfully filled location on AdditionSoftwareRequest page
-2022-11-29 12:00:21,297  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:57 - selected user details on AdditionSoftwareRequest page
-2022-11-29 12:00:22,387  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:63 - successfully entered location details on PrivilegeRequest page
-2022-11-29 12:00:22,572  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:71 - successfully entered hostname on PrivilegeRequest page
-2022-11-29 12:00:22,863  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:59 - entered requirement details on AdditionSoftwareRequest page
-2022-11-29 12:00:24,824  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:79 - successfully entered remarks on PrivilegeRequest page
-2022-11-29 12:00:24,915  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:87 - successfully checked accepted checkbox on PrivilegeRequest page
-2022-11-29 12:00:25,007  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:95 - successfully clicked submit button on PrivilegeRequest page
-2022-11-29 12:00:25,308  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:61 - successfully checked accepted checkbox on AdditionSoftwareRequest page
-2022-11-29 12:00:25,684  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:63 - successfully typed remark description on AdditionSoftwareRequest page
-2022-11-29 12:00:26,583  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:103 - Browser is closed
-2022-11-29 12:00:28,866  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:71 - successfully clicked submit button on AdditionSoftwareRequest page
-2022-11-29 12:00:30,960  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:80 - Browser is closed
-2022-11-29 12:00:31,263 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-2022-11-29 12:00:31,267 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-2022-11-29 12:00:31,273 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2022-11-29 12:00:31,278 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2022-11-29 12:00:31,278 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-2022-11-29 12:00:31,618 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-2022-11-29 12:00:31,620 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-2022-11-29 12:00:31,621 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2022-11-29 12:00:31,621 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2022-11-29 12:00:31,621 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-11-29 18:24:26,083  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-29 18:24:26,088  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-29 18:24:33,776  INFO [main] EfromLoginMultipleSetOfDataTest:31 - entering eform application URL
+2022-11-29 18:24:34,026  INFO [main] LoginEformPage:44 - entered username credential as : SK66921
+2022-11-29 18:24:36,231  INFO [main] LoginEformPage:47 - entered password credential as : sk12345
+2022-11-29 18:24:36,345  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
+2022-11-29 18:24:38,299  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed
+2022-11-29 18:24:44,750  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-29 18:24:44,751  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-29 18:24:49,199  INFO [main] EfromLoginMultipleSetOfDataTest:31 - entering eform application URL
+2022-11-29 18:24:49,388  INFO [main] LoginEformPage:44 - entered username credential as : AS61837
+2022-11-29 18:24:51,735  INFO [main] LoginEformPage:47 - entered password credential as : as45678
+2022-11-29 18:24:51,880  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
+2022-11-29 18:24:53,871  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed
+2022-11-29 18:25:00,136  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-29 18:25:00,136  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-29 18:25:07,616  INFO [main] EfromLoginMultipleSetOfDataTest:31 - entering eform application URL
+2022-11-29 18:25:07,822  INFO [main] LoginEformPage:44 - entered username credential as : AC67129
+2022-11-29 18:25:10,024  INFO [main] LoginEformPage:47 - entered password credential as : ac54677
+2022-11-29 18:25:10,137  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
+2022-11-29 18:25:11,883  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed
+2022-11-29 18:25:18,631  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-29 18:25:18,631  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-29 18:25:24,361  INFO [main] EfromLoginMultipleSetOfDataTest:31 - entering eform application URL
+2022-11-29 18:25:24,557  INFO [main] LoginEformPage:44 - entered username credential as : DN67143
+2022-11-29 18:25:26,838  INFO [main] LoginEformPage:47 - entered password credential as : dn78699
+2022-11-29 18:25:26,992  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
+2022-11-29 18:25:28,669  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed
+2022-11-29 18:25:34,932  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-29 18:25:34,932  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-29 18:25:39,384  INFO [main] EfromLoginMultipleSetOfDataTest:31 - entering eform application URL
+2022-11-29 18:25:39,589  INFO [main] LoginEformPage:44 - entered username credential as : SK57670
+2022-11-29 18:25:41,852  INFO [main] LoginEformPage:47 - entered password credential as : sk98345
+2022-11-29 18:25:41,979  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
+2022-11-29 18:25:43,482  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed

@@ -1,5 +1,6 @@
 package page;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class LoginEformPage extends CommonActions {
+    Logger log = Logger.getLogger(LoginEformPage.class);
     WebDriver driver;
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
@@ -39,8 +41,10 @@ public class LoginEformPage extends CommonActions {
     /* This method is used to fill the credential from DataBase  */
     public void logInThroughDataProvider(String username, String password) throws Exception {
         sendKeysWebElement(uname, username);
+        log.info("entered username credential as : " + username);
         Thread.sleep(2000);
         sendKeysWebElement(Password, password);
+        log.info("entered password credential as : " + password);
         clickingOnWebElement(submit, 1);
 
     }

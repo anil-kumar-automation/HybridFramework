@@ -2,22 +2,28 @@ package tests;
 
 import BrowserFactory.DriverFactory;
 import controllers.ExcelDataProvider;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.LoginEformPage;
 import utils.CommonActions;
 
+import java.io.File;
 import java.io.IOException;
 
 
 public class EfromLoginMultipleSetOfDataTest {
-    Logger log = Logger.getLogger(EfromLoginMultipleSetOfDataTest.class);
     public CommonActions ca;
     public DriverFactory df;
-
     public LoginEformPage loginefrompage;
+    Logger log = Logger.getLogger(EfromLoginMultipleSetOfDataTest.class);
+    private WebDriver driver;
 
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
 
@@ -46,6 +52,9 @@ public class EfromLoginMultipleSetOfDataTest {
         ca.tearDown();
         log.info("Browser is closed");
     }
-
 }
+
+
+
+
 

@@ -6,6 +6,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
+
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
@@ -13,8 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 
-
 public class ExtentReportNg implements IReporter {
+
     private ExtentReports extent;
 
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
@@ -63,6 +64,8 @@ public class ExtentReportNg implements IReporter {
             }
         }
     }
+
+
 
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();

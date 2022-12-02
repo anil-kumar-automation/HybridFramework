@@ -12,14 +12,15 @@ import java.sql.Connection;
 
 public class LoginForEformWithDB extends CommonActions {
     WebDriver driver;
-    String username;
+  String username;
     String password;
 
-    //Constructor to get the multiple data sets to automate.
+   //Constructor to get the multiple data sets to automate.
     public LoginForEformWithDB(String username, String password) {
         this.username = username;
         this.password = password;
     }
+
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
     WebElement uname;
@@ -36,7 +37,6 @@ public class LoginForEformWithDB extends CommonActions {
     //Constructor to get the multiple data sets to automate.
     public LoginForEformWithDB(WebDriver rDriver) {
         driver = rDriver;
-
         PageFactory.initElements(rDriver, this);
     }
 

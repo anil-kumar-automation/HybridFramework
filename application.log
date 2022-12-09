@@ -33,3 +33,54 @@
 2022-11-29 18:25:41,852  INFO [main] LoginEformPage:47 - entered password credential as : sk98345
 2022-11-29 18:25:41,979  INFO [main] EfromLoginMultipleSetOfDataTest:39 - successfully entered credentials
 2022-11-29 18:25:43,482  INFO [main] EfromLoginMultipleSetOfDataTest:47 - Browser is closed
+2022-11-30 17:10:48,019  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-11-30 17:10:48,027  INFO [main] DriverFactory:40 - launching chrome browser
+2022-11-30 17:10:48,198  INFO [main] EfromViewStatusDbTest:30 - entering eform application URL
+2022-11-30 17:12:21,218  INFO [main] EfromViewStatusDbTest:82 - Browser is closed
+2022-12-01 18:08:31,029  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-01 18:11:18,264  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-01 18:11:31,752  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-12-01 18:11:31,752  INFO [main] DriverFactory:40 - launching chrome browser
+2022-12-01 18:12:53,091  INFO [main] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-01 18:13:20,712  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-01 18:13:35,101  INFO [TestNG-tests-1] DriverFactory:39 - browser name is: chrome
+2022-12-01 18:13:35,103  INFO [TestNG-tests-1] DriverFactory:40 - launching chrome browser
+2022-12-01 18:13:36,287  INFO [TestNG-tests-2] DriverFactory:39 - browser name is: chrome
+2022-12-01 18:13:36,287  INFO [TestNG-tests-2] DriverFactory:40 - launching chrome browser
+2022-12-01 18:14:44,061  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-01 18:15:55,075  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:103 - Browser is closed
+2022-12-01 18:15:55,341 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-01 18:15:55,346 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-01 18:15:55,350 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-01 18:15:55,353 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-01 18:15:55,354 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-01 18:15:55,701 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-01 18:15:55,702 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-01 18:15:55,704 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-01 18:15:55,705 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-01 18:15:55,707 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-01 18:20:52,216  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-12-01 18:20:52,227  INFO [main] DriverFactory:40 - launching chrome browser
+2022-12-01 18:22:16,994  INFO [main] DriverFactory:39 - browser name is: chrome
+2022-12-01 18:22:17,001  INFO [main] DriverFactory:40 - launching chrome browser
+2022-12-02 23:04:03,333  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-02 23:04:49,170  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-02 23:06:53,617  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-02 23:09:20,327  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-02 23:09:37,611  INFO [main] DriverFactory:42 - browser name is: chrome
+2022-12-02 23:09:37,611  INFO [main] DriverFactory:43 - launching chrome browser
+2022-12-02 23:10:02,710  INFO [main] EfromAdditionSoftwareRequestTest:31 - entering eform application URL
+2022-12-02 23:10:02,711  WARN [main] EfromAdditionSoftwareRequestTest:32 - Hey this just a warning message
+2022-12-02 23:10:02,713 FATAL [main] EfromAdditionSoftwareRequestTest:33 - hey this is just fatal error message
+2022-12-02 23:10:02,713 DEBUG [main] EfromAdditionSoftwareRequestTest:34 - this is debug message
+2022-12-02 23:10:06,166  INFO [main] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
+2022-12-02 23:10:49,725  INFO [main] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-02 23:11:55,622  INFO [main] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-02 23:12:12,928  INFO [main] DriverFactory:42 - browser name is: chrome
+2022-12-02 23:12:12,930  INFO [main] DriverFactory:43 - launching chrome browser
+2022-12-02 23:12:16,733  INFO [main] EfromAdditionSoftwareRequestTest:31 - entering eform application URL
+2022-12-02 23:12:16,733  WARN [main] EfromAdditionSoftwareRequestTest:32 - Hey this just a warning message
+2022-12-02 23:12:16,734 FATAL [main] EfromAdditionSoftwareRequestTest:33 - hey this is just fatal error message
+2022-12-02 23:12:16,734 DEBUG [main] EfromAdditionSoftwareRequestTest:34 - this is debug message
+2022-12-02 23:12:19,570  INFO [main] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
+2022-12-02 23:13:32,457  INFO [main] EfromAdditionSoftwareRequestTest:80 - Browser is closed

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestSuite" parallel="tests" thread-count="2">
+<suite name="TestSuite" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="listeners.ExtentReportNg"/>
     </listeners>
 
-    <test name="ChromeTest">
+ <!--   <test name="ChromeTest">
         <classes>
             <class name="tests.EfromPrivilegeRequestTest"></class>
         </classes>
@@ -14,6 +14,12 @@
     <test name="ChromeTest1">
         <classes>
             <class name="tests.EfromAdditionSoftwareRequestTest"></class>
+        </classes>
+    </test>-->
+
+    <test name="EdgeTest">
+        <classes>
+            <class name="tests.PimHrmTestcases"></class>
         </classes>
     </test>
 

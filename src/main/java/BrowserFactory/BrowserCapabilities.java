@@ -15,13 +15,28 @@ public class BrowserCapabilities {
 
     public static DesiredCapabilities remoteDriverCap() {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("browser", "Chrome");
+        caps.setCapability("browser", "");
         caps.setCapability("os", "os");
         caps.setCapability("os_version", "os_version");
         caps.setCapability("browser_version", "browser_version");
         caps.setAcceptInsecureCerts(true);
         return caps;
     }
+
+    public static ChromeOptions getLocalChromeCapabilities() {
+        ChromeOptions co = new ChromeOptions();
+        Map<String, Object> chromePrefs = new HashMap<String, Object>();
+        chromePrefs.put("profile.default_content_settings.popups", 0);
+        chromePrefs.put("download.prompt_for_download", false);
+        chromePrefs.put("plugins.plugins_disabled", "Chrome PDF Viewer");
+        chromePrefs.put("download.default_directory", "/directory/path");
+        co.setExperimentalOption("prefs", chromePrefs);
+        co.setAcceptInsecureCerts(true);
+        co.setCapability(ChromeOptions.CAPABILITY, co);
+        co.addArguments("--start-maximized");
+        return co;
+    }
+
 
     public static ChromeOptions getHeadlessChromeCapability() {
 
@@ -38,23 +53,35 @@ public class BrowserCapabilities {
         // to manage the  connection safe for secure reasons
         options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         options.setCapability(ChromeOptions.CAPABILITY, options);
-        options.addArguments("--start-maximized");
         return options;
 
     }
 
-    public static DesiredCapabilities DesiredAndOptionsMerge() {
+    public static ChromeOptions incognitoChromeLaunch() {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("platformVersion", "Windows 10");
         caps.setAcceptInsecureCerts(true);
         ChromeOptions co = new ChromeOptions();
-        co.setHeadless(true);
-        co = co.merge(caps);
-        co.addExtensions(new File("/path/to/extension.crx"));
-        co.addArguments("--headless");
-        co.addArguments("--incognito");
         co.addArguments("--start-maximized");
-        return caps;
+        co.addArguments("--incognito");
+        co = co.merge(caps);
+        return co;
+    }
+
+    public static FirefoxOptions getFirefoxCapabilitiesWithHeadless() {
+        FirefoxOptions fo = new FirefoxOptions();
+        fo.setHeadless(true);
+        fo.setAcceptInsecureCerts(true);
+        fo.addArguments("--start-maximized");
+        return fo;
+    }
+
+
+    public static EdgeOptions getEdgeCapabilitiesWithHeadless() {
+        EdgeOptions eo = new EdgeOptions();
+        eo.setHeadless(false);
+        eo.setAcceptInsecureCerts(true);
+        eo.addArguments("--start-maximized");
+        return eo;
     }
 
     public static ChromeOptions NewChromeOption() {
@@ -96,36 +123,4 @@ public class BrowserCapabilities {
         options.setCapability("proxy", proxy);
         return options;
     }
-
-
-    public static ChromeOptions getLocalChromeCapabilities() {
-        ChromeOptions co = new ChromeOptions();
-        Map<String, Object> chromePrefs = new HashMap<String, Object>();
-        chromePrefs.put("profile.default_content_settings.popups", 0);
-        chromePrefs.put("download.prompt_for_download", false);
-        chromePrefs.put("plugins.plugins_disabled", "Chrome PDF Viewer");
-        chromePrefs.put("download.default_directory", "/directory/path");
-        co.setExperimentalOption("prefs", chromePrefs);
-        co.setAcceptInsecureCerts(true);
-        co.setCapability(ChromeOptions.CAPABILITY, co);
-        co.addArguments("--start-maximized");
-        return co;
-    }
-
-
-    public static FirefoxOptions getHeadlessFirefoxCapabilities() {
-        FirefoxOptions fo = new FirefoxOptions();
-        fo.setHeadless(true);
-        fo.addArguments("--start-maximized");
-        return fo;
-    }
-
-
-    public static EdgeOptions getHeadlessEdgeCapabilities() {
-        EdgeOptions eo = new EdgeOptions();
-        eo.setHeadless(true);
-        eo.addArguments("--start-maximized");
-        return eo;
-    }
-
 }

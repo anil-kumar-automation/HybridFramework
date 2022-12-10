@@ -5,22 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
-import utils.DBConnection;
-import utils.DBConnectionBuilder;
-
-import java.sql.Connection;
 
 public class LoginForEformWithDB extends CommonActions {
     WebDriver driver;
-  String username;
-    String password;
-
-   //Constructor to get the multiple data sets to automate.
-    public LoginForEformWithDB(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
     /* it's finding username text box element in eform Application */
     @FindBy(xpath = "//input[@id='userName']")
     WebElement uname;
@@ -41,32 +28,51 @@ public class LoginForEformWithDB extends CommonActions {
     }
 
     /* This method is used to fill the credential from DataBase  */
-    public void logIn() throws Exception {
+   /* public void logIn(LoginForEformWithDB loginForEformWithDB) throws Exception {
         String choice =DBConnectionBuilder.Connections.CONNECTION_CHOICE.getValue();
         DBConnection db=new DBConnection();
-        if(choice.equals("Sql")){
-            Connection sqlCon=DBConnectionBuilder.creatingConnection();
+        DBConnectionBuilder dbConnectionBuilder = new DBConnectionBuilder();
+        if(choice.equalsIgnoreCase("Sql")){
+            Connection sqlCon=dbConnectionBuilder.creatingConnection();
             db.ExtractDataFromMySQL(sqlCon);
-            sendKeysWebElement(uname,username);
+            sendKeysWebElement(uname,loginForEformWithDB.getUsername());
             Thread.sleep(2000);
-            sendKeysWebElement(Password,password);
+            sendKeysWebElement(Password,loginForEformWithDB.getPassword());
             clickingOnWebElement(submit, 1);
         }
-        else if(choice.equals("Oracle")) {
-            Connection oracleCon=DBConnectionBuilder.creatingConnection();
+        else if(choice.equalsIgnoreCase("Oracle")) {
+            Connection oracleCon=dbConnectionBuilder.creatingConnection();
             db.ExtractDataFromOracle(oracleCon);
-            sendKeysWebElement(uname, username);
+            sendKeysWebElement(uname,loginForEformWithDB.getUsername());
             Thread.sleep(2000);
-            sendKeysWebElement(Password, password);
+            sendKeysWebElement(Password,loginForEformWithDB.getPassword());
+            clickingOnWebElement(submit, 1);
+        }
+        else if(choice.equalsIgnoreCase("SqlServer")){
+            Connection sqlServerCon = dbConnectionBuilder.creatingConnection();
+            db.ExtractDataFromSqlServer(sqlServerCon);
+            sendKeysWebElement(uname,loginForEformWithDB.getUsername());
+            Thread.sleep(2000);
+            sendKeysWebElement(Password,loginForEformWithDB.getPassword());
             clickingOnWebElement(submit, 1);
         }
         else{
-            DBConnection.connectToMongoDB();
-            sendKeysWebElement(uname, username);
+            db.connectToMongoDB();
+            sendKeysWebElement(uname,loginForEformWithDB.getUsername());
             Thread.sleep(2000);
-            sendKeysWebElement(Password, password);
+            sendKeysWebElement(Password,loginForEformWithDB.getPassword());
             clickingOnWebElement(submit, 1);
         }
+    }*/
+
+    public void sendingData(String username,String password) throws InterruptedException {
+        sendKeysWebElement(uname, username);
+        Thread.sleep(2000);
+        sendKeysWebElement(Password, password);
+        clickingOnWebElement(submit, 1);
+    }
+    public void logIn(String username,String password) throws Exception {
+        sendingData(username,password);
     }
     public void logInAndClosePopUp() {
         clickingOnWebElement(closeform, 3);

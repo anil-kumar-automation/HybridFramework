@@ -84,3 +84,189 @@
 2022-12-02 23:12:16,734 DEBUG [main] EfromAdditionSoftwareRequestTest:34 - this is debug message
 2022-12-02 23:12:19,570  INFO [main] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
 2022-12-02 23:13:32,457  INFO [main] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-09 18:51:32,382  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-09 18:52:06,742  INFO [TestNG-tests-2] DriverFactory:42 - browser name is: chrome
+2022-12-09 18:52:06,743  INFO [TestNG-tests-2] DriverFactory:43 - launching chrome browser
+2022-12-09 18:52:06,745  INFO [TestNG-tests-1] DriverFactory:42 - browser name is: chrome
+2022-12-09 18:52:06,752  INFO [TestNG-tests-1] DriverFactory:43 - launching chrome browser
+2022-12-09 18:52:10,981  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:31 - entering eform application URL
+2022-12-09 18:52:10,981  WARN [TestNG-tests-2] EfromAdditionSoftwareRequestTest:32 - Hey this just a warning message
+2022-12-09 18:52:10,982 FATAL [TestNG-tests-2] EfromAdditionSoftwareRequestTest:33 - hey this is just fatal error message
+2022-12-09 18:52:10,983 DEBUG [TestNG-tests-2] EfromAdditionSoftwareRequestTest:34 - this is debug message
+2022-12-09 18:52:12,091  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:30 - entering eform application URL
+2022-12-09 18:52:14,218  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
+2022-12-09 18:52:15,027  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:38 - successfully entered credentials
+2022-12-09 18:52:19,618  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:51 - successfully clicked Menu icon
+2022-12-09 18:52:19,654  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:47 - successfully clicked Menu icon
+2022-12-09 18:52:23,064  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:53 - successfully selected project name on AdditionSoftwareRequest page
+2022-12-09 18:52:23,070  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:55 - successfully selected project name on PrivilegeRequest page
+2022-12-09 18:52:26,635  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:55 - successfully filled location on AdditionSoftwareRequest page
+2022-12-09 18:52:28,344  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:57 - selected user details on AdditionSoftwareRequest page
+2022-12-09 18:52:29,570  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:63 - successfully entered location details on PrivilegeRequest page
+2022-12-09 18:52:29,925  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:71 - successfully entered hostname on PrivilegeRequest page
+2022-12-09 18:52:31,517  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:59 - entered requirement details on AdditionSoftwareRequest page
+2022-12-09 18:52:32,649  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:79 - successfully entered remarks on PrivilegeRequest page
+2022-12-09 18:52:32,847  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:87 - successfully checked accepted checkbox on PrivilegeRequest page
+2022-12-09 18:52:33,049  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:95 - successfully clicked submit button on PrivilegeRequest page
+2022-12-09 18:52:34,311  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:61 - successfully checked accepted checkbox on AdditionSoftwareRequest page
+2022-12-09 18:52:34,956  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:63 - successfully typed remark description on AdditionSoftwareRequest page
+2022-12-09 18:52:34,958  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:103 - Browser is closed
+2022-12-09 18:52:38,122  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:71 - successfully clicked submit button on AdditionSoftwareRequest page
+2022-12-09 18:52:40,258  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-09 18:52:40,415 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-09 18:52:40,430 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-09 18:52:40,433 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-09 18:52:40,435 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-09 18:52:40,435 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-09 18:52:40,680 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-09 18:52:40,681 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-09 18:52:40,682 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-09 18:52:40,684 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-09 18:52:40,684 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-09 18:54:42,046  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:26 - ****************************** Starting test cases execution  *****************************************
+2022-12-09 18:55:08,440  INFO [TestNG-tests-2] DriverFactory:42 - browser name is: chrome
+2022-12-09 18:55:08,440  INFO [TestNG-tests-1] DriverFactory:42 - browser name is: chrome
+2022-12-09 18:55:08,441  INFO [TestNG-tests-2] DriverFactory:43 - launching chrome browser
+2022-12-09 18:55:08,442  INFO [TestNG-tests-1] DriverFactory:43 - launching chrome browser
+2022-12-09 18:55:16,230  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:31 - entering eform application URL
+2022-12-09 18:55:16,231  WARN [TestNG-tests-2] EfromAdditionSoftwareRequestTest:32 - Hey this just a warning message
+2022-12-09 18:55:16,231 FATAL [TestNG-tests-2] EfromAdditionSoftwareRequestTest:33 - hey this is just fatal error message
+2022-12-09 18:55:16,231 DEBUG [TestNG-tests-2] EfromAdditionSoftwareRequestTest:34 - this is debug message
+2022-12-09 18:55:16,269  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:30 - entering eform application URL
+2022-12-09 18:55:20,827  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:42 - successfully entered credentials
+2022-12-09 18:55:20,941  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:38 - successfully entered credentials
+2022-12-09 18:55:28,694  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:47 - successfully clicked Menu icon
+2022-12-09 18:55:31,550  INFO [TestNG-tests-2] EfromAdditionSoftwareRequestTest:80 - Browser is closed
+2022-12-09 18:55:39,380  INFO [TestNG-tests-1] EfromPrivilegeRequestTest:103 - Browser is closed
+2022-12-09 18:55:39,802 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-09 18:55:39,810 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-09 18:55:39,817 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-09 18:55:39,820 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-09 18:55:39,821 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-09 18:55:40,377 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-09 18:55:40,378 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-09 18:55:40,379 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-09 18:55:40,380 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-09 18:55:40,381 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-10 10:14:44,358  INFO [TestNG-tests-1] DriverFactory:37 - browser name is: edge
+2022-12-10 10:14:44,367  INFO [TestNG-tests-1] DriverFactory:38 - launching edge browser
+2022-12-10 12:41:45,900  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 12:41:45,906  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 12:41:49,762  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 12:41:50,846  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 12:41:55,186  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 12:41:58,073  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 12:42:01,443  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 12:42:08,200  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 12:42:09,692  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 12:42:13,175  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 12:42:13,231  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 12:42:16,831  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:01:18,263  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:01:18,269  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:01:25,046  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:01:26,429  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:01:30,469  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:01:33,264  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:01:36,367  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:01:43,153  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:01:44,616  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:01:48,156  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:01:48,215  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:01:51,825  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:11:15,486  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:11:15,495  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:11:23,822  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:11:25,524  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:11:29,655  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:11:32,440  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:11:35,092  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:11:42,185  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:11:43,663  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:11:47,153  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:11:47,209  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:11:50,840  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:18:37,113  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:18:37,121  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:18:41,549  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:18:42,536  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:18:47,156  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:18:49,964  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:18:52,956  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:18:59,789  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:19:01,307  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:19:04,777  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:19:04,830  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:19:08,400  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:24:41,678  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:24:41,684  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:24:48,396  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:24:49,679  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:24:54,172  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:24:57,015  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:25:00,086  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:25:06,869  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:25:08,355  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:25:11,873  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:25:11,924  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:25:15,640  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:30:31,918  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:30:31,923  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:30:37,845  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:30:38,941  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:30:43,102  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:30:46,236  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:30:49,486  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:30:56,126  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:30:57,586  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:31:01,195  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:31:01,246  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:31:05,057  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:35:59,232  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:35:59,237  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:36:06,044  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:36:07,329  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:36:11,963  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:36:14,705  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:36:17,311  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:36:23,355  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:36:24,820  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:36:28,343  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:36:28,414  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:36:32,057  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:40:15,523  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:40:15,532  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:40:23,875  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:40:25,193  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:40:29,508  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:40:32,201  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:40:35,812  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:40:42,510  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:40:44,035  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:40:47,619  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:40:47,673  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:40:51,869  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:47:42,554  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:47:42,562  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:55:27,204  INFO [TestNG-tests-1] DriverFactory:43 - browser name is: edge
+2022-12-10 13:55:27,210  INFO [TestNG-tests-1] DriverFactory:44 - launching edge browser
+2022-12-10 13:55:35,168  INFO [TestNG-tests-1] PimHrmTestcases:27 - entering Orange HRM application URL
+2022-12-10 13:55:36,633  INFO [TestNG-tests-1] PimHrmTestcases:34 - entering credential on Orange HRM application
+2022-12-10 13:55:49,320  INFO [TestNG-tests-1] PimHrmTestcases:42 - clicking PIM On Orange HRM application
+2022-12-10 13:55:52,361  INFO [TestNG-tests-1] PimHrmTestcases:49 - clicking AddEmployee On Orange HRM application
+2022-12-10 13:55:54,982  INFO [TestNG-tests-1] PimHrmTestcases:58 - entering Orange HRM application URL
+2022-12-10 13:56:02,931  INFO [TestNG-tests-1] PimHrmTestcases:67 - scrolled Orange HRM application 
+2022-12-10 13:56:04,455  INFO [TestNG-tests-1] PimHrmTestcases:74 - selecting dropdowns on Orange HRM application
+2022-12-10 13:56:08,034  INFO [TestNG-tests-1] PimHrmTestcases:81 - selected data on Hrm application
+2022-12-10 13:56:08,098  INFO [TestNG-tests-1] PimHrmTestcases:88 - Select Radio Button on Hrm
+2022-12-10 13:56:12,272  INFO [TestNG-tests-1] PimHrmTestcases:97 - closing Orange HRM application browser
+2022-12-10 13:56:12,426 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-10 13:56:12,429 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-10 13:56:12,432 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-10 13:56:12,434 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-10 13:56:12,436 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-12-10 13:56:12,750 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-12-10 13:56:12,751 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-12-10 13:56:12,752 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-12-10 13:56:12,753 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-12-10 13:56:12,753 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"

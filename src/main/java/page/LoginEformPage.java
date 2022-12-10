@@ -6,15 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
-import utils.DBConnection;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Properties;
 
-public class LoginEformPage extends CommonActions {
+public class LoginEformPage {
     Logger log = Logger.getLogger(LoginEformPage.class);
     WebDriver driver;
     /* it's finding username text box element in eform Application */
@@ -38,15 +35,14 @@ public class LoginEformPage extends CommonActions {
         PageFactory.initElements(rDriver, this);
     }
 
-    /* This method is used to fill the credential from DataBase  */
+    /* This method is used to fill the credential from Excel  */
     public void logInThroughDataProvider(String username, String password) throws Exception {
-        sendKeysWebElement(uname, username);
+        CommonActions.sendKeysWebElement(uname, username);
         log.info("entered username credential as : " + username);
         Thread.sleep(2000);
-        sendKeysWebElement(Password, password);
+        CommonActions.sendKeysWebElement(Password, password);
         log.info("entered password credential as : " + password);
-        clickingOnWebElement(submit, 1);
-
+        CommonActions.clickingOnWebElement(submit, 1);
     }
 
     /* This method is used to fill the credential from property  */
@@ -54,13 +50,13 @@ public class LoginEformPage extends CommonActions {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         Properties prop = new Properties();
         prop.load(fis);
-        sendKeysWebElement(uname, prop.getProperty("username"));
+        CommonActions.sendKeysWebElement(uname, prop.getProperty("username"));
         Thread.sleep(2000);
-        sendKeysWebElement(Password, prop.getProperty("password"));
-        clickingOnWebElement(submit, 1);
+        CommonActions.sendKeysWebElement(Password, prop.getProperty("password"));
+        CommonActions.clickingOnWebElement(submit, 1);
     }
 
     public void logInAndClosePopUp() {
-        clickingOnWebElement(closeform, 3);
+        CommonActions.clickingOnWebElement(closeform, 3);
     }
 }

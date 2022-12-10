@@ -1,9 +1,11 @@
+
 package listeners;
 
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import org.testng.xml.XmlSuite;
 
@@ -16,7 +18,9 @@ import java.util.Map;
 
 public class ExtentReportNg implements IReporter {
 
+    public WebDriver driver;
     private ExtentReports extent;
+
 
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
                                String outputDirectory) {
@@ -31,6 +35,7 @@ public class ExtentReportNg implements IReporter {
                 buildTestNodes(context.getPassedTests(), LogStatus.PASS);
                 buildTestNodes(context.getFailedTests(), LogStatus.FAIL);
                 buildTestNodes(context.getSkippedTests(), LogStatus.SKIP);
+
             }
         }
 
@@ -38,14 +43,16 @@ public class ExtentReportNg implements IReporter {
         extent.close();
     }
 
-    private void buildTestNodes(IResultMap tests, LogStatus status) {
+
+
+    private void buildTestNodes(IResultMap tests, LogStatus status)  {
         ExtentTest test;
 
         if (tests.size() > 0) {
             for (ITestResult result : tests.getAllResults()) {
 
                 test = extent.startTest(result.getTestClass().getName());
-                test.setDescription("Method Names: " + result.getMethod().getMethodName());
+                test.setDescription("Method Name is: " + result.getMethod().getMethodName());
 
                 test.setStartedTime(getTime(result.getStartMillis()));
                 test.setEndedTime(getTime(result.getEndMillis()));
@@ -53,19 +60,21 @@ public class ExtentReportNg implements IReporter {
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
 
-                if (result.getThrowable() != null) {
+                if(result.getStatus()==ITestResult.FAILURE){
+                    test.log(status.FAIL, "TEST CASE IS FAILED on "+result.getName() + " Method"); //to add name in extent report
                     test.log(status, result.getThrowable());
-                } else {
-                    test.log(status, "Test " + status.toString().toLowerCase()
-                            + "ed");
                 }
 
+                else if(result.getStatus()==ITestResult.SKIP){
+                    test.log(status.SKIP, "Test Case IS SKIPPED on " + result.getName() + "Method");
+                }
+                else if(result.getStatus()==ITestResult.SUCCESS){
+                    test.log(status.PASS, "Test Case IS PASSED on " + result.getName() + " Method");
+                }
                 extent.endTest(test);
             }
         }
     }
-
-
 
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
@@ -73,3 +82,4 @@ public class ExtentReportNg implements IReporter {
         return calendar.getTime();
     }
 }
+

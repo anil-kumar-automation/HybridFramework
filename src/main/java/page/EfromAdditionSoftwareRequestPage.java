@@ -8,7 +8,7 @@ import utils.CommonActions;
 
 import java.util.Collections;
 
-public class EfromAdditionSoftwareRequestPage extends CommonActions {
+public class EfromAdditionSoftwareRequestPage {
     WebDriver driver;
     /* it's finding menu element in eform Application */
     @FindBy(xpath = "//div[@class='noti__item js-item-menu']//img")
@@ -100,56 +100,56 @@ public class EfromAdditionSoftwareRequestPage extends CommonActions {
 
     /* This method is used to click menu and select request type */
     public void clickOnMenu() throws InterruptedException {
-        clickingOnWebElement(menu, 2);
-        clickingOnWebElement(type, 2);
+        CommonActions.clickingOnWebElement(menu, 2);
+        CommonActions.clickingOnWebElement(type, 2);
     }
 
     /* This method is used to select respective project name  */
     public void selectProjectName() throws InterruptedException {
         Thread.sleep(3000);
-        selectDropDownValue(projectname, "value", "AS_BFSI");
+        CommonActions.selectDropDownValue(projectname, "value", "AS_BFSI");
     }
 
     public void EnteringLocationDetails() throws InterruptedException {
-        scrollDown("window.scrollBy(0, 430)");
-        sendKeysWebElement(extensionNumber, "0000");
-        selectDropDownValue(location, "value", "IND42-A1SLG/ZCBI");
-        selectDropDownValue(assetNumber, "value", "Z/IND42/S/LPC");
-        sendKeysWebElement(assetNo, "6574");
-        sendKeysWebElement(deskNumber, "00");
+        CommonActions.scrollDown("window.scrollBy(0, 430)");
+        CommonActions.sendKeysWebElement(extensionNumber, "0000");
+        CommonActions.selectDropDownValue(location, "value", "IND42-A1SLG/ZCBI");
+        CommonActions.selectDropDownValue(assetNumber, "value", "Z/IND42/S/LPC");
+        CommonActions.sendKeysWebElement(assetNo, "6574");
+        CommonActions.sendKeysWebElement(deskNumber, "00");
     }
 
     public void SelectUserDetails() throws InterruptedException {
-        selectRadioButtonValue(Collections.singletonList(radiobtnuser), "Self");
-        sendKeysWebElement(ipAddress, "192.168.9.0");
-        sendKeysWebElement(hostname, "PO1284784747");
+        CommonActions.selectRadioButtonValue(Collections.singletonList(radiobtnuser), "Self");
+        CommonActions.sendKeysWebElement(ipAddress, "192.168.9.0");
+        CommonActions.sendKeysWebElement(hostname, "PO1284784747");
     }
 
     public void RequirementDetails() throws InterruptedException {
-        scrollDown("window.scrollBy(0, 430)");
-        clickingOnWebElement(internalProject, 3);
-        selectDropDownValue(licenseType, "index", "3");
-        selectDropDownValue(freeware, "index", "1");
-        sendKeysWebElement(productName, "Application");
+        CommonActions.scrollDown("window.scrollBy(0, 430)");
+        CommonActions.clickingOnWebElement(internalProject, 3);
+        CommonActions.selectDropDownValue(licenseType, "index", "3");
+        CommonActions.selectDropDownValue(freeware, "index", "1");
+        CommonActions.sendKeysWebElement(productName, "Application");
     }
 
     public void acceptTndC() throws InterruptedException {
-        clickingOnWebElement(tndc, 3);
+        CommonActions.clickingOnWebElement(tndc, 3);
         Thread.sleep(2000);
-        clickingOnWebElement(checkbox, 3);
-        clickingOnWebElement(okbtn, 3);
+        CommonActions.clickingOnWebElement(checkbox, 3);
+        CommonActions.clickingOnWebElement(okbtn, 3);
     }
 
 
     public void enterRemark() throws InterruptedException {
-        sendKeysWebElement(remark, "For project purpose");
-        scrollDown("window.scrollBy(0, 430)");
+        CommonActions.sendKeysWebElement(remark, "For project purpose");
+        CommonActions.scrollDown("window.scrollBy(0, 430)");
     }
 
     /* This method is used to click on submit button */
     public void clickOnSubmitbtn() throws InterruptedException {
         Thread.sleep(3000);
-        clickingOnWebElement(submitbtn, 2);
+        CommonActions.clickingOnWebElement(submitbtn, 2);
     }
 
 }

@@ -2,7 +2,7 @@ package tests;
 
 import BrowserFactory.DriverFactory;
 import org.apache.log4j.Logger;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import page.EformPrivilegeRequestPage;
 import page.LoginEformPage;
 import utils.CommonActions;
@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class EfromPrivilegeRequestTest {
     Logger log = Logger.getLogger(EfromPrivilegeRequestTest.class);
-    public CommonActions ca;
     public DriverFactory df;
     public LoginEformPage loginForEform;
     public EformPrivilegeRequestPage ef;
@@ -23,10 +22,9 @@ public class EfromPrivilegeRequestTest {
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
-        ca = new CommonActions();
-        DriverFactory df = new DriverFactory();
+        df = new DriverFactory();
         df.init_driver("chrome");
-        ca.navigateEformmurl();
+        CommonActions.navigateEformmurl();
         log.info("entering eform application URL");
     }
 
@@ -98,8 +96,7 @@ public class EfromPrivilegeRequestTest {
     /* it's help to quit the browsers*/
     @Test(priority = 10)
     public void QuitTest() {
-        ca = new CommonActions();
-        ca.tearDown();
+        CommonActions.tearDown();
         log.info("Browser is closed");
     }
 

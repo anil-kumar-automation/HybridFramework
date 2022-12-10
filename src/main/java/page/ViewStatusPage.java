@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
 
-public class ViewStatusPage extends CommonActions {
+public class ViewStatusPage {
     WebDriver driver;
 
     /* it's finding menu element in eform Application */
@@ -36,22 +36,22 @@ public class ViewStatusPage extends CommonActions {
 
     /* This method is used for click on menu button */
     public void Clickmenu() throws InterruptedException {
-        clickingOnWebElement(menu, 3);
+        CommonActions.clickingOnWebElement(menu, 3);
     }
 
     /* This method is used to select view status  */
     public void ClickViewStatusBtn() throws InterruptedException {
-        clickingOnWebElement(ViewStatusBtn, 3);
+        CommonActions.clickingOnWebElement(ViewStatusBtn, 3);
     }
 
     /* This method is used for enter the eform number in text box */
     public void EnterEformNO() throws InterruptedException {
-        sendKeysWebElement(eform, "435536");
+        CommonActions.sendKeysWebElement(eform, "435536");
     }
 
     /* This method is used for click submit button*/
     public void ClickSubmitBtn() {
-        clickingOnWebElement(submitBtn, 3);
+        CommonActions.clickingOnWebElement(submitBtn, 3);
     }
 
 

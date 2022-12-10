@@ -19,7 +19,7 @@ import java.util.Set;
 public class CommonActions {
 
     /* navigate Efrom application*/
-    public void navigateEformmurl() throws IOException {
+    public static void navigateEformmurl() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         prop.load(fis);
@@ -27,9 +27,18 @@ public class CommonActions {
         DriverFactory.getDriver().get(url1);
 
     }
+    /* navigate Efrom application*/
+    public static void navigateOrangeHrmmurl() throws IOException {
+        Properties prop = new Properties();
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
+        prop.load(fis);
+        String url2 = prop.getProperty("url2");
+        DriverFactory.getDriver().get(url2);
+
+    }
 
     /* navigate snapdeal application*/
-    public void navigateSanpdealurl() throws IOException {
+    public static void navigateSanpdealurl() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/configuration/config.properties");
         prop.load(fis);
@@ -38,7 +47,7 @@ public class CommonActions {
     }
 
     /* To click a certain Web Element */
-    public void clickingOnWebElement(WebElement element, long waitTimeInSeconds) {
+    public static void clickingOnWebElement(WebElement element, long waitTimeInSeconds) {
         //Declare and initialise a fluent wait
         FluentWait<WebDriver> wait = new FluentWait<>(DriverFactory.getDriver());
         //Specify the timout of the wait
@@ -56,7 +65,7 @@ public class CommonActions {
 
 
     /* To Type at the specified location */
-    public void sendKeysWebElement(WebElement element, String text) throws InterruptedException {
+    public static void sendKeysWebElement(WebElement element, String text) throws InterruptedException {
         //Declare and initialise a fluent wait
         FluentWait<WebDriver> wait = new FluentWait<>(DriverFactory.getDriver());
         //Specify the timout of the wait
@@ -75,44 +84,44 @@ public class CommonActions {
     }
 
     /* Wait for element clickable */
-    public WebElement waitForElement(WebElement elementName, long waitTimeSeconds) {
+    public static WebElement waitForElement(WebElement elementName, long waitTimeSeconds) {
         WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(waitTimeSeconds));
         wait.until(ExpectedConditions.elementToBeClickable(elementName));
         return elementName;
     }
 
     /* to wait until element to be visible */
-    public void explicitWaitVisibilityOfElement(By element, long timeInSeconds) {
+    public static void explicitWaitVisibilityOfElement(By element, long timeInSeconds) {
         WebDriverWait elementToBeVisible = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(timeInSeconds));
         elementToBeVisible.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
 
     /* To ScrollDown using JavaScript Executor */
-    public void scrollDown(String valueTobeSelected) {
+    public static void scrollDown(String valueTobeSelected) {
         JavascriptExecutor jse = (JavascriptExecutor) DriverFactory.getDriver();
         jse.executeScript(valueTobeSelected);
     }
 
     /* To ScrollUp using JavaScript Executor */
-    public void scrollUp(String valueTobeSelected) {
+    public static void scrollUp(String valueTobeSelected) {
         JavascriptExecutor jse = (JavascriptExecutor) DriverFactory.getDriver();
         jse.executeScript(valueTobeSelected);
     }
 
     /* To Type at the specified location before it clear the present text  */
-    public void sendKeysAndClearClick(WebElement element, String text) {
+    public static void sendKeysAndClearClick(WebElement element, String text) {
         element.click();
         element.clear();
         element.sendKeys(text);
     }
 
     /* To click a certain Web Element using DOM/ JavaScript Executor */
-    public void javaScriptExecutorClick(WebElement element) {
+    public static void javaScriptExecutorClick(WebElement element) {
         ((JavascriptExecutor) DriverFactory.getDriver()).executeScript("return arguments[0].click();", element);
     }
 
-    public void sendkeysJavaScript(WebElement element, String text) {
+    public static void sendkeysJavaScript(WebElement element, String text) {
         WebElement ele = waitForElement(element, 20);
         JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
         js.executeScript("arguments[0].value='" + text + "';", ele);
@@ -120,7 +129,7 @@ public class CommonActions {
 
 
     /* To Perform Select all Dropdown Option's  */
-    public void selectDropDownValue(WebElement element, String type, String value) {
+    public static void selectDropDownValue(WebElement element, String type, String value) {
         Select select = new Select(element);
         switch (type) {
             case "index":
@@ -139,25 +148,25 @@ public class CommonActions {
     }
 
     /* To Perform Select Option by VisibleText */
-    public void doselectByVisibleText(WebElement element, String text) {
+    public static void doselectByVisibleText(WebElement element, String text) {
         Select select = new Select(element);
         select.selectByVisibleText(text);
     }
 
     /* To Perform Select Option by Index */
-    public void doselectDropDownByIndex(WebElement element, int index) {
+    public static void doselectDropDownByIndex(WebElement element, int index) {
         Select select = new Select(element);
         select.selectByIndex(index);
     }
 
     /* To Perform Select Option by Value */
-    public void doselectDropDownByValue(WebElement element, String text) {
+    public static void doselectDropDownByValue(WebElement element, String text) {
         Select select = new Select(element);
         select.selectByValue(text);
     }
 
     /*To click radio button */
-    public void selectRadioButtonValue(List<WebElement> element, String valueTobeSelected) {
+    public static void selectRadioButtonValue(List<WebElement> element, String valueTobeSelected) {
         for (WebElement ref : element) {
             ref.click();
             break;
@@ -165,36 +174,36 @@ public class CommonActions {
     }
 
     /*To Close All Tab */
-    public void tearDown() {
+    public static void tearDown() {
         DriverFactory.getDriver().quit();
     }
 
     /* To Clear the content in the input location */
-    public void clear(WebElement element) {
+    public static void clear(WebElement element) {
         element.clear();
     }
 
 
     /* To Accept the Alert Dialog Message */
-    public void alertAccept() throws Exception {
+    public static void alertAccept() throws Exception {
         Alert al = DriverFactory.getDriver().switchTo().alert();
         al.accept();
     }
 
 
     /* To Dismiss the Alert Dialog Message */
-    public void alertDismiss() throws Exception {
+    public static void alertDismiss() throws Exception {
         Alert al = DriverFactory.getDriver().switchTo().alert();
         al.dismiss();
     }
 
     //accepting an alert From UI
-    public void acceptAlert(WebDriver driver) {
+    public static void acceptAlert(WebDriver driver) {
         driver.switchTo().alert().accept();
     }
 
     /* To Get the Alert Messages */
-    public String getAlertText() throws Exception {
+    public static String getAlertText() throws Exception {
         Alert al = DriverFactory.getDriver().switchTo().alert();
         String text = al.getText();
         Thread.sleep(2000);
@@ -204,26 +213,26 @@ public class CommonActions {
 
 
     /* To Perform a WebAction of Mouse Over */
-    public void mouseHover(WebElement element) {
+    public static void mouseHover(WebElement element) {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.moveToElement(element).build().perform();
     }
 
     /* To Drag and Drop from Source Locator to Destination Locator */
-    public void dragAndDrop(WebElement Source, WebElement Destination) {
+    public static void dragAndDrop(WebElement Source, WebElement Destination) {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.dragAndDrop(Source, Destination);
     }
 
 
     /*To Drag from the given WebElement Location and Drop at the given WebElement location */
-    public void dragAndDropTo(WebElement Source, int XOffset, int YOffset) throws Exception {
+    public static void dragAndDropTo(WebElement Source, int XOffset, int YOffset) throws Exception {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.dragAndDropBy(Source, XOffset, YOffset);
     }
 
     /*To Open a Page in New Tab */
-    public void rightClick(WebElement element) {
+    public static void rightClick(WebElement element) {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.contextClick(element);
         ac.build().perform();
@@ -231,7 +240,7 @@ public class CommonActions {
 
 
     /*To Perform Click and Hold Action */
-    public void clickAndHold(WebElement element) {
+    public static void clickAndHold(WebElement element) {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.clickAndHold(element);
         ac.build().perform();
@@ -239,37 +248,37 @@ public class CommonActions {
 
 
     /*To Perform Click and Hold Action */
-    public void doubleClick(WebElement element) {
+    public static void doubleClick(WebElement element) {
         Actions ac = new Actions(DriverFactory.getDriver());
         ac.doubleClick(element);
         ac.build().perform();
     }
 
     /*To Switch To Frame By Index */
-    public void switchToFrameByIndex(int index) throws Exception {
+    public static void switchToFrameByIndex(int index) throws Exception {
         DriverFactory.getDriver().switchTo().frame(index);
     }
 
 
     /*To Switch To Frame By Frame Name */
-    public void switchToFrameByFrameName(String frameName) throws Exception {
+    public static void switchToFrameByFrameName(String frameName) throws Exception {
         DriverFactory.getDriver().switchTo().frame(frameName);
     }
 
 
     /*To Switch To Frame By Web Element */
-    public void switchToFrameByWebElement(WebElement element) throws Exception {
+    public static void switchToFrameByWebElement(WebElement element) throws Exception {
         DriverFactory.getDriver().switchTo().frame(element);
     }
 
 
     /*To Switch out of a Frame */
-    public void switchOutOfFrame() throws Exception {
+    public static void switchOutOfFrame() throws Exception {
         DriverFactory.getDriver().switchTo().defaultContent();
     }
 
     /*To Switch out of a Frame */
-    public void windowHandler() throws Exception {
+    public static void windowHandler() throws Exception {
         Set<String> windows = DriverFactory.getDriver().getWindowHandles(); //[parentid,childid,subchildId]
         Iterator<String> it = windows.iterator();
         String parentId = it.next();
@@ -280,7 +289,7 @@ public class CommonActions {
 
 
     /*Calendar it helps to select future data */
-    public void selectCalendar(String expectDay, String expectMonth, String expectYear) {
+    public static void selectCalendar(String expectDay, String expectMonth, String expectYear) {
         if (expectMonth.equals("February") && Integer.parseInt(expectDay) > 29) {
             System.out.println("wrong date: " + expectMonth + " : " + expectDay);
             return;

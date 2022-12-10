@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonActions;
 
-public class EformPrivilegeRequestPage extends CommonActions {
+public class EformPrivilegeRequestPage   {
 
     WebDriver driver;
     /* it's finding menu element in eform Application */
@@ -79,28 +79,28 @@ public class EformPrivilegeRequestPage extends CommonActions {
 
     /* This method is used to click menu and select request type */
     public void clickOnMenu() {
-        clickingOnWebElement(menu, 2);
-        clickingOnWebElement(type, 2);
+        CommonActions.clickingOnWebElement(menu, 2);
+        CommonActions.clickingOnWebElement(type, 2);
     }
 
     /* This method is used to select respective project name  */
     public void selectProjectName() throws InterruptedException {
         Thread.sleep(3000);
-        selectDropDownValue(projectname, "value", "AS_BFSI");
+        CommonActions.selectDropDownValue(projectname, "value", "AS_BFSI");
     }
 
 
     /* This method is used to fill location details */
     public void enterLocationDetails() throws InterruptedException {
-        selectDropDownValue(assetType, "value", "Desktop");
-        selectDropDownValue(assetNumber, "value", "Z/IND42/S/LPC");
-        sendKeysWebElement(assetNo, "6574");
-        sendKeysWebElement(extensionNumber, "0000");
-        scrollDown("window.scrollBy(0, 430);");
+        CommonActions.selectDropDownValue(assetType, "value", "Desktop");
+        CommonActions.selectDropDownValue(assetNumber, "value", "Z/IND42/S/LPC");
+        CommonActions.sendKeysWebElement(assetNo, "6574");
+        CommonActions.sendKeysWebElement(extensionNumber, "0000");
+        CommonActions.scrollDown("window.scrollBy(0, 430);");
         Thread.sleep(1000);
-        selectDropDownValue(location, "value", "IND42-A1SLG/ZCBI");
+        CommonActions.selectDropDownValue(location, "value", "IND42-A1SLG/ZCBI");
         Thread.sleep(1000);
-        sendKeysWebElement(deskNumber, "00");
+        CommonActions.sendKeysWebElement(deskNumber, "00");
     }
 
     /* This method is used to host detail */
@@ -111,19 +111,19 @@ public class EformPrivilegeRequestPage extends CommonActions {
     /* This method is used to enter remark details */
     public void enterRemark() throws InterruptedException {
         Thread.sleep(1000);
-        sendKeysWebElement(remark, "For project purpose");
+        CommonActions.sendKeysWebElement(remark, "For project purpose");
         Thread.sleep(1000);
-        scrollDown("window.scrollBy(0, 400);");
+        CommonActions.scrollDown("window.scrollBy(0, 400);");
     }
 
     /* This method is used to accept the terms and conditions before submitting request */
     public void clickOnCheckBox() {
-        clickingOnWebElement(checkbox, 2);
+        CommonActions.clickingOnWebElement(checkbox, 2);
     }
 
     /* This method is used to click on submit button */
     public void clickOnSubmitbtn() {
-        clickingOnWebElement(submitbtn, 2);
+        CommonActions.clickingOnWebElement(submitbtn, 2);
     }
 
 }

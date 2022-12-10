@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class EfromAdditionSoftwareRequestTest {
 
-    public CommonActions ca;
+
     public DriverFactory df;
     public LoginEformPage loginForEform;
     public EfromAdditionSoftwareRequestPage easr;
@@ -24,10 +24,9 @@ public class EfromAdditionSoftwareRequestTest {
     @Test(priority = 1)
     public void launchBrowserTest() throws IOException {
         log.info("****************************** Starting test cases execution  *****************************************");
-        DriverFactory df = new DriverFactory();
-        ca = new CommonActions();
+        df = new DriverFactory();
         df.init_driver("chrome");
-        ca.navigateEformmurl();
+        CommonActions.navigateEformmurl();
         log.info("entering eform application URL");
         log.warn("Hey this just a warning message");
         log.fatal("hey this is just fatal error message");
@@ -75,8 +74,7 @@ public class EfromAdditionSoftwareRequestTest {
     /* it's help to quit the browsers*/
     @Test(priority = 5)
     public void QuitTest() {
-        ca = new CommonActions();
-        ca.tearDown();
+        CommonActions.tearDown();
         log.info("Browser is closed");
     }
 

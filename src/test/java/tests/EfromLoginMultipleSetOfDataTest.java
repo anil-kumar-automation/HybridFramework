@@ -2,24 +2,18 @@ package tests;
 
 import BrowserFactory.DriverFactory;
 import controllers.ExcelDataProvider;
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.LoginEformPage;
 import utils.CommonActions;
 
-import java.io.File;
 import java.io.IOException;
 
 
 public class EfromLoginMultipleSetOfDataTest {
-    public CommonActions ca;
     public DriverFactory df;
     public LoginEformPage loginefrompage;
     Logger log = Logger.getLogger(EfromLoginMultipleSetOfDataTest.class);
@@ -31,9 +25,8 @@ public class EfromLoginMultipleSetOfDataTest {
     @BeforeMethod
     public void launchBrowserTest() throws IOException {
         DriverFactory df = new DriverFactory();
-        ca = new CommonActions();
         df.init_driver("chrome");
-        ca.navigateEformmurl();
+        CommonActions.navigateEformmurl();
         log.info("entering eform application URL");
     }
 
@@ -48,8 +41,7 @@ public class EfromLoginMultipleSetOfDataTest {
     /* it's help to quit the browsers*/
     @AfterMethod
     public void QuitTest() {
-        ca = new CommonActions();
-        ca.tearDown();
+        CommonActions.tearDown();
         log.info("Browser is closed");
     }
 }

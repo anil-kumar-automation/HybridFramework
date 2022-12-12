@@ -1,28 +1,88 @@
+/*
 package tests;
+
 import BrowserFactory.DriverFactory;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import listeners.ExtentTestNGIReporterListener;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import page.AddEmployeeForHrmPage;
+import page.EfromAdditionSoftwareRequestPage;
+import page.LoginEformPage;
 import page.LoginForHrmPage;
 import utils.CommonActions;
+
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 
 
+public class PimHrmReportTestcases {
 
-
-public class PimHrmTestcases {
-    ExtentTest test;
-    ExtentReports extent = new ExtentReports();
     public DriverFactory df;
     public LoginForHrmPage loginForHrm;
     public AddEmployeeForHrmPage aep;
-    /* Logger log = Logger.getLogger(PimHrmTestcases.class);*/
-    private Logger log = (Logger) LogManager.getLogger(PimHrmTestcases.class);
+    */
+/* Logger log = Logger.getLogger(PimHrmTestcases.class);*//*
+
+    private Logger log = (Logger) LogManager.getLogger(PimHrmReportTestcases.class);
+    ExtentReports extent = new ExtentReports();
+    ExtentTest extentTest;
+    public ExtentTestNGIReporterListener etrl;
+
+    public static String getScreenshot(WebDriver driver) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+
+        File src = ts.getScreenshotAs(OutputType.FILE);
+
+        String path = System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png";
+
+        File destination = new File(path);
+
+        try {
+            FileUtils.copyFile(src, destination);
+        } catch (IOException e) {
+            System.out.println("Capture Failed " + e.getMessage());
+        }
+
+        return path;
+    }
+
+    @BeforeMethod
+    public void setup() {
+        etrl = new ExtentTestNGIReporterListener();
+        ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReportWithScreenShot.html");
+
+        extent = new ExtentReports();
+
+        extent.attachReporter(reporter);
+
+        extentTest = extent.createTest("LoginTest");
+    }
+
+    @AfterMethod
+    public void tearDown(ITestResult result) throws IOException {
+
+        if (result.getStatus() == ITestResult.FAILURE) {
+            String temp = getScreenshot(DriverFactory.getDriver());
+
+            extentTest.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+        }
+
+        extent.flush();
+
+    }
 
     @Test(priority = 1)
     public void launch() throws IOException {
@@ -98,20 +158,25 @@ public class PimHrmTestcases {
 
    @Test(priority = 10)
     public void quit() throws IOException {
-        /*if(result.getStatus()==result.FAILURE || result.getStatus()==result.SKIP) {
+        */
+/*if(result.getStatus()==result.FAILURE || result.getStatus()==result.SKIP) {
             String screenshotPath = util.captureScreenshot(driver, result.getName());
             result.setAttribute("screenshotPath", screenshotPath); //sets the value the variable/attribute screenshotPath as the path of the sceenshot
-        }*/
-       /*if(result.getStatus()==ITestResult.FAILURE)
+        }*//*
+
+       */
+/*if(result.getStatus()==ITestResult.FAILURE)
         {
             String temp= getScreenshot(DriverFactory.getDriver());
 
             test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
         }
         extent.flush();
-*/
+*//*
+
         CommonActions.tearDown();
         log.info("closing Orange HRM application browser");
     }
 }
 
+*/

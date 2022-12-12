@@ -19,7 +19,6 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-lite:5.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.21" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.07" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi:5.2.2" level="project" />
@@ -91,7 +90,6 @@
     <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.60.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.60.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.60.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.netty:netty-reactive-streams:2.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
@@ -106,17 +104,21 @@
     <orderEntry type="library" name="Maven: com.relevantcodes:extentreports:2.41.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
     <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.8.11.1" level="project" />
-    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:bson:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:3.0.4" level="project" />
-    <orderEntry type="library" name="Maven: com.aventstack:extentreports:3.1.5" level="project" />
+    <orderEntry type="library" name="Maven: com.aventstack:extentreports:5.0.9" level="project" />
+    <orderEntry type="library" name="Maven: io.reactivex.rxjava3:rxjava:3.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.11.0" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.30" level="project" />
+    <orderEntry type="library" name="Maven: com.aventstack:extentreports-testng-adapter:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.aventstack:klov-reporter:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: com.aventstack:extentreports-testng-adapter:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: com.aventstack:klov-reporter:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.mysql:mysql-connector-j:8.0.31" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.19.4" level="project" />
     <orderEntry type="library" name="Maven: com.oracle.database.jdbc:ojdbc10:19.3.0.0" level="project" />

@@ -1,3 +1,4 @@
+/*
 package listeners;
 
 import BrowserFactory.DriverFactory;
@@ -17,11 +18,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/* aventstack extent code it's supported with 3.1.5 version dependency,,notePoint if use this code for reports just comment 5.1.0 version in pom.xml */
+*/
+/* aventstack extent code it's supported with 3.1.5 version dependency,,notePoint if use this code for reports just comment 5.1.0 version in pom.xml *//*
+
 public class ExtentTestNGIReporter  implements IReporter {
 
-   /* private static final String OUTPUT_FOLDER = "test-output/";
-    private static final String FILE_NAME = "Extent.html";*/
+   */
+/* private static final String OUTPUT_FOLDER = "test-output/";
+    private static final String FILE_NAME = "Extent.html";*//*
+
 
         private ExtentReports extent;
         private ExtentTest test;
@@ -83,8 +88,10 @@ public class ExtentTestNGIReporter  implements IReporter {
                         //test.log(Status.FAIL, "TEST CASE FAILED On "+result.getThrowable()); //to add error/exception in extent report
 
 
-                        /*String screenshotPath = ScreenShot.getScreenshot(DriverFactory.getDriver());
-                        test.fail("Test Case failed check screenshot below"+test.addScreenCaptureFromPath(screenshotPath));*/
+                        */
+/*String screenshotPath = ScreenShot.getScreenshot(DriverFactory.getDriver());
+                        test.fail("Test Case failed check screenshot below"+test.addScreenCaptureFromPath(screenshotPath));*//*
+
 
                         //extentTest.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); //to add screenshot in extent report
                         //extentTest.fail("details").addScreenCaptureFromPath(screenshotPath);
@@ -96,9 +103,11 @@ public class ExtentTestNGIReporter  implements IReporter {
                         test.log(Status.PASS, "Test Case PASSED On " + result.getName());
 
                     }
-                    /*else {
+                    */
+/*else {
                         test.log(status, "Test " + status.toString().toLowerCase() + "ed");
-                    }*/
+                    }*//*
+
 
                     test.getModel().setStartTime(getTime(result.getStartMillis()));
                     test.getModel().setEndTime(getTime(result.getEndMillis()));
@@ -106,7 +115,8 @@ public class ExtentTestNGIReporter  implements IReporter {
             }
         }
 
-     /*   public void down(ITestResult result) throws IOException {
+     */
+/*   public void down(ITestResult result) throws IOException {
 
 
             if(result.getStatus()==ITestResult.FAILURE){
@@ -127,10 +137,12 @@ public class ExtentTestNGIReporter  implements IReporter {
             }
             extent.flush();
         }
-*/
+*//*
+
         private Date getTime(long millis) {
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(millis);
             return calendar.getTime();
         }
     }
+*/

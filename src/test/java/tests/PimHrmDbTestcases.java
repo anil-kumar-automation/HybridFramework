@@ -1,41 +1,39 @@
+/*
 package tests;
+
+
 import BrowserFactory.DriverFactory;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import controllers.MySqlDataProvider;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import page.AddEmployeeForHrmPage;
 import page.LoginForHrmPage;
 import utils.CommonActions;
-import java.awt.*;
+
 import java.io.IOException;
 
-
-
-
-public class PimHrmTestcases {
-    ExtentTest test;
-    ExtentReports extent = new ExtentReports();
+public class PimHrmDbTestcases  {
     public DriverFactory df;
     public LoginForHrmPage loginForHrm;
     public AddEmployeeForHrmPage aep;
-    /* Logger log = Logger.getLogger(PimHrmTestcases.class);*/
+    */
+/* Logger log = Logger.getLogger(PimHrmTestcases.class);*//*
+
     private Logger log = (Logger) LogManager.getLogger(PimHrmTestcases.class);
 
     @Test(priority = 1)
     public void launch() throws IOException {
         df = new DriverFactory();
-        df.init_driver("edge");
+        df.init_driver("chrome");
         CommonActions.navigateOrangeHrmmurl();
         log.info("entering Orange HRM application URL");
     }
 
-    @Test(priority = 2)
-    public void login() throws IOException, InterruptedException {
+    @Test(priority = 2, dataProvider = "ExtractDataFromMySqlDatabase1", dataProviderClass = MySqlDataProvider.class )
+    public void login(String username,String password) throws IOException, InterruptedException {
         loginForHrm = new LoginForHrmPage(DriverFactory.getDriver());
-        loginForHrm.setLogindetail();
+        loginForHrm.setLogindetailDb(username,password);
         log.info("entering credential on Orange HRM application");
     }
 
@@ -55,12 +53,11 @@ public class PimHrmTestcases {
         Thread.sleep(2000);
     }
 
-
-    @Test(priority = 5)
-    public void AddPageAction() throws IOException, AWTException, InterruptedException {
+    @Test(priority = 5, dataProvider = "ExtractDataFromMySqlDatabase2", dataProviderClass = MySqlDataProvider.class)
+    public void AddPageAction(String firstname,String middlename, String lastname) throws InterruptedException {
         aep = new AddEmployeeForHrmPage(DriverFactory.getDriver());
-        aep.AddEmployeeActions();
-        log.info("entering Orange HRM application URL");
+        aep.AddEmployeeActionsDb(firstname,middlename,lastname);
+        log.info("Successfully entered employee in add_employee page");
     }
 
     @Test(priority = 6)
@@ -96,22 +93,11 @@ public class PimHrmTestcases {
         Thread.sleep(2000);
     }
 
-   @Test(priority = 10)
+    @Test(priority = 10)
     public void quit() {
-        /*if(result.getStatus()==result.FAILURE || result.getStatus()==result.SKIP) {
-            String screenshotPath = util.captureScreenshot(driver, result.getName());
-            result.setAttribute("screenshotPath", screenshotPath); //sets the value the variable/attribute screenshotPath as the path of the sceenshot
-        }*/
-       /*if(result.getStatus()==ITestResult.FAILURE)
-        {
-            String temp= getScreenshot(DriverFactory.getDriver());
-
-            test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-        }
-        extent.flush();
-*/
         CommonActions.tearDown();
         log.info("closing Orange HRM application browser");
     }
 }
 
+*/

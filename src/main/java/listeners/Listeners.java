@@ -24,7 +24,6 @@ public class Listeners extends ExtentTestNGIReporterListener implements ITestLis
 
         @Override
         public void onTestSuccess(ITestResult result) {
-            extestTest.get().log(Status.PASS,"Successful");
             extestTest.get().log(Status.PASS, "Test Case IS PASSED on " + result.getName() + " Method");
             try {
                 extestTest.get().addScreenCaptureFromPath(getScreenShotPath(result.getMethod().getMethodName()), result.getMethod().getMethodName());

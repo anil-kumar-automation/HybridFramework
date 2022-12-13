@@ -2,18 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="tests" thread-count="3">
     <listeners>
-        <listener class-name="listeners.Listeners"/>
-       <!-- <listener class-name="listeners.ExtentTestNGIReporterListenerVersion5"/>-->
-        <!--<listener class-name="listeners.ExtentReportNg"/>-->
-
+       <listener class-name="listeners.Listeners"/>
     </listeners>
-
  <!--   <test name="ChromeTest">
         <classes>
             <class name="tests.EfromPrivilegeRequestTest"></class>
         </classes>
     </test>
-
     <test name="ChromeTest1">
         <classes>
             <class name="tests.EfromAdditionSoftwareRequestTest"></class>

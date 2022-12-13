@@ -31,6 +31,13 @@ public class LoginForHrmPage   {
 
     }
 
+    public void  setLogindetailDb(String username, String password) throws IOException, InterruptedException {
+        CommonActions.sendKeysWebElement(uname, username);
+        CommonActions.sendKeysWebElement(pword,password);
+        CommonActions.clickingOnWebElement(LogIn_Button,1 );
+
+    }
+
 }
 
 

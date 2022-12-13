@@ -56,9 +56,14 @@ public class DBUtils {
             se.printStackTrace();
         }
         finally {
-            resultSet.close();
-            statement.close();
-            connection.close();
+            if(resultSet != null)
+                resultSet.close();
+
+            if(statement != null)
+                statement.close();
+
+            if(connection != null)
+                connection.close();
         }
         return data;
     }

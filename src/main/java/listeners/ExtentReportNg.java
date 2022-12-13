@@ -21,7 +21,6 @@ public class ExtentReportNg implements IReporter {
     public WebDriver driver;
     private ExtentReports extent;
 
-
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
                                String outputDirectory) {
         extent = new ExtentReports(outputDirectory + File.separator
@@ -38,7 +37,6 @@ public class ExtentReportNg implements IReporter {
 
             }
         }
-
         extent.flush();//it notify the test done
         extent.close();
     }

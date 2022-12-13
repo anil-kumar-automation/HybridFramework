@@ -7,20 +7,17 @@ public class DBConnectionBuilder {
     /*Group of pre-defined constants.*/
     public enum Connections{
         SQL_DRIVER("sql_driver","com.mysql.cj.jdbc.Driver"),
-        SQL_CONNECTION_URL("mySqlUrl","jdbc:mysql://localhost:3306/E_formDetails"),
+        SQL_CONNECTION_URL("mySqlUrl","jdbc:mysql://localhost:3306/orangehrm"),
         SQL_USERNAME("sqlUsername","root"),
         SQL_PASSWORD("sqlPassword","Sriman@7849"),
-
-        MS_SQL_SERVER_URL("server_url",""),
-        MS_SQL_SERVER_USERNAME("sqlServerUsername","sk66921"),
-        MS_SQL_SERVER_PASSWORD("sqlServerPassword","sN#736yana"),
+        SQL_QUERY1("sqlQuery1","select * from credentials;"),
+        SQL_QUERY2("sqlQuery2","select * from add_employee"),
         ORACLE_DRIVER("oracle_driver","oracle.jdbc.driver.OracleDriver"),
         ORACLE_CONNECTION_URL(" "," "),
         ORACLE_USERNAME("oracleUsername "," "),
         ORACLE_PASSWORD("oraclePassword"," "),
         MONGO_HOSTNAME("mongoHost","localhost"),
         MONGO_PORT_NUMBER("mongoPort",2707),
-        SQL_QUERY("sqlQuery","select * from credentials;"),
         ORACLE_QUERY("oracleQuery","select * from credentials");
         private String property;
         private String value;

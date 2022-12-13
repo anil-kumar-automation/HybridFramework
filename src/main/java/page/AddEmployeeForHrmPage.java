@@ -111,6 +111,12 @@ public class AddEmployeeForHrmPage  {
         CommonActions.clickingOnWebElement(Save, 3);
     }
 
+    public void AddEmployeeActionsDb(String fName, String mName,String lName) throws InterruptedException {
+        CommonActions.sendKeysWebElement(FirstName, fName);
+        CommonActions.sendKeysWebElement(MiddleName, mName);
+        CommonActions.sendKeysWebElement(LastName, lName);
+        CommonActions.clickingOnWebElement(Save, 3);
+    }
     public void scrool() throws InterruptedException {
         CommonActions.scrollDown("window.scrollBy(0, 500);");
     }

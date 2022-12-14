@@ -288,7 +288,7 @@ public class CommonActions {
     }
 
 
-    /*Calendar it helps to select future data */
+    /*Calendar it helps to select future data on hrm application*/
     public static void selectCalendar(String expectDay, String expectMonth, String expectYear) {
         if (expectMonth.equals("February") && Integer.parseInt(expectDay) > 29) {
             System.out.println("wrong date: " + expectMonth + " : " + expectDay);

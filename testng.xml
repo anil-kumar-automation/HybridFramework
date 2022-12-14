@@ -4,21 +4,30 @@
     <listeners>
        <listener class-name="listeners.Listeners"/>
     </listeners>
- <!--   <test name="ChromeTest">
+
+  <!--<test name="ChromeTest">
         <classes>
             <class name="tests.EfromPrivilegeRequestTest"></class>
         </classes>
     </test>
+
     <test name="ChromeTest1">
         <classes>
             <class name="tests.EfromAdditionSoftwareRequestTest"></class>
         </classes>
     </test>-->
 
+
     <test name="EdgeTest">
         <classes>
             <class name="tests.PimHrmTestcases"></class>
         </classes>
     </test>
+
+    <!--<test name="EdgeTest1">
+        <classes>
+            <class name="tests.SnapdealScenariosTest"></class>
+        </classes>
+    </test>-->
 
 </suite>

@@ -1,4 +1,3 @@
-/*
 package tests;
 
 
@@ -17,10 +16,7 @@ public class PimHrmDbTestcases  {
     public DriverFactory df;
     public LoginForHrmPage loginForHrm;
     public AddEmployeeForHrmPage aep;
-    */
-/* Logger log = Logger.getLogger(PimHrmTestcases.class);*//*
-
-    private Logger log = (Logger) LogManager.getLogger(PimHrmTestcases.class);
+    Logger log = Logger.getLogger(PimHrmTestcases.class);
 
     @Test(priority = 1)
     public void launch() throws IOException {
@@ -100,4 +96,3 @@ public class PimHrmDbTestcases  {
     }
 }
 
-*/

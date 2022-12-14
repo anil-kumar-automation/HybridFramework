@@ -30,7 +30,7 @@ public class EfromAdditionSoftwareRequestTest {
         log.info("entering eform application URL");
         log.warn("Hey this just a warning message");
         log.fatal("hey this is just fatal error message");
-        log.debug("this is debug message");
+        //log.debug("this is debug message");
     }
 
     /*TC_03 :This method is used to login using credential*/

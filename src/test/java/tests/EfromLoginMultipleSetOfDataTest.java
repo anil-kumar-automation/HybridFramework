@@ -17,14 +17,14 @@ public class EfromLoginMultipleSetOfDataTest {
     public DriverFactory df;
     public LoginEformPage loginefrompage;
     Logger log = Logger.getLogger(EfromLoginMultipleSetOfDataTest.class);
-    private WebDriver driver;
+    //private WebDriver driver;
 
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
 
     /* TC_02 :This method is used to navigate respective BROWSER & URL*/
     @BeforeMethod
     public void launchBrowserTest() throws IOException {
-        DriverFactory df = new DriverFactory();
+         df = new DriverFactory();
         df.init_driver("chrome");
         CommonActions.navigateEformmurl();
         log.info("entering eform application URL");

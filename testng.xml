@@ -5,18 +5,29 @@
        <listener class-name="listeners.Listeners"/>
     </listeners>
 
-  <!--<test name="ChromeTest">
+  <test name="ChromeTest">
+        <classes>
+            <class name="tests.EfromLoginMultipleSetOfDataTest"></class>
+        </classes>
+    </test>
+
+  <!--  <test name="ChromeTest1">
+        <classes>
+            <class name="tests.EfromAdditionSoftwareRequestTest"></class>
+        </classes>
+    </test>
+
+    <test name="ChromeTest2">
         <classes>
             <class name="tests.EfromPrivilegeRequestTest"></class>
         </classes>
     </test>
 
-    <test name="ChromeTest1">
+    <test name="ChromeTest4">
         <classes>
-            <class name="tests.EfromAdditionSoftwareRequestTest"></class>
+            <class name="tests.EfromViewStatusTest"></class>
         </classes>
-    </test>-->
-
+    </test>
 
     <test name="EdgeTest">
         <classes>
@@ -24,7 +35,7 @@
         </classes>
     </test>
 
-    <!--<test name="EdgeTest1">
+    <test name="EdgeTest1">
         <classes>
             <class name="tests.SnapdealScenariosTest"></class>
         </classes>

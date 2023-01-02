@@ -1,0 +1,29 @@
+{
+  "project":"AS_BFSI",
+
+  "Location Details": {
+    "assettype": "Desktop",
+    "assetnumber": "Z/IND42/S/LPC",
+    "assetno": "6574",
+    "extensionnumber": "0000",
+    "scrolldown": "window.scrollBy(0, 430)",
+    "location": "IND42-A1SLG/ZCBI",
+    "desknumber": "00"
+  },
+  "user details": [
+    {
+      "ipAddress": "192.168.9.0",
+      "hostname": "PO1284784747"
+    },
+    {
+      "licenseType":"3",
+      "commercial":"1",
+      "requiredate":"30/11/2022",
+      "productdetails":"Application"
+    },
+    {
+      "remark": "For project purpose"
+    }
+  ]
+}
+

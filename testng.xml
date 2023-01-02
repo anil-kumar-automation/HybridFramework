@@ -7,7 +7,7 @@
 
   <test name="ChromeTest">
         <classes>
-            <class name="tests.EfromLoginMultipleSetOfDataTest"></class>
+            <class name="tests.EfromAdditionSoftwareRequestTestJson"></class>
         </classes>
     </test>
 

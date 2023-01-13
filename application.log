@@ -1,0 +1,35 @@
+2023-01-05 10:39:26,586  INFO [TestNG-PoolService-4] DriverFactory:44 - browser name is: chrome
+2023-01-05 10:39:26,586  INFO [TestNG-PoolService-2] DriverFactory:44 - browser name is: chrome
+2023-01-05 10:39:26,596  INFO [TestNG-PoolService-4] DriverFactory:45 - launching chrome browser
+2023-01-05 10:39:26,598  INFO [TestNG-PoolService-2] DriverFactory:45 - launching chrome browser
+2023-01-05 10:39:27,434  INFO [TestNG-PoolService-1] DriverFactory:44 - browser name is: chrome
+2023-01-05 10:39:27,435  INFO [TestNG-PoolService-1] DriverFactory:45 - launching chrome browser
+2023-01-05 10:39:28,919  INFO [TestNG-PoolService-3] DriverFactory:44 - browser name is: chrome
+2023-01-05 10:39:28,920  INFO [TestNG-PoolService-0] DriverFactory:44 - browser name is: chrome
+2023-01-05 10:39:28,920  INFO [TestNG-PoolService-3] DriverFactory:45 - launching chrome browser
+2023-01-05 10:39:28,921  INFO [TestNG-PoolService-0] DriverFactory:45 - launching chrome browser
+2023-01-05 10:39:37,799  INFO [TestNG-PoolService-1] EfromLoginMultipleSetOfDataTest:30 - entering eform application URL
+2023-01-05 10:39:38,011  INFO [TestNG-PoolService-4] EfromLoginMultipleSetOfDataTest:30 - entering eform application URL
+2023-01-05 10:39:39,069  INFO [TestNG-PoolService-1] LoginEformPage:41 - entered username credential as : AS61837
+2023-01-05 10:39:39,192  INFO [TestNG-PoolService-4] LoginEformPage:41 - entered username credential as : SK57670
+2023-01-05 10:39:39,533  INFO [TestNG-PoolService-2] EfromLoginMultipleSetOfDataTest:30 - entering eform application URL
+2023-01-05 10:39:39,966  INFO [TestNG-PoolService-3] EfromLoginMultipleSetOfDataTest:30 - entering eform application URL
+2023-01-05 10:39:40,209  INFO [TestNG-PoolService-0] EfromLoginMultipleSetOfDataTest:30 - entering eform application URL
+2023-01-05 10:39:40,431  INFO [TestNG-PoolService-2] LoginEformPage:41 - entered username credential as : AC67129
+2023-01-05 10:39:40,896  INFO [TestNG-PoolService-3] LoginEformPage:41 - entered username credential as : DN67143
+2023-01-05 10:39:41,092  INFO [TestNG-PoolService-0] LoginEformPage:41 - entered username credential as : SK66921
+2023-01-05 10:39:41,934  INFO [TestNG-PoolService-1] LoginEformPage:44 - entered password credential as : as45678
+2023-01-05 10:39:42,169  INFO [TestNG-PoolService-4] LoginEformPage:44 - entered password credential as : sk98345
+2023-01-05 10:39:42,493  INFO [TestNG-PoolService-1] EfromLoginMultipleSetOfDataTest:38 - successfully entered credentials
+2023-01-05 10:39:42,635  INFO [TestNG-PoolService-4] EfromLoginMultipleSetOfDataTest:38 - successfully entered credentials
+2023-01-05 10:39:43,182  INFO [TestNG-PoolService-2] LoginEformPage:44 - entered password credential as : ac54677
+2023-01-05 10:39:43,430  INFO [TestNG-PoolService-3] LoginEformPage:44 - entered password credential as : dn78699
+2023-01-05 10:39:43,469  INFO [TestNG-PoolService-2] EfromLoginMultipleSetOfDataTest:38 - successfully entered credentials
+2023-01-05 10:39:43,838  INFO [TestNG-PoolService-0] LoginEformPage:44 - entered password credential as : sk12345
+2023-01-05 10:39:43,893  INFO [TestNG-PoolService-3] EfromLoginMultipleSetOfDataTest:38 - successfully entered credentials
+2023-01-05 10:39:44,352  INFO [TestNG-PoolService-0] EfromLoginMultipleSetOfDataTest:38 - successfully entered credentials
+2023-01-05 10:39:46,475  INFO [TestNG-PoolService-0] EfromLoginMultipleSetOfDataTest:45 - Browser is closed
+2023-01-05 10:39:46,909  INFO [TestNG-PoolService-3] EfromLoginMultipleSetOfDataTest:45 - Browser is closed
+2023-01-05 10:39:51,206  INFO [TestNG-PoolService-2] EfromLoginMultipleSetOfDataTest:45 - Browser is closed
+2023-01-05 10:39:51,290  INFO [TestNG-PoolService-4] EfromLoginMultipleSetOfDataTest:45 - Browser is closed
+2023-01-05 10:39:51,793  INFO [TestNG-PoolService-1] EfromLoginMultipleSetOfDataTest:45 - Browser is closed

@@ -1,9 +1,13 @@
+/*
 package listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,7 +22,8 @@ public class Listeners  extends ExtentTestNGIReporterListener implements ITestLi
     String concatenate = ".";
 
 
-    private static ThreadLocal<ExtentTest> extestTest = new ThreadLocal<ExtentTest>();
+   // private static ThreadLocal<ExtentTest> extestTest = new ThreadLocal<ExtentTest>();
+   public static ThreadLocal<ExtentTest> extestTest = new ThreadLocal<ExtentTest>(); // for lenin sugest code
     @Override
     public void onTestStart(ITestResult result) {
         test = extent.createTest(result.getMethod().getMethodName());
@@ -43,7 +48,9 @@ public class Listeners  extends ExtentTestNGIReporterListener implements ITestLi
 
     @Override
     public void onTestSkipped(ITestResult result) {
-
+        String logText = "<b>Test Method " + result.getMethod().getMethodName() + " Skipped</b>";
+        Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREY);
+        extestTest.get().log(Status.SKIP,m);
     }
 
     @Override
@@ -60,4 +67,4 @@ public class Listeners  extends ExtentTestNGIReporterListener implements ITestLi
     public void onFinish(ITestContext context) {
         extent.flush();
     }
-}
+}*/

@@ -119,7 +119,7 @@ public class EfromAdditionSoftwareRequestPageJson {
 
         // parsing file "JSONExample.json"
         Object obj = new JSONParser()
-                .parse(new FileReader(System.getProperty("user.dir") +"/src/test/resources/Data.json"));
+                .parse(new FileReader(System.getProperty("user.dir") +"/src/test/resources/payloads/Data.json"));
 
         // typecasting obj to JSONObject
         JSONObject jsonObject = (JSONObject) obj;

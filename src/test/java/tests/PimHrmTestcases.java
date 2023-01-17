@@ -19,7 +19,6 @@ public class PimHrmTestcases {
 
 
     private static Logger Log = (Logger) LogManager.getLogger(PimHrmTestcases.class);
-
     //private static Logger Log = Logger.getLogger(PimHrmTestcases.class);
 
     public static void info(String message) {

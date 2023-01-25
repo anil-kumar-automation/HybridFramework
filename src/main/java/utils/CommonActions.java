@@ -1,6 +1,6 @@
 package utils;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;

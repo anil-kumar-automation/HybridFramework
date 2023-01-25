@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SnapdealScenarios extends CommonActions {
     WebDriver driver;
-    @FindBy(xpath = "//div[@id='add-cart-button-id']")
+    @FindBy(xpath = "//div[@id='add-cart-button-id']234")
     WebElement clickAddtoCart;
 
     @FindBy(xpath = "//div[@class='remove-item-div']")

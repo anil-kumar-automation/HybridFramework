@@ -1,6 +1,6 @@
 package page;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -14,7 +14,6 @@ import utils.JsonRead;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Collections;
 
 public class EfromAdditionSoftwareRequestPageJson {
     WebDriver driver;

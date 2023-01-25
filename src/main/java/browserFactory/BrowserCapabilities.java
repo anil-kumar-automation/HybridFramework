@@ -1,4 +1,4 @@
-package BrowserFactory;
+package browserFactory;
 
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.chrome.ChromeOptions;

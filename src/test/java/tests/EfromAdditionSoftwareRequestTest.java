@@ -1,6 +1,6 @@
 package tests;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import page.EfromAdditionSoftwareRequestPage;

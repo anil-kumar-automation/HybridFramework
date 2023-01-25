@@ -1,6 +1,6 @@
 package tests;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
@@ -9,7 +9,6 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -113,7 +112,7 @@ public class SnapdealScenariosTest {
         ca.windowHandler();
         info1("successfully moved to another tab");
         Log.info("successfully  search the Bluetooth item");
-        s.SelectAddtoCart();
+        s.SelectAddtoCart(); // falling to see extent capability
         info1("successfully clicked the AddToCart");
         s.clickonviewCart();
         Thread.sleep(2000);

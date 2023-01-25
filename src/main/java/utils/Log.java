@@ -1,13 +1,13 @@
 package utils;
 
-import Listnerslenin.ExtentReporter;
+import Listners.ExtentReporter;
 import com.aventstack.extentreports.Status;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.util.logging.Logger;
 
-import static Listnerslenin.ExtentReporter.error;
-import static Listnerslenin.ExtentReporter.warn;
+import static Listners.ExtentReporter.error;
+import static Listners.ExtentReporter.warn;
 
 public class Log {
 

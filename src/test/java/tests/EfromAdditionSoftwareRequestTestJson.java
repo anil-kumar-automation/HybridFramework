@@ -1,10 +1,9 @@
 package tests;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.apache.log4j.Logger;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
-import page.EfromAdditionSoftwareRequestPage;
 import page.EfromAdditionSoftwareRequestPageJson;
 import page.LoginEformPage;
 import utils.CommonActions;

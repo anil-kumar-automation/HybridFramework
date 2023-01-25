@@ -1,6 +1,6 @@
 package tests;
 
-import BrowserFactory.DriverFactory;
+import browserFactory.DriverFactory;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.annotations.*;

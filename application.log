@@ -1,182 +1,50 @@
-2023-01-17 21:52:28,226 DEBUG [main] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
-2023-01-17 21:52:28,271 DEBUG [main] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
-2023-01-17 21:52:28,672 DEBUG [main] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
-2023-01-17 21:52:28,674 DEBUG [main] RequestAuthCache:76 - Auth cache not set in the context
-2023-01-17 21:52:28,675 DEBUG [main] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
-2023-01-17 21:52:28,677 DEBUG [main] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
-2023-01-17 21:52:28,677 DEBUG [main] DefaultHttpClient:684 - Attempt 1 to execute request
-2023-01-17 21:52:28,677 DEBUG [main] DefaultClientConnection:276 - Sending request: POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1
-2023-01-17 21:52:28,678 DEBUG [main] wire:72 -  >> "POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1[\r][\n]"
-2023-01-17 21:52:28,680 DEBUG [main] wire:72 -  >> "Accept: */*[\r][\n]"
-2023-01-17 21:52:28,680 DEBUG [main] wire:72 -  >> "Content-Type: application/json[\r][\n]"
-2023-01-17 21:52:28,681 DEBUG [main] wire:72 -  >> "Content-Length: 303[\r][\n]"
-2023-01-17 21:52:28,681 DEBUG [main] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
-2023-01-17 21:52:28,681 DEBUG [main] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:28,681 DEBUG [main] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
-2023-01-17 21:52:28,681 DEBUG [main] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-01-17 21:52:28,682 DEBUG [main] wire:72 -  >> "[\r][\n]"
-2023-01-17 21:52:28,683 DEBUG [main] headers:280 - >> POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1
-2023-01-17 21:52:28,683 DEBUG [main] headers:283 - >> Accept: */*
-2023-01-17 21:52:28,683 DEBUG [main] headers:283 - >> Content-Type: application/json
-2023-01-17 21:52:28,683 DEBUG [main] headers:283 - >> Content-Length: 303
-2023-01-17 21:52:28,683 DEBUG [main] headers:283 - >> Host: rahulshettyacademy.com
-2023-01-17 21:52:28,684 DEBUG [main] headers:283 - >> Connection: Keep-Alive
-2023-01-17 21:52:28,684 DEBUG [main] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
-2023-01-17 21:52:28,684 DEBUG [main] headers:283 - >> Accept-Encoding: gzip,deflate
-2023-01-17 21:52:28,684 DEBUG [main] wire:72 -  >> "{[\n]"
-2023-01-17 21:52:28,685 DEBUG [main] wire:72 -  >> "  "location": {[\n]"
-2023-01-17 21:52:28,685 DEBUG [main] wire:72 -  >> "    "lat": -38.383494,[\n]"
-2023-01-17 21:52:28,685 DEBUG [main] wire:72 -  >> "    "lng": 33.427362[\n]"
-2023-01-17 21:52:28,686 DEBUG [main] wire:72 -  >> "  },[\n]"
-2023-01-17 21:52:28,686 DEBUG [main] wire:72 -  >> "  "accuracy": 50,[\n]"
-2023-01-17 21:52:28,686 DEBUG [main] wire:72 -  >> "  "name": "Frontline house",[\n]"
-2023-01-17 21:52:28,686 DEBUG [main] wire:72 -  >> "  "phone_number": "(+91) 983 893 3937",[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "  "address": "29, side layout, cohen 09",[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "  "types": [[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "    "shoe park",[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "    "shop"[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "  ],[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "  "website": "http://google.com",[\n]"
-2023-01-17 21:52:28,687 DEBUG [main] wire:72 -  >> "  "language": "French-IN"[\n]"
-2023-01-17 21:52:28,688 DEBUG [main] wire:86 -  >> "}"
-2023-01-17 21:52:28,760 DEBUG [main] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-01-17 21:52:28,763 DEBUG [main] wire:72 -  << "Date: Tue, 17 Jan 2023 16:22:35 GMT[\r][\n]"
-2023-01-17 21:52:28,763 DEBUG [main] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
-2023-01-17 21:52:28,763 DEBUG [main] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2023-01-17 21:52:28,764 DEBUG [main] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
-2023-01-17 21:52:28,764 DEBUG [main] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
-2023-01-17 21:52:28,765 DEBUG [main] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
-2023-01-17 21:52:28,765 DEBUG [main] wire:72 -  << "Content-Length: 194[\r][\n]"
-2023-01-17 21:52:28,765 DEBUG [main] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
-2023-01-17 21:52:28,766 DEBUG [main] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:28,766 DEBUG [main] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
-2023-01-17 21:52:28,766 DEBUG [main] wire:72 -  << "[\r][\n]"
-2023-01-17 21:52:28,767 DEBUG [main] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
-2023-01-17 21:52:28,768 DEBUG [main] headers:264 - << HTTP/1.1 200 OK
-2023-01-17 21:52:28,768 DEBUG [main] headers:267 - << Date: Tue, 17 Jan 2023 16:22:35 GMT
-2023-01-17 21:52:28,769 DEBUG [main] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
-2023-01-17 21:52:28,769 DEBUG [main] headers:267 - << Access-Control-Allow-Origin: *
-2023-01-17 21:52:28,769 DEBUG [main] headers:267 - << Access-Control-Allow-Methods: POST
-2023-01-17 21:52:28,770 DEBUG [main] headers:267 - << Access-Control-Max-Age: 3600
-2023-01-17 21:52:28,770 DEBUG [main] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-2023-01-17 21:52:28,770 DEBUG [main] headers:267 - << Content-Length: 194
-2023-01-17 21:52:28,774 DEBUG [main] headers:267 - << Keep-Alive: timeout=5, max=100
-2023-01-17 21:52:28,774 DEBUG [main] headers:267 - << Connection: Keep-Alive
-2023-01-17 21:52:28,775 DEBUG [main] headers:267 - << Content-Type: application/json;charset=UTF-8
-2023-01-17 21:52:28,779 DEBUG [main] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
-2023-01-17 21:52:28,795 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
-2023-01-17 21:52:28,795 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-01-17 21:52:28,865 DEBUG [main] wire:86 -  << "{"status":"OK","place_id":"ee053d3bb8e51e0172ad4d37f935abb8","scope":"APP","reference":"e9071400139cd45ef1cf83906711900be9071400139cd45ef1cf83906711900b","id":"e9071400139cd45ef1cf83906711900b"}"
-2023-01-17 21:52:28,866 DEBUG [main] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2a066689
-2023-01-17 21:52:28,867 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
-2023-01-17 21:52:29,829 DEBUG [main] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
-2023-01-17 21:52:29,830 DEBUG [main] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
-2023-01-17 21:52:30,078 DEBUG [main] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
-2023-01-17 21:52:30,079 DEBUG [main] RequestAuthCache:76 - Auth cache not set in the context
-2023-01-17 21:52:30,079 DEBUG [main] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
-2023-01-17 21:52:30,080 DEBUG [main] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
-2023-01-17 21:52:30,080 DEBUG [main] DefaultHttpClient:684 - Attempt 1 to execute request
-2023-01-17 21:52:30,080 DEBUG [main] DefaultClientConnection:276 - Sending request: PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1
-2023-01-17 21:52:30,081 DEBUG [main] wire:72 -  >> "PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1[\r][\n]"
-2023-01-17 21:52:30,081 DEBUG [main] wire:72 -  >> "Accept: */*[\r][\n]"
-2023-01-17 21:52:30,081 DEBUG [main] wire:72 -  >> "Content-Type: application/json[\r][\n]"
-2023-01-17 21:52:30,081 DEBUG [main] wire:72 -  >> "Content-Length: 106[\r][\n]"
-2023-01-17 21:52:30,082 DEBUG [main] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
-2023-01-17 21:52:30,082 DEBUG [main] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:30,082 DEBUG [main] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
-2023-01-17 21:52:30,083 DEBUG [main] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-01-17 21:52:30,083 DEBUG [main] wire:72 -  >> "[\r][\n]"
-2023-01-17 21:52:30,083 DEBUG [main] headers:280 - >> PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1
-2023-01-17 21:52:30,084 DEBUG [main] headers:283 - >> Accept: */*
-2023-01-17 21:52:30,084 DEBUG [main] headers:283 - >> Content-Type: application/json
-2023-01-17 21:52:30,084 DEBUG [main] headers:283 - >> Content-Length: 106
-2023-01-17 21:52:30,084 DEBUG [main] headers:283 - >> Host: rahulshettyacademy.com
-2023-01-17 21:52:30,084 DEBUG [main] headers:283 - >> Connection: Keep-Alive
-2023-01-17 21:52:30,085 DEBUG [main] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
-2023-01-17 21:52:30,085 DEBUG [main] headers:283 - >> Accept-Encoding: gzip,deflate
-2023-01-17 21:52:30,085 DEBUG [main] wire:72 -  >> "{[\r][\n]"
-2023-01-17 21:52:30,085 DEBUG [main] wire:72 -  >> ""place_id":"ee053d3bb8e51e0172ad4d37f935abb8",[\r][\n]"
-2023-01-17 21:52:30,085 DEBUG [main] wire:72 -  >> ""address":"Summer Walk, Africa",[\r][\n]"
-2023-01-17 21:52:30,086 DEBUG [main] wire:72 -  >> ""key":"qaclick123"[\r][\n]"
-2023-01-17 21:52:30,086 DEBUG [main] wire:86 -  >> "}"
-2023-01-17 21:52:30,772 DEBUG [main] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-01-17 21:52:30,773 DEBUG [main] wire:72 -  << "Date: Tue, 17 Jan 2023 16:22:36 GMT[\r][\n]"
-2023-01-17 21:52:30,773 DEBUG [main] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
-2023-01-17 21:52:30,774 DEBUG [main] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2023-01-17 21:52:30,774 DEBUG [main] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
-2023-01-17 21:52:30,774 DEBUG [main] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
-2023-01-17 21:52:30,775 DEBUG [main] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
-2023-01-17 21:52:30,775 DEBUG [main] wire:72 -  << "Content-Length: 38[\r][\n]"
-2023-01-17 21:52:30,775 DEBUG [main] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
-2023-01-17 21:52:30,776 DEBUG [main] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:30,776 DEBUG [main] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
-2023-01-17 21:52:30,776 DEBUG [main] wire:72 -  << "[\r][\n]"
-2023-01-17 21:52:30,777 DEBUG [main] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
-2023-01-17 21:52:30,777 DEBUG [main] headers:264 - << HTTP/1.1 200 OK
-2023-01-17 21:52:30,777 DEBUG [main] headers:267 - << Date: Tue, 17 Jan 2023 16:22:36 GMT
-2023-01-17 21:52:30,777 DEBUG [main] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
-2023-01-17 21:52:30,778 DEBUG [main] headers:267 - << Access-Control-Allow-Origin: *
-2023-01-17 21:52:30,778 DEBUG [main] headers:267 - << Access-Control-Allow-Methods: POST
-2023-01-17 21:52:30,778 DEBUG [main] headers:267 - << Access-Control-Max-Age: 3600
-2023-01-17 21:52:30,779 DEBUG [main] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-2023-01-17 21:52:30,779 DEBUG [main] headers:267 - << Content-Length: 38
-2023-01-17 21:52:30,780 DEBUG [main] headers:267 - << Keep-Alive: timeout=5, max=100
-2023-01-17 21:52:30,780 DEBUG [main] headers:267 - << Connection: Keep-Alive
-2023-01-17 21:52:30,780 DEBUG [main] headers:267 - << Content-Type: application/json;charset=UTF-8
-2023-01-17 21:52:30,781 DEBUG [main] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
-2023-01-17 21:52:30,781 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
-2023-01-17 21:52:30,782 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-01-17 21:52:30,786 DEBUG [main] wire:86 -  << "{"msg":"Address successfully updated"}"
-2023-01-17 21:52:30,787 DEBUG [main] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@47ac613b
-2023-01-17 21:52:30,787 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
-2023-01-17 21:52:30,812 DEBUG [main] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
-2023-01-17 21:52:30,813 DEBUG [main] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
-2023-01-17 21:52:31,043 DEBUG [main] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
-2023-01-17 21:52:31,044 DEBUG [main] RequestAuthCache:76 - Auth cache not set in the context
-2023-01-17 21:52:31,045 DEBUG [main] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
-2023-01-17 21:52:31,045 DEBUG [main] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
-2023-01-17 21:52:31,046 DEBUG [main] DefaultHttpClient:684 - Attempt 1 to execute request
-2023-01-17 21:52:31,046 DEBUG [main] DefaultClientConnection:276 - Sending request: GET /maps/api/place/get/json?key=qaclick123&place_id=ee053d3bb8e51e0172ad4d37f935abb8 HTTP/1.1
-2023-01-17 21:52:31,047 DEBUG [main] wire:72 -  >> "GET /maps/api/place/get/json?key=qaclick123&place_id=ee053d3bb8e51e0172ad4d37f935abb8 HTTP/1.1[\r][\n]"
-2023-01-17 21:52:31,047 DEBUG [main] wire:72 -  >> "Accept: */*[\r][\n]"
-2023-01-17 21:52:31,048 DEBUG [main] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
-2023-01-17 21:52:31,049 DEBUG [main] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:31,049 DEBUG [main] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
-2023-01-17 21:52:31,050 DEBUG [main] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-01-17 21:52:31,050 DEBUG [main] wire:72 -  >> "[\r][\n]"
-2023-01-17 21:52:31,050 DEBUG [main] headers:280 - >> GET /maps/api/place/get/json?key=qaclick123&place_id=ee053d3bb8e51e0172ad4d37f935abb8 HTTP/1.1
-2023-01-17 21:52:31,051 DEBUG [main] headers:283 - >> Accept: */*
-2023-01-17 21:52:31,051 DEBUG [main] headers:283 - >> Host: rahulshettyacademy.com
-2023-01-17 21:52:31,052 DEBUG [main] headers:283 - >> Connection: Keep-Alive
-2023-01-17 21:52:31,052 DEBUG [main] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
-2023-01-17 21:52:31,052 DEBUG [main] headers:283 - >> Accept-Encoding: gzip,deflate
-2023-01-17 21:52:31,472 DEBUG [main] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-01-17 21:52:31,472 DEBUG [main] wire:72 -  << "Date: Tue, 17 Jan 2023 16:22:37 GMT[\r][\n]"
-2023-01-17 21:52:31,472 DEBUG [main] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
-2023-01-17 21:52:31,472 DEBUG [main] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2023-01-17 21:52:31,473 DEBUG [main] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
-2023-01-17 21:52:31,473 DEBUG [main] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "Content-Length: 251[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] wire:72 -  << "[\r][\n]"
-2023-01-17 21:52:31,474 DEBUG [main] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
-2023-01-17 21:52:31,474 DEBUG [main] headers:264 - << HTTP/1.1 200 OK
-2023-01-17 21:52:31,474 DEBUG [main] headers:267 - << Date: Tue, 17 Jan 2023 16:22:37 GMT
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Access-Control-Allow-Origin: *
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Access-Control-Allow-Methods: POST
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Access-Control-Max-Age: 3600
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Content-Length: 251
-2023-01-17 21:52:31,475 DEBUG [main] headers:267 - << Keep-Alive: timeout=5, max=100
-2023-01-17 21:52:31,476 DEBUG [main] headers:267 - << Connection: Keep-Alive
-2023-01-17 21:52:31,476 DEBUG [main] headers:267 - << Content-Type: application/json;charset=UTF-8
-2023-01-17 21:52:31,476 DEBUG [main] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
-2023-01-17 21:52:31,477 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
-2023-01-17 21:52:31,477 DEBUG [main] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2023-01-17 21:52:31,478 DEBUG [main] wire:86 -  << "{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"Summer Walk, Africa","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}"
-2023-01-17 21:52:31,478 DEBUG [main] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1ee27d73
-2023-01-17 21:52:31,479 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-25 21:36:04,354  INFO [TestNG-PoolService-0] SnapdealScenariosTest:87 - successfully  search the Bluetooth item
+2023-01-25 21:36:04,573  INFO [TestNG-PoolService-0] SnapdealScenariosTest:94 - successfully  search the Bluetooth item
+2023-01-25 21:36:06,912  INFO [TestNG-PoolService-0] SnapdealScenariosTest:99 - successfully  search the Bluetooth item
+2023-01-25 21:36:11,958  INFO [TestNG-PoolService-0] SnapdealScenariosTest:106 - successfully  search the Bluetooth item
+2023-01-25 21:36:17,934  INFO [TestNG-PoolService-0] SnapdealScenariosTest:110 - successfully  search the Bluetooth item
+2023-01-25 21:36:18,143  INFO [TestNG-PoolService-0] SnapdealScenariosTest:114 - successfully  search the Bluetooth item
+2023-01-25 21:36:24,044 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,046 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+2023-01-25 21:36:24,054 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("index.ftl"): Found
+2023-01-25 21:36:24,054 DEBUG [TestNG-tests-1] cache:45 - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+2023-01-25 21:36:24,502 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,508 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+2023-01-25 21:36:24,510 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("head.ftl"): Found
+2023-01-25 21:36:24,511 DEBUG [TestNG-tests-1] cache:45 - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+2023-01-25 21:36:24,515 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,522 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+2023-01-25 21:36:24,525 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("nav.ftl"): Found
+2023-01-25 21:36:24,526 DEBUG [TestNG-tests-1] cache:45 - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+2023-01-25 21:36:24,547 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,550 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+2023-01-25 21:36:24,551 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+2023-01-25 21:36:24,551 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+2023-01-25 21:36:24,583 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,584 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+2023-01-25 21:36:24,586 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+2023-01-25 21:36:24,587 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+2023-01-25 21:36:24,616 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,616 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+2023-01-25 21:36:24,616 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+2023-01-25 21:36:24,620 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+2023-01-25 21:36:24,685 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,685 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+2023-01-25 21:36:24,685 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+2023-01-25 21:36:24,685 DEBUG [TestNG-tests-1] cache:45 - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+2023-01-25 21:36:24,700 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,701 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+2023-01-25 21:36:24,703 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+2023-01-25 21:36:24,704 DEBUG [TestNG-tests-1] cache:45 - Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+2023-01-25 21:36:24,713 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,714 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+2023-01-25 21:36:24,714 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+2023-01-25 21:36:24,714 DEBUG [TestNG-tests-1] cache:45 - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+2023-01-25 21:36:24,720 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,724 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+2023-01-25 21:36:24,726 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+2023-01-25 21:36:24,727 DEBUG [TestNG-tests-1] cache:45 - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+2023-01-25 21:36:24,743 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-25 21:36:24,745 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+2023-01-25 21:36:24,747 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+2023-01-25 21:36:24,747 DEBUG [TestNG-tests-1] cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"

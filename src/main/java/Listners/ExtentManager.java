@@ -1,4 +1,4 @@
-package Listnerslenin;
+package Listners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -11,7 +11,7 @@ public class ExtentManager {
 
     static ExtentReports createInstance(){
 
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"./Reports/" + "LeninSuggestExtentReport"+".html");
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"./Reports/" + "ExtentReport"+".html");
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setDocumentTitle("Zensar Automatio Report");

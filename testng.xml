@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="tests" thread-count="3">
     <listeners>
-       <listener class-name="listeners.Listeners"/>
+       <listener class-name="listeners.ExtentReporter"/>
     </listeners>
 
-  <test name="ChromeTest">
+  <!--<test name="ChromeTest">
         <classes>
             <class name="tests.EfromAdditionSoftwareRequestTestJson"></class>
         </classes>
-    </test>
+    </test>-->
 
   <!--  <test name="ChromeTest1">
         <classes>
@@ -33,12 +33,12 @@
         <classes>
             <class name="tests.PimHrmTestcases"></class>
         </classes>
-    </test>
+    </test>-->
 
     <test name="EdgeTest1">
         <classes>
             <class name="tests.SnapdealScenariosTest"></class>
         </classes>
-    </test>-->
+    </test>
 
 </suite>

@@ -1,52 +1,43 @@
-package utils.api;
+package basicApi;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
-import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import pojoClasses.AddPlace;
 import pojoClasses.Location;
-import pojoClasses.OauthGetCourse;
+import utils.api.API;
+import utils.api.APIResources;
+import utils.api.BuildSpec;
+import utils.api.HttpOperation;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class ApiUtil extends AccessUtility {
+public class PlacesApi extends API {
 
-    public static String responseString;
-    public static String GetresponseString;
-    static String placeId ;
-    static String accessToken;
-
-    public static String GetActualRequestApi() {
-        JsonPath jsonPath = new JsonPath(generateAccessToken());
-        accessToken = jsonPath.getString("access_token");
-        System.out.println("accessToken = " + accessToken);
-
-        String ActualRequestresponse = given().contentType("application/json").
-                queryParams("access_token", accessToken)
-                .when().get("https://rahulshettyacademy.com/getCourse.php").then().assertThat().statusCode(200)
-                .extract().response().asString();
-        System.out.println("ActualRequestResponse =" + ActualRequestresponse);
-        return ActualRequestresponse;
+    public PlacesApi() {
     }
 
-    public static void GetActualRequestApiUsingPojo() {
-        //Actual Request
-        OauthGetCourse gc = given().queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
-                .when()
-                .get("https://rahulshettyacademy.com/getCourse.php").as(OauthGetCourse.class);
-        System.out.println("GetActualRequestApiUsingPojo response = " + gc);
-        System.out.println(gc.getLinkedIn());
-        System.out.println(gc.getInstructor());
-        System.out.println(gc.getCourses().getApi().get(1).getCourseTitle());
+    static String placeId;
+
+    public void AddPlaceApi() throws FileNotFoundException {
+        BuildSpec.RequestSpec()
+
+      /*  initBase("baseUrl");
+        setQueryParam("key","qaclick123");
+        setHeader("Content-Type", "application/json");
+        setBody("{\\r\\n  \\\"location\\\": {\\r\\n    \\\"lat\\\": -38.383494,\\r\\n    \\\"lng\\\": 33.427362\\r\\n  },\\r\\n  \\\"accuracy\\\": 50,\\r\\n  \\\"name\\\": \\\"Frontline house\\\",\\r\\n  \\\"phone_number\\\": \\\"(+91) 983 893 3937\\\",\\r\\n  \\\"address\\\": \\\"29, side layout, cohen 09\\\",\\r\\n  \\\"types\\\": [\\r\\n    \\\"shoe park\\\",\\r\\n    \\\"shop\\\"\\r\\n  ],\\r\\n  \\\"website\\\": \\\"http:\\/\\/google.com\\\",\\r\\n  \\\"language\\\": \\\"French-IN\\\"\\r\\n}");
+        initbase("/maps/api/place/add/json", HttpOperation.POST);
+        assertItCode(200);
+        getResponseString();*/
     }
 
     public static String postAddPlaceRequestApi() {
@@ -100,7 +91,6 @@ public class ApiUtil extends AccessUtility {
         return updatePlaceResponse;
     }
 
-
     public static String GetPlaceRequestApi() {
         RestAssured.baseURI = "https://rahulshettyacademy.com";
         //Get Place
@@ -111,53 +101,6 @@ public class ApiUtil extends AccessUtility {
 
         System.out.println("getPlaceResponse =" + getPlaceResponse);
         return getPlaceResponse;
-    }
-
-
-    public static void PostAddPlaceApiWithSerialize() {
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
-
-        AddPlace p = new AddPlace();
-        p.setAccuracy(50);
-        p.setAddress("29, side layout, cohen 09");
-        p.setLanguage("French-IN");
-        p.setPhone_number("(+91) 983 893 3937");
-        p.setWebsite("https://rahulshettyacademy.com");
-        p.setName("Frontline house");
-        List<String> myList = new ArrayList<String>();
-        myList.add("shoe park");
-        myList.add("shop");
-
-        p.setTypes(myList);
-        Location l = new Location();
-        l.setLat(-38.383494);
-        l.setLng(33.427362);
-
-        p.setLocation(l);
-        Response res = given().log().all().queryParam("key", "qaclick123")
-                .body(p)
-                .when().post("/maps/api/place/add/json").
-                        then().assertThat().statusCode(200).extract().response();
-
-        String responseString = res.asString();
-        System.out.println("AddPlaceResponseThroughPojoSerialization = " + responseString);
-    }
-
-
-    public static void PostGraphQlTestWithQueryAndMutation() {
-        /** query */
-        String queryResponse = given().log().all().header("Content-Type", "application/json").body("{\"query\":\"query($episodeId : Int!){\\n  episode(episodeId: $episodeId) {\\n    name\\n    air_date\\n    id\\n    characters {\\n      name\\n      species\\n      image\\n      origin {\\n        id\\n      }\\n    }\\n  }\\n}\\n\\n\",\"variables\":{\"episodeId\":10}}").when().post("https://rahulshettyacademy.com/gq/graphql").then().extract().response().asString();
-        System.out.println("query response using GraphQL " + queryResponse);
-        JsonPath js = new JsonPath(queryResponse);
-        System.out.println(js.getString("data.episode.name"));
-
-        /** mutation */
-        String mutationResponse = given().log().all().header("Content-Type", "application/json")
-                .body("{\"query\":\"mutation($locationName:String!){\\n  createLocation(location : {name:$locationName, type: \\\"hjvb\\\", dimension: \\\"anilb\\\"})\\n  {\\n    id\\n  }\\n}\\n\",\"variables\":{\"locationName\":\"india\"}}").when().post("https://rahulshettyacademy.com/gq/graphql").then().extract().response().asString();
-        System.out.println("mutation response using GraphQL " + mutationResponse);
-
-        JsonPath js1 = new JsonPath(mutationResponse);
-        System.out.println(js1.getInt("data.createLocation.id"));
     }
 
 
@@ -195,29 +138,4 @@ public class ApiUtil extends AccessUtility {
 
 
     }
-
-    public static void postApi(String baseuri, String body, String key, String val, String Resources, int code) {
-        RestAssured.baseURI = baseuri;
-
-        Response res = given().log().all().queryParam(key, val).header("Content-Type", "application/json")
-                .body(body)
-                .when().post(Resources)
-                .then().statusCode(code).extract().response();
-        responseString = res.asString();
-        System.out.println("ADDPlaceResponse = " + responseString);
-    }
-
-    public static void getApi(String baseuri, String key, String val, String Resources, int code) {
-        RestAssured.baseURI = baseuri;
-
-        Response res = given().log().all().queryParam(key, val).header("Content-Type", "application/json")
-                .when().get(Resources)
-                .then().statusCode(code).extract().response();
-        GetresponseString = res.asString();
-        System.out.println("ADDPlaceResponse = " + GetresponseString);
-    }
-
 }
-
-
-

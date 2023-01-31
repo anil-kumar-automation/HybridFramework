@@ -90,7 +90,7 @@ public class ExtentReporter implements ITestListener {
             onTestFailure(result);
             return;
         }
-        String logText = "<b>Test Method" + result.getMethod().getMethodName() + "Successful</b>";
+        String logText = "<b>Test Method " + result.getMethod().getMethodName()  + " Successes </b>";
         Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         extentTest.get().log(Status.PASS, m);
         extentTest.get().info("TestCase execution finished.");

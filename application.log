@@ -1,50 +1,381 @@
-2023-01-30 17:14:09,896 DEBUG [main] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
-2023-01-30 17:14:10,088 DEBUG [main] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
-2023-01-30 17:14:10,559 DEBUG [main] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
-2023-01-30 17:14:10,562 DEBUG [main] RequestAuthCache:76 - Auth cache not set in the context
-2023-01-30 17:14:10,563 DEBUG [main] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
-2023-01-30 17:14:10,563 DEBUG [main] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
-2023-01-30 17:14:10,565 DEBUG [main] DefaultHttpClient:684 - Attempt 1 to execute request
-2023-01-30 17:14:10,565 DEBUG [main] DefaultClientConnection:276 - Sending request: POST /maps/api/place/add/json HTTP/1.1
-2023-01-30 17:14:10,565 DEBUG [main] wire:72 -  >> "POST /maps/api/place/add/json HTTP/1.1[\r][\n]"
-2023-01-30 17:14:10,568 DEBUG [main] wire:72 -  >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
-2023-01-30 17:14:10,570 DEBUG [main] wire:72 -  >> "Accept: */*[\r][\n]"
-2023-01-30 17:14:10,571 DEBUG [main] wire:72 -  >> "Content-Length: 0[\r][\n]"
-2023-01-30 17:14:10,571 DEBUG [main] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
-2023-01-30 17:14:10,571 DEBUG [main] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
-2023-01-30 17:14:10,571 DEBUG [main] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
-2023-01-30 17:14:10,571 DEBUG [main] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2023-01-30 17:14:10,573 DEBUG [main] wire:72 -  >> "[\r][\n]"
-2023-01-30 17:14:10,574 DEBUG [main] headers:280 - >> POST /maps/api/place/add/json HTTP/1.1
-2023-01-30 17:14:10,574 DEBUG [main] headers:283 - >> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
-2023-01-30 17:14:10,574 DEBUG [main] headers:283 - >> Accept: */*
-2023-01-30 17:14:10,575 DEBUG [main] headers:283 - >> Content-Length: 0
-2023-01-30 17:14:10,575 DEBUG [main] headers:283 - >> Host: rahulshettyacademy.com
-2023-01-30 17:14:10,576 DEBUG [main] headers:283 - >> Connection: Keep-Alive
-2023-01-30 17:14:10,576 DEBUG [main] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
-2023-01-30 17:14:10,577 DEBUG [main] headers:283 - >> Accept-Encoding: gzip,deflate
-2023-01-30 17:14:10,655 DEBUG [main] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
-2023-01-30 17:14:10,657 DEBUG [main] wire:72 -  << "Date: Mon, 30 Jan 2023 11:44:23 GMT[\r][\n]"
-2023-01-30 17:14:10,658 DEBUG [main] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
-2023-01-30 17:14:10,659 DEBUG [main] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2023-01-30 17:14:10,659 DEBUG [main] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
-2023-01-30 17:14:10,664 DEBUG [main] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
-2023-01-30 17:14:10,665 DEBUG [main] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
-2023-01-30 17:14:10,665 DEBUG [main] wire:72 -  << "Content-Length: 0[\r][\n]"
-2023-01-30 17:14:10,666 DEBUG [main] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
-2023-01-30 17:14:10,666 DEBUG [main] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
-2023-01-30 17:14:10,667 DEBUG [main] wire:72 -  << "Content-Type: application/json; charset=UTF-8[\r][\n]"
-2023-01-30 17:14:10,667 DEBUG [main] wire:72 -  << "[\r][\n]"
-2023-01-30 17:14:10,669 DEBUG [main] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
-2023-01-30 17:14:10,669 DEBUG [main] headers:264 - << HTTP/1.1 200 OK
-2023-01-30 17:14:10,670 DEBUG [main] headers:267 - << Date: Mon, 30 Jan 2023 11:44:23 GMT
-2023-01-30 17:14:10,670 DEBUG [main] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
-2023-01-30 17:14:10,670 DEBUG [main] headers:267 - << Access-Control-Allow-Origin: *
-2023-01-30 17:14:10,671 DEBUG [main] headers:267 - << Access-Control-Allow-Methods: POST
-2023-01-30 17:14:10,671 DEBUG [main] headers:267 - << Access-Control-Max-Age: 3600
-2023-01-30 17:14:10,672 DEBUG [main] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-2023-01-30 17:14:10,672 DEBUG [main] headers:267 - << Content-Length: 0
-2023-01-30 17:14:10,673 DEBUG [main] headers:267 - << Keep-Alive: timeout=5, max=100
-2023-01-30 17:14:10,673 DEBUG [main] headers:267 - << Connection: Keep-Alive
-2023-01-30 17:14:10,674 DEBUG [main] headers:267 - << Content-Type: application/json; charset=UTF-8
-2023-01-30 17:14:10,684 DEBUG [main] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:09,495 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
+2023-01-31 18:07:09,497 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
+2023-01-31 18:07:09,783 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:09,784 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:09,784 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:09,785 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:09,785 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:09,786 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:09,786 DEBUG [TestNG-tests-1] wire:72 -  >> "PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1[\r][\n]"
+2023-01-31 18:07:09,787 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:09,787 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:09,788 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Length: 102[\r][\n]"
+2023-01-31 18:07:09,788 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
+2023-01-31 18:07:09,788 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:09,789 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:09,789 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:09,790 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:09,790 DEBUG [TestNG-tests-1] headers:280 - >> PUT /maps/api/place/update/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:09,791 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:09,792 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:09,792 DEBUG [TestNG-tests-1] headers:283 - >> Content-Length: 102
+2023-01-31 18:07:09,792 DEBUG [TestNG-tests-1] headers:283 - >> Host: rahulshettyacademy.com
+2023-01-31 18:07:09,793 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:09,794 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:09,794 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:09,795 DEBUG [TestNG-tests-1] wire:72 -  >> "{[\n]"
+2023-01-31 18:07:09,795 DEBUG [TestNG-tests-1] wire:72 -  >> ""place_id":"a5307d49d3f9ba369d2fcf955a8acfdd",[\n]"
+2023-01-31 18:07:09,795 DEBUG [TestNG-tests-1] wire:72 -  >> ""address":"Summer Walk, Africa",[\n]"
+2023-01-31 18:07:09,796 DEBUG [TestNG-tests-1] wire:72 -  >> ""key":"qaclick123"[\n]"
+2023-01-31 18:07:09,796 DEBUG [TestNG-tests-1] wire:86 -  >> "}"
+2023-01-31 18:07:10,618 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:10,619 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:22 GMT[\r][\n]"
+2023-01-31 18:07:10,619 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
+2023-01-31 18:07:10,620 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2023-01-31 18:07:10,620 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
+2023-01-31 18:07:10,621 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
+2023-01-31 18:07:10,622 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
+2023-01-31 18:07:10,622 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 38[\r][\n]"
+2023-01-31 18:07:10,623 DEBUG [TestNG-tests-1] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
+2023-01-31 18:07:10,623 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:10,624 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2023-01-31 18:07:10,625 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:10,625 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:10,625 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:10,626 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:22 GMT
+2023-01-31 18:07:10,626 DEBUG [TestNG-tests-1] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
+2023-01-31 18:07:10,626 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Origin: *
+2023-01-31 18:07:10,627 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Methods: POST
+2023-01-31 18:07:10,627 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Max-Age: 3600
+2023-01-31 18:07:10,627 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+2023-01-31 18:07:10,628 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 38
+2023-01-31 18:07:10,629 DEBUG [TestNG-tests-1] headers:267 - << Keep-Alive: timeout=5, max=100
+2023-01-31 18:07:10,629 DEBUG [TestNG-tests-1] headers:267 - << Connection: Keep-Alive
+2023-01-31 18:07:10,629 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json;charset=UTF-8
+2023-01-31 18:07:10,630 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:10,631 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
+2023-01-31 18:07:10,632 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:10,634 DEBUG [TestNG-tests-1] wire:86 -  << "{"msg":"Address successfully updated"}"
+2023-01-31 18:07:10,635 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3d040d63
+2023-01-31 18:07:10,635 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:10,698 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
+2023-01-31 18:07:10,699 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
+2023-01-31 18:07:11,004 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:11,005 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:11,005 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:11,006 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:11,007 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:11,007 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: GET /maps/api/place/get/json?key=qaclick123&place_id=a5307d49d3f9ba369d2fcf955a8acfdd HTTP/1.1
+2023-01-31 18:07:11,007 DEBUG [TestNG-tests-1] wire:72 -  >> "GET /maps/api/place/get/json?key=qaclick123&place_id=a5307d49d3f9ba369d2fcf955a8acfdd HTTP/1.1[\r][\n]"
+2023-01-31 18:07:11,007 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:11,007 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:11,008 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
+2023-01-31 18:07:11,008 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:11,008 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:11,009 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:11,009 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:11,009 DEBUG [TestNG-tests-1] headers:280 - >> GET /maps/api/place/get/json?key=qaclick123&place_id=a5307d49d3f9ba369d2fcf955a8acfdd HTTP/1.1
+2023-01-31 18:07:11,010 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:11,010 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:11,010 DEBUG [TestNG-tests-1] headers:283 - >> Host: rahulshettyacademy.com
+2023-01-31 18:07:11,011 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:11,011 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:11,011 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:11,470 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:11,471 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:24 GMT[\r][\n]"
+2023-01-31 18:07:11,471 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
+2023-01-31 18:07:11,472 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2023-01-31 18:07:11,472 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
+2023-01-31 18:07:11,472 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
+2023-01-31 18:07:11,473 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
+2023-01-31 18:07:11,473 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 251[\r][\n]"
+2023-01-31 18:07:11,474 DEBUG [TestNG-tests-1] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
+2023-01-31 18:07:11,474 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:11,474 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2023-01-31 18:07:11,475 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:11,475 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:11,475 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:11,476 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:24 GMT
+2023-01-31 18:07:11,476 DEBUG [TestNG-tests-1] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
+2023-01-31 18:07:11,476 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Origin: *
+2023-01-31 18:07:11,477 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Methods: POST
+2023-01-31 18:07:11,477 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Max-Age: 3600
+2023-01-31 18:07:11,477 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+2023-01-31 18:07:11,478 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 251
+2023-01-31 18:07:11,478 DEBUG [TestNG-tests-1] headers:267 - << Keep-Alive: timeout=5, max=100
+2023-01-31 18:07:11,479 DEBUG [TestNG-tests-1] headers:267 - << Connection: Keep-Alive
+2023-01-31 18:07:11,479 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json;charset=UTF-8
+2023-01-31 18:07:11,480 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:11,480 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
+2023-01-31 18:07:11,481 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:11,482 DEBUG [TestNG-tests-1] wire:86 -  << "{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"Summer Walk, Africa","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}"
+2023-01-31 18:07:11,483 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@63317c3e
+2023-01-31 18:07:11,483 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:12,054 DEBUG [Finalizer] DefaultClientConnection:182 - Connection 0.0.0.0:59977<->3.110.88.201:443 closed
+2023-01-31 18:07:12,062 DEBUG [Finalizer] DefaultClientConnection:182 - Connection 0.0.0.0:59978<->3.110.88.201:443 closed
+2023-01-31 18:07:12,262 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
+2023-01-31 18:07:12,263 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
+2023-01-31 18:07:12,560 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:12,561 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] wire:72 -  >> "POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1[\r][\n]"
+2023-01-31 18:07:12,562 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:12,563 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:12,563 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Length: 255[\r][\n]"
+2023-01-31 18:07:12,563 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
+2023-01-31 18:07:12,564 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:12,564 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:12,564 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:12,564 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:12,564 DEBUG [TestNG-tests-1] headers:280 - >> POST /maps/api/place/add/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:12,565 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:12,565 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:12,565 DEBUG [TestNG-tests-1] headers:283 - >> Content-Length: 255
+2023-01-31 18:07:12,565 DEBUG [TestNG-tests-1] headers:283 - >> Host: rahulshettyacademy.com
+2023-01-31 18:07:12,566 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:12,566 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:12,566 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:12,566 DEBUG [TestNG-tests-1] wire:86 -  >> "{"accuracy":50,"name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","website":"https://rahulshettyacademy.com","language":"French-IN","location":{"lat":-38.383494,"lng":33.427362},"types":["shoe park","shop"]}"
+2023-01-31 18:07:12,657 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:12,657 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:25 GMT[\r][\n]"
+2023-01-31 18:07:12,658 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
+2023-01-31 18:07:12,658 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2023-01-31 18:07:12,658 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
+2023-01-31 18:07:12,659 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
+2023-01-31 18:07:12,659 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
+2023-01-31 18:07:12,659 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 194[\r][\n]"
+2023-01-31 18:07:12,660 DEBUG [TestNG-tests-1] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
+2023-01-31 18:07:12,661 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:12,661 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2023-01-31 18:07:12,661 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:12,661 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:12,661 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:12,662 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:25 GMT
+2023-01-31 18:07:12,662 DEBUG [TestNG-tests-1] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
+2023-01-31 18:07:12,662 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Origin: *
+2023-01-31 18:07:12,663 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Methods: POST
+2023-01-31 18:07:12,663 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Max-Age: 3600
+2023-01-31 18:07:12,663 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+2023-01-31 18:07:12,663 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 194
+2023-01-31 18:07:12,664 DEBUG [TestNG-tests-1] headers:267 - << Keep-Alive: timeout=5, max=100
+2023-01-31 18:07:12,664 DEBUG [TestNG-tests-1] headers:267 - << Connection: Keep-Alive
+2023-01-31 18:07:12,664 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json;charset=UTF-8
+2023-01-31 18:07:12,665 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:12,666 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
+2023-01-31 18:07:12,667 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:12,668 DEBUG [TestNG-tests-1] wire:86 -  << "{"status":"OK","place_id":"87b44d49918ff7eed869f4eca4ebe7df","scope":"APP","reference":"3622876ba28f48d427279ba53410dd0f3622876ba28f48d427279ba53410dd0f","id":"3622876ba28f48d427279ba53410dd0f"}"
+2023-01-31 18:07:12,669 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@18b824eb
+2023-01-31 18:07:12,669 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:12,692 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://rahulshettyacademy.com:443
+2023-01-31 18:07:12,692 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to rahulshettyacademy.com:443
+2023-01-31 18:07:12,987 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:12,987 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:12,988 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:12,988 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:12,988 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:12,988 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: DELETE /maps/api/place/delete/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:12,989 DEBUG [TestNG-tests-1] wire:72 -  >> "DELETE /maps/api/place/delete/json?key=qaclick123 HTTP/1.1[\r][\n]"
+2023-01-31 18:07:12,989 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:12,989 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:12,990 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Length: 53[\r][\n]"
+2023-01-31 18:07:12,990 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: rahulshettyacademy.com[\r][\n]"
+2023-01-31 18:07:12,990 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:12,990 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:12,991 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:12,991 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:12,992 DEBUG [TestNG-tests-1] headers:280 - >> DELETE /maps/api/place/delete/json?key=qaclick123 HTTP/1.1
+2023-01-31 18:07:12,992 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:12,992 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:12,992 DEBUG [TestNG-tests-1] headers:283 - >> Content-Length: 53
+2023-01-31 18:07:12,993 DEBUG [TestNG-tests-1] headers:283 - >> Host: rahulshettyacademy.com
+2023-01-31 18:07:12,993 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:12,993 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:12,993 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:12,994 DEBUG [TestNG-tests-1] wire:72 -  >> "{[\n]"
+2023-01-31 18:07:12,994 DEBUG [TestNG-tests-1] wire:72 -  >> "    "place_id":"a5307d49d3f9ba369d2fcf955a8acfdd"[\n]"
+2023-01-31 18:07:12,994 DEBUG [TestNG-tests-1] wire:86 -  >> "}"
+2023-01-31 18:07:13,808 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:13,810 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:26 GMT[\r][\n]"
+2023-01-31 18:07:13,810 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Apache/2.4.41 (Ubuntu)[\r][\n]"
+2023-01-31 18:07:13,810 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2023-01-31 18:07:13,810 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Methods: POST[\r][\n]"
+2023-01-31 18:07:13,811 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Max-Age: 3600[\r][\n]"
+2023-01-31 18:07:13,812 DEBUG [TestNG-tests-1] wire:72 -  << "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With[\r][\n]"
+2023-01-31 18:07:13,812 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 15[\r][\n]"
+2023-01-31 18:07:13,812 DEBUG [TestNG-tests-1] wire:72 -  << "Keep-Alive: timeout=5, max=100[\r][\n]"
+2023-01-31 18:07:13,812 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:13,812 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2023-01-31 18:07:13,813 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:13,813 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:13,814 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:13,814 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:26 GMT
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Server: Apache/2.4.41 (Ubuntu)
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Origin: *
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Methods: POST
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Max-Age: 3600
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 15
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Keep-Alive: timeout=5, max=100
+2023-01-31 18:07:13,816 DEBUG [TestNG-tests-1] headers:267 - << Connection: Keep-Alive
+2023-01-31 18:07:13,818 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json;charset=UTF-8
+2023-01-31 18:07:13,818 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:13,818 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json;charset=UTF-8
+2023-01-31 18:07:13,820 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:13,821 DEBUG [TestNG-tests-1] wire:86 -  << "{"status":"OK"}"
+2023-01-31 18:07:13,822 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@c04d819
+2023-01-31 18:07:13,823 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive for 5000 MILLISECONDS
+2023-01-31 18:07:13,858 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://restful-booker.herokuapp.com:443
+2023-01-31 18:07:14,251 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to restful-booker.herokuapp.com:443
+2023-01-31 18:07:15,643 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:15,643 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:15,644 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:15,644 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:15,644 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:15,644 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: POST /auth HTTP/1.1
+2023-01-31 18:07:15,645 DEBUG [TestNG-tests-1] wire:72 -  >> "POST /auth HTTP/1.1[\r][\n]"
+2023-01-31 18:07:15,645 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:15,645 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:15,646 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Length: 59[\r][\n]"
+2023-01-31 18:07:15,646 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: restful-booker.herokuapp.com[\r][\n]"
+2023-01-31 18:07:15,646 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:15,646 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:15,647 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:15,647 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:15,647 DEBUG [TestNG-tests-1] headers:280 - >> POST /auth HTTP/1.1
+2023-01-31 18:07:15,648 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:15,648 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:15,648 DEBUG [TestNG-tests-1] headers:283 - >> Content-Length: 59
+2023-01-31 18:07:15,648 DEBUG [TestNG-tests-1] headers:283 - >> Host: restful-booker.herokuapp.com
+2023-01-31 18:07:15,649 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:15,649 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:15,649 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:15,649 DEBUG [TestNG-tests-1] wire:86 -  >> "{ "username" : "admibgvn", "password" : "pasnxbnxsword123"}"
+2023-01-31 18:07:15,961 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:15,963 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Cowboy[\r][\n]"
+2023-01-31 18:07:15,964 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: keep-alive[\r][\n]"
+2023-01-31 18:07:15,964 DEBUG [TestNG-tests-1] wire:72 -  << "X-Powered-By: Express[\r][\n]"
+2023-01-31 18:07:15,965 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2023-01-31 18:07:15,965 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 28[\r][\n]"
+2023-01-31 18:07:15,966 DEBUG [TestNG-tests-1] wire:72 -  << "Etag: W/"1c-J3EiwfZwVQjKTKvpvazUfTni8fI"[\r][\n]"
+2023-01-31 18:07:15,966 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:28 GMT[\r][\n]"
+2023-01-31 18:07:15,967 DEBUG [TestNG-tests-1] wire:72 -  << "Via: 1.1 vegur[\r][\n]"
+2023-01-31 18:07:15,967 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:15,968 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:15,968 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:15,969 DEBUG [TestNG-tests-1] headers:267 - << Server: Cowboy
+2023-01-31 18:07:15,971 DEBUG [TestNG-tests-1] headers:267 - << Connection: keep-alive
+2023-01-31 18:07:15,972 DEBUG [TestNG-tests-1] headers:267 - << X-Powered-By: Express
+2023-01-31 18:07:15,973 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json; charset=utf-8
+2023-01-31 18:07:15,973 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 28
+2023-01-31 18:07:15,973 DEBUG [TestNG-tests-1] headers:267 - << Etag: W/"1c-J3EiwfZwVQjKTKvpvazUfTni8fI"
+2023-01-31 18:07:15,974 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:28 GMT
+2023-01-31 18:07:15,974 DEBUG [TestNG-tests-1] headers:267 - << Via: 1.1 vegur
+2023-01-31 18:07:15,974 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive indefinitely
+2023-01-31 18:07:15,975 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json; charset=utf-8
+2023-01-31 18:07:15,976 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:15,978 DEBUG [TestNG-tests-1] wire:86 -  << "{"reason":"Bad credentials"}"
+2023-01-31 18:07:15,978 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6616cf3
+2023-01-31 18:07:15,978 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2023-01-31 18:07:16,098 DEBUG [TestNG-tests-1] BasicClientConnectionManager:164 - Get connection for route {s}->https://restful-booker.herokuapp.com:443
+2023-01-31 18:07:16,099 DEBUG [TestNG-tests-1] DefaultClientConnectionOperator:176 - Connecting to restful-booker.herokuapp.com:443
+2023-01-31 18:07:17,518 DEBUG [TestNG-tests-1] RequestAddCookies:122 - CookieSpec selected: ignoreCookies
+2023-01-31 18:07:17,520 DEBUG [TestNG-tests-1] RequestAuthCache:76 - Auth cache not set in the context
+2023-01-31 18:07:17,521 DEBUG [TestNG-tests-1] RequestTargetAuthentication:79 - Target auth state: UNCHALLENGED
+2023-01-31 18:07:17,521 DEBUG [TestNG-tests-1] RequestProxyAuthentication:88 - Proxy auth state: UNCHALLENGED
+2023-01-31 18:07:17,522 DEBUG [TestNG-tests-1] DefaultHttpClient:684 - Attempt 1 to execute request
+2023-01-31 18:07:17,522 DEBUG [TestNG-tests-1] DefaultClientConnection:276 - Sending request: POST /auth HTTP/1.1
+2023-01-31 18:07:17,523 DEBUG [TestNG-tests-1] wire:72 -  >> "POST /auth HTTP/1.1[\r][\n]"
+2023-01-31 18:07:17,523 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept: */*[\r][\n]"
+2023-01-31 18:07:17,524 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Type: application/json[\r][\n]"
+2023-01-31 18:07:17,525 DEBUG [TestNG-tests-1] wire:72 -  >> "Content-Length: 51[\r][\n]"
+2023-01-31 18:07:17,525 DEBUG [TestNG-tests-1] wire:72 -  >> "Host: restful-booker.herokuapp.com[\r][\n]"
+2023-01-31 18:07:17,525 DEBUG [TestNG-tests-1] wire:72 -  >> "Connection: Keep-Alive[\r][\n]"
+2023-01-31 18:07:17,525 DEBUG [TestNG-tests-1] wire:72 -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)[\r][\n]"
+2023-01-31 18:07:17,525 DEBUG [TestNG-tests-1] wire:72 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2023-01-31 18:07:17,526 DEBUG [TestNG-tests-1] wire:72 -  >> "[\r][\n]"
+2023-01-31 18:07:17,526 DEBUG [TestNG-tests-1] headers:280 - >> POST /auth HTTP/1.1
+2023-01-31 18:07:17,526 DEBUG [TestNG-tests-1] headers:283 - >> Accept: */*
+2023-01-31 18:07:17,527 DEBUG [TestNG-tests-1] headers:283 - >> Content-Type: application/json
+2023-01-31 18:07:17,527 DEBUG [TestNG-tests-1] headers:283 - >> Content-Length: 51
+2023-01-31 18:07:17,527 DEBUG [TestNG-tests-1] headers:283 - >> Host: restful-booker.herokuapp.com
+2023-01-31 18:07:17,528 DEBUG [TestNG-tests-1] headers:283 - >> Connection: Keep-Alive
+2023-01-31 18:07:17,528 DEBUG [TestNG-tests-1] headers:283 - >> User-Agent: Apache-HttpClient/4.5.2 (Java/11.0.10)
+2023-01-31 18:07:17,528 DEBUG [TestNG-tests-1] headers:283 - >> Accept-Encoding: gzip,deflate
+2023-01-31 18:07:17,528 DEBUG [TestNG-tests-1] wire:86 -  >> "{ "username" : "admin", "password" : "password123"}"
+2023-01-31 18:07:17,881 DEBUG [TestNG-tests-1] wire:72 -  << "HTTP/1.1 200 OK[\r][\n]"
+2023-01-31 18:07:17,882 DEBUG [TestNG-tests-1] wire:72 -  << "Server: Cowboy[\r][\n]"
+2023-01-31 18:07:17,884 DEBUG [TestNG-tests-1] wire:72 -  << "Connection: keep-alive[\r][\n]"
+2023-01-31 18:07:17,885 DEBUG [TestNG-tests-1] wire:72 -  << "X-Powered-By: Express[\r][\n]"
+2023-01-31 18:07:17,885 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2023-01-31 18:07:17,888 DEBUG [TestNG-tests-1] wire:72 -  << "Content-Length: 27[\r][\n]"
+2023-01-31 18:07:17,890 DEBUG [TestNG-tests-1] wire:72 -  << "Etag: W/"1b-CqJE1F6KgqH1OV4AxuPQGj5DE6c"[\r][\n]"
+2023-01-31 18:07:17,890 DEBUG [TestNG-tests-1] wire:72 -  << "Date: Tue, 31 Jan 2023 12:37:30 GMT[\r][\n]"
+2023-01-31 18:07:17,892 DEBUG [TestNG-tests-1] wire:72 -  << "Via: 1.1 vegur[\r][\n]"
+2023-01-31 18:07:17,893 DEBUG [TestNG-tests-1] wire:72 -  << "[\r][\n]"
+2023-01-31 18:07:17,893 DEBUG [TestNG-tests-1] DefaultClientConnection:261 - Receiving response: HTTP/1.1 200 OK
+2023-01-31 18:07:17,894 DEBUG [TestNG-tests-1] headers:264 - << HTTP/1.1 200 OK
+2023-01-31 18:07:17,894 DEBUG [TestNG-tests-1] headers:267 - << Server: Cowboy
+2023-01-31 18:07:17,895 DEBUG [TestNG-tests-1] headers:267 - << Connection: keep-alive
+2023-01-31 18:07:17,895 DEBUG [TestNG-tests-1] headers:267 - << X-Powered-By: Express
+2023-01-31 18:07:17,895 DEBUG [TestNG-tests-1] headers:267 - << Content-Type: application/json; charset=utf-8
+2023-01-31 18:07:17,896 DEBUG [TestNG-tests-1] headers:267 - << Content-Length: 27
+2023-01-31 18:07:17,896 DEBUG [TestNG-tests-1] headers:267 - << Etag: W/"1b-CqJE1F6KgqH1OV4AxuPQGj5DE6c"
+2023-01-31 18:07:17,896 DEBUG [TestNG-tests-1] headers:267 - << Date: Tue, 31 Jan 2023 12:37:30 GMT
+2023-01-31 18:07:17,897 DEBUG [TestNG-tests-1] headers:267 - << Via: 1.1 vegur
+2023-01-31 18:07:17,897 DEBUG [TestNG-tests-1] DefaultHttpClient:511 - Connection can be kept alive indefinitely
+2023-01-31 18:07:17,898 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:545 - Parsing response as: application/json; charset=utf-8
+2023-01-31 18:07:17,898 DEBUG [TestNG-tests-1] RequestSpecificationImpl$RestAssuredHttpBuilder:548 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2023-01-31 18:07:17,899 DEBUG [TestNG-tests-1] wire:86 -  << "{"token":"d4db790dbe1983c"}"
+2023-01-31 18:07:17,900 DEBUG [TestNG-tests-1] BasicClientConnectionManager:203 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6a66e5ba
+2023-01-31 18:07:17,901 DEBUG [TestNG-tests-1] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2023-01-31 18:07:18,032 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,040 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+2023-01-31 18:07:18,044 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("index.ftl"): Found
+2023-01-31 18:07:18,045 DEBUG [TestNG-tests-1] cache:45 - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+2023-01-31 18:07:18,527 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,529 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+2023-01-31 18:07:18,530 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("head.ftl"): Found
+2023-01-31 18:07:18,531 DEBUG [TestNG-tests-1] cache:45 - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+2023-01-31 18:07:18,545 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,546 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+2023-01-31 18:07:18,547 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("nav.ftl"): Found
+2023-01-31 18:07:18,548 DEBUG [TestNG-tests-1] cache:45 - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+2023-01-31 18:07:18,565 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,567 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+2023-01-31 18:07:18,570 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+2023-01-31 18:07:18,571 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+2023-01-31 18:07:18,595 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,597 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+2023-01-31 18:07:18,598 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+2023-01-31 18:07:18,598 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+2023-01-31 18:07:18,626 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,627 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+2023-01-31 18:07:18,628 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+2023-01-31 18:07:18,628 DEBUG [TestNG-tests-1] cache:45 - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+2023-01-31 18:07:18,670 DEBUG [TestNG-tests-1] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2023-01-31 18:07:18,674 DEBUG [TestNG-tests-1] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2023-01-31 18:07:18,676 DEBUG [TestNG-tests-1] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2023-01-31 18:07:18,680 DEBUG [TestNG-tests-1] cache:45 - "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2023-01-31 18:07:18,682 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,683 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+2023-01-31 18:07:18,686 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+2023-01-31 18:07:18,687 DEBUG [TestNG-tests-1] cache:45 - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+2023-01-31 18:07:18,693 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,695 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+2023-01-31 18:07:18,696 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+2023-01-31 18:07:18,696 DEBUG [TestNG-tests-1] cache:45 - Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+2023-01-31 18:07:18,707 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,709 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+2023-01-31 18:07:18,710 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+2023-01-31 18:07:18,710 DEBUG [TestNG-tests-1] cache:45 - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+2023-01-31 18:07:18,716 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,719 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+2023-01-31 18:07:18,720 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+2023-01-31 18:07:18,720 DEBUG [TestNG-tests-1] cache:45 - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+2023-01-31 18:07:18,734 DEBUG [TestNG-tests-1] cache:45 - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+2023-01-31 18:07:18,735 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+2023-01-31 18:07:18,736 DEBUG [TestNG-tests-1] cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+2023-01-31 18:07:18,737 DEBUG [TestNG-tests-1] cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/as61837/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"

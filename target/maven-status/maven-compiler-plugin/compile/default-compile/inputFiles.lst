@@ -4,11 +4,10 @@ C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\listeners\
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\CommonActions.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\controllers\ExcelDataProvider.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\listeners\ExtentReporter.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\Helper.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\ViewStatusPage.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\pojoClasses\Api.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\APIResources.java
-C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\Helper.java
-C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\ApiUtil.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\pojoClasses\Courses.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\SnapdealScenarios.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\Robot.java
@@ -21,11 +20,14 @@ C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\pojoClasse
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\AddEmployeeForHrmPage.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\LoginForHrmPage.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\pojoClasses\AddPlace.java
-C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\API.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\Api.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\basicApi\PlacesApi.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\listeners\ExtentManager.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\pojoClasses\Location.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\JsonRead.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\Log.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\ValidatorOperation.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\basicApi\Auth.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\DBConnectionBuilder.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\DBUtils.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\ExplicitWaiting.java
@@ -33,6 +35,7 @@ C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\controllers\MySqlDataProvider.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\LoginEformPage.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\BrowserFactory\DriverFactory.java
+C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\api\ApiUtils.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\EfromAdditionSoftwareRequestPageJson.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\utils\ExcelUtils.java
 C:\Users\as61837\Documents\GitHub\HybridFrameworkMaster\src\main\java\page\EfromAdditionSoftwareRequestPage.java

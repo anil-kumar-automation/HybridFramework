@@ -1,0 +1,29 @@
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/auth
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password123"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Etag: W/"1b-CqJE1F6KgqH1OV4AxuPQGj5DE6c"
+Date: Tue, 31 Jan 2023 12:37:30 GMT
+Via: 1.1 vegur
+
+{
+    "token": "d4db790dbe1983c"
+}

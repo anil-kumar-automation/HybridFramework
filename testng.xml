@@ -2,43 +2,50 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="tests" thread-count="3">
     <listeners>
-       <listener class-name="listeners.ExtentReporter"/>
+        <listener class-name="listeners.ExtentReporter"/>
     </listeners>
 
-  <!--<test name="ChromeTest">
-        <classes>
-            <class name="tests.EfromAdditionSoftwareRequestTestJson"></class>
-        </classes>
-    </test>-->
+    <!--<test name="ChromeTest">
+          <classes>
+              <class name="tests.EfromAdditionSoftwareRequestTestJson"></class>
+          </classes>
+      </test>-->
 
-  <!--  <test name="ChromeTest1">
+    <!--  <test name="ChromeTest1">
+          <classes>
+              <class name="tests.EfromAdditionSoftwareRequestTest"></class>
+          </classes>
+      </test>
+
+      <test name="ChromeTest2">
+          <classes>
+              <class name="tests.EfromPrivilegeRequestTest"></class>
+          </classes>
+      </test>
+
+      <test name="ChromeTest4">
+          <classes>
+              <class name="tests.EfromViewStatusTest"></class>
+          </classes>
+      </test>
+
+      <test name="EdgeTest">
+          <classes>
+              <class name="tests.PimHrmTestcases"></class>
+          </classes>
+      </test>-->
+
+    <!-- <test name="EdgeTest1">
+         <classes>
+             <class name="tests.SnapdealScenariosTest"></class>
+         </classes>
+     </test>-->
+
+    <test name="ApiTestSuite">
         <classes>
-            <class name="tests.EfromAdditionSoftwareRequestTest"></class>
+            <class name="WorkflowApi.ApiValidateTest"></class>
         </classes>
     </test>
 
-    <test name="ChromeTest2">
-        <classes>
-            <class name="tests.EfromPrivilegeRequestTest"></class>
-        </classes>
-    </test>
-
-    <test name="ChromeTest4">
-        <classes>
-            <class name="tests.EfromViewStatusTest"></class>
-        </classes>
-    </test>
-
-    <test name="EdgeTest">
-        <classes>
-            <class name="tests.PimHrmTestcases"></class>
-        </classes>
-    </test>-->
-
-    <test name="EdgeTest1">
-        <classes>
-            <class name="tests.SnapdealScenariosTest"></class>
-        </classes>
-    </test>
 
 </suite>

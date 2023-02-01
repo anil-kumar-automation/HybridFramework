@@ -20,10 +20,9 @@ public class Auth extends ApiUtils {
      * */
     private void createToken(String userName, String passWord) throws FileNotFoundException {
 		initBase("HostBaseUrl");
-		init("/auth", HttpOperation.POST,"login");
+		init("/auth", HttpOperation.POST,"auth");
 		setHeader("Content-Type","application/json");
 		setBody("{ \"username\" : \""+userName+"\", \"password\" : \""+passWord+"\"}");
-
 	}
 	
 

@@ -3,12 +3,11 @@ package tests;
 import BrowserFactory.DriverFactory;
 import controllers.ExcelDataProvider;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.LoginEformPage;
-import utils.CommonActions;
+import utils.selenium.CommonActions;
 
 import java.io.IOException;
 

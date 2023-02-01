@@ -5,15 +5,19 @@ import basicApi.PlacesApi;
 import com.aventstack.extentreports.Status;
 import io.restassured.response.Response;
 import listeners.ExtentReporter;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.api.ValidatorOperation;
+import utils.selenium.JsonRead;
 
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Method;
 
-import static utils.Log.info1;
+import static utils.selenium.Log.info1;
 
 
 public class ApiValidateTest {
@@ -59,7 +63,7 @@ public class ApiValidateTest {
         ExtentReporter.extentTest.get().info("Description: InValid Login Scenario with username and password.");
         Auth response = new Auth();
         Response loginTokenResponse = response.getLoginToken("admibgvn", "pasnxbnxsword123");
-        info1("loginTokenResponse is = " + loginTokenResponse.asString());
+        ExtentReporter.extentTest.get().log(Status.FAIL,"InvalidLoginTokenResponse is = " + loginTokenResponse.asString());
 
         try {
             //ExtentTestManager.getTest().log(LogStatus.INFO, "URL is: " +response.url);
@@ -77,31 +81,42 @@ public class ApiValidateTest {
 
     }
 
-    @Test
-    public void AddPlaceApiTest() throws IOException {
+    @Test(priority = 1)
+    public void AddPlaceApiTest() throws IOException, ParseException {
         PlacesApi placesApi = new PlacesApi();
         response = placesApi.AddPlaceApi();
         placesApi.assertIt(200);
-        placeId = placesApi.getJson_Path(response, "place_id");
-        info1("addPlace response is =" + response.asString());
-        info1("addPlace response of placeid value is =" + placeId);
-        System.out.println("placeId = " + placeId);
-        placesApi.UpdatePlaceApi(placeId);
-        response = placesApi.GetPlaceApi(placeId);
-        String address = placesApi.getJson_Path(response, "address");
-        info1("GetPlace response is =" + response.asString());
-        info1("GetPlace response of address value is =" + address);
-        System.out.println("address value is = " + address);
-        Assert.assertEquals(address, "Summer Walk, Africa");
+        Object obj = new JSONParser().parse(response.asString());
+        JSONObject jsonObject = (JSONObject) obj;
 
-       /* response = placesApi.DeletePlaceApi(placeId);
-        info1("UpdatePlace response is =" + response);*/
+        placeId = JsonRead.getValue(jsonObject, "place_id");
+        info1("addPlace response := " + response.asString());
+        info1("addPlace response of  placeId value   := " + placeId);
+
+
     }
 
-    @Test
+    @Test(priority = 2)
+    public void UpdatePlaceApiTest() throws IOException {
+        PlacesApi placesApi = new PlacesApi();
+        response= placesApi.UpdatePlaceApi(placeId);
+        info1("UpdatePlace response is =" + response.asString());
+    }
+
+    @Test(priority = 3)
+    public void GetPlaceApiTest() throws IOException {
+        PlacesApi placesApi = new PlacesApi();
+        response = placesApi.GetPlaceApi(placeId);
+        info1("GetPlace response is =" + response.asString());
+        String address = placesApi.getJson_Path(response, "address");
+        info1("GetPlace response of address value is =" + address);
+        Assert.assertEquals(address, "Summer Walk, Africa");
+    }
+
+    @Test(priority = 4)
     public void DeletePlaceApiTest() throws IOException {
         PlacesApi placesApi = new PlacesApi();
-        response =  placesApi.DeletePlaceApi(placeId);
+        response = placesApi.DeletePlaceApi(placeId);
         info1("UpdatePlace response is =" + response.asString());
     }
 

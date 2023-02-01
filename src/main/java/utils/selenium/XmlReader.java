@@ -1,4 +1,4 @@
-package utils;
+package utils.selenium;
 
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;

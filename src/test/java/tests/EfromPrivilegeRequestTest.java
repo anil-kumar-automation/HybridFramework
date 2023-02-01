@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import page.EformPrivilegeRequestPage;
 import page.LoginEformPage;
-import utils.CommonActions;
+import utils.selenium.CommonActions;
 
 import java.io.IOException;
 

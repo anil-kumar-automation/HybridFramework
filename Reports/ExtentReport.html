@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 31, 2023 06:07:03 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 1, 2023 06:29:33 PM</span>
 				</a>
 			</li>
 			<li>
@@ -74,6 +74,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -134,10 +135,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>6</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -149,10 +150,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='53.846%'><span class='strong'>14</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='51.613%'><span class='strong'>16</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='46.154%'>12</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.226%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='45.161%'>14</span> others
 				</div>
 			</div>
 		</div>
@@ -169,15 +170,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>ApiValidateTest::AddPlaceApiTest</span>
-						<span class='test-time'>Jan 31, 2023 06:07:04 PM</span>
+						<span class='test-name'>ApiValidateTest::AddPlaceApiWithPojoTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 31, 2023 06:07:04 PM</span>
-	<span class='label end-time'>Jan 31, 2023 06:07:11 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+427ms</span>
+	<span class='label start-time'>Feb 1, 2023 06:29:34 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+461ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -199,32 +200,17 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:09 PM</td>
-					<td class='step-details'>addPlace response is ={"status":"OK","place_id":"a5307d49d3f9ba369d2fcf955a8acfdd","scope":"APP","reference":"fb4aba8a879fb95a95f15ff2281f5557fb4aba8a879fb95a95f15ff2281f5557","id":"fb4aba8a879fb95a95f15ff2281f5557"}</td>
+					<td class='timestamp'>6:29:37 PM</td>
+					<td class='step-details'>AddPlace pojo approach response is = {"status":"OK","place_id":"49cc98bac5de9c96bc63a0417a98cd04","scope":"APP","reference":"364bdb5265794e85e266ab209e25f3ab364bdb5265794e85e266ab209e25f3ab","id":"364bdb5265794e85e266ab209e25f3ab"}</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:09 PM</td>
-					<td class='step-details'>addPlace response of placeid value is =a5307d49d3f9ba369d2fcf955a8acfdd</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:11 PM</td>
-					<td class='step-details'>GetPlace response is ={"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"Summer Walk, Africa","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:11 PM</td>
-					<td class='step-details'>GetPlace response of address value is =Summer Walk, Africa</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:11 PM</td>
-					<td class='step-details'><span class='label white-text green'><b>Test Method AddPlaceApiTest Successes </b></span></td>
+					<td class='timestamp'>6:29:37 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method AddPlaceApiWithPojoTest Successes </b></span></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:11 PM</td>
+					<td class='timestamp'>6:29:37 PM</td>
 					<td class='step-details'>TestCase execution finished.</td>
 				</tr>
 			</tbody>
@@ -234,17 +220,17 @@
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>ApiValidateTest::AddPlaceApiWithPojoTest</span>
-						<span class='test-time'>Jan 31, 2023 06:07:11 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>ApiValidateTest::invalidLoginTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:37 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 31, 2023 06:07:11 PM</span>
-	<span class='label end-time'>Jan 31, 2023 06:07:12 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+154ms</span>
+	<span class='label start-time'>Feb 1, 2023 06:29:37 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+751ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -264,19 +250,34 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:12 PM</td>
-					<td class='step-details'>AddPlace pojo approach response is = {"status":"OK","place_id":"87b44d49918ff7eed869f4eca4ebe7df","scope":"APP","reference":"3622876ba28f48d427279ba53410dd0f3622876ba28f48d427279ba53410dd0f","id":"3622876ba28f48d427279ba53410dd0f"}</td>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:37 PM</td>
+					<td class='step-details'>Description: InValid Login Scenario with username and password.</td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:12 PM</td>
-					<td class='step-details'><span class='label white-text green'><b>Test Method AddPlaceApiWithPojoTest Successes </b></span></td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>6:29:40 PM</td>
+					<td class='step-details'>InvalidLoginTokenResponse is = {"reason":"Bad credentials"}</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:12 PM</td>
+					<td class='timestamp'>6:29:40 PM</td>
+					<td class='step-details'>Asserting response code</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:41 PM</td>
+					<td class='step-details'>Asserting response value == Bad credentials</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:41 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method invalidLoginTest Successes </b></span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:41 PM</td>
 					<td class='step-details'>TestCase execution finished.</td>
 				</tr>
 			</tbody>
@@ -288,15 +289,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
-						<span class='test-name'>ApiValidateTest::DeletePlaceApiTest</span>
-						<span class='test-time'>Jan 31, 2023 06:07:12 PM</span>
+						<span class='test-name'>ApiValidateTest::validLoginTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:41 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 31, 2023 06:07:12 PM</span>
-	<span class='label end-time'>Jan 31, 2023 06:07:13 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+153ms</span>
+	<span class='label start-time'>Feb 1, 2023 06:29:41 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+862ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -316,19 +317,44 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:13 PM</td>
-					<td class='step-details'>UpdatePlace response is ={"status":"OK"}</td>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:41 PM</td>
+					<td class='step-details'>Description: Valid Login Scenario with username and password.</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:13 PM</td>
-					<td class='step-details'><span class='label white-text green'><b>Test Method DeletePlaceApiTest Successes </b></span></td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'>loginTokenResponse is = {"token":"8a9d67666a52db6"}</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'>Description: Valid Login Scenario with username and password.</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:13 PM</td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'>Asserting response code</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'>Asserting response value not empty case</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'>Asserting response value not null case</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:44 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method validLoginTest Successes </b></span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:44 PM</td>
 					<td class='step-details'>TestCase execution finished.</td>
 				</tr>
 			</tbody>
@@ -340,15 +366,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
-						<span class='test-name'>ApiValidateTest::invalidLoginTest</span>
-						<span class='test-time'>Jan 31, 2023 06:07:13 PM</span>
+						<span class='test-name'>ApiValidateTest::AddPlaceApiTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:44 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 31, 2023 06:07:13 PM</span>
-	<span class='label end-time'>Jan 31, 2023 06:07:16 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+248ms</span>
+	<span class='label start-time'>Feb 1, 2023 06:29:44 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+624ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -368,34 +394,24 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:13 PM</td>
-					<td class='step-details'>Description: InValid Login Scenario with username and password.</td>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:45 PM</td>
+					<td class='step-details'>addPlace response := {"status":"OK","place_id":"5a800a25c67a3208ad0235f1302efeb1","scope":"APP","reference":"8caa27577f6907ee7eb1a93474568df78caa27577f6907ee7eb1a93474568df7","id":"8caa27577f6907ee7eb1a93474568df7"}</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:15 PM</td>
-					<td class='step-details'>loginTokenResponse is = {"reason":"Bad credentials"}</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:15 PM</td>
-					<td class='step-details'>Asserting response code</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:16 PM</td>
-					<td class='step-details'>Asserting response value == Bad credentials</td>
+					<td class='timestamp'>6:29:45 PM</td>
+					<td class='step-details'>addPlace response of  placeId value   := 5a800a25c67a3208ad0235f1302efeb1</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:16 PM</td>
-					<td class='step-details'><span class='label white-text green'><b>Test Method invalidLoginTest Successes </b></span></td>
+					<td class='timestamp'>6:29:45 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method AddPlaceApiTest Successes </b></span></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:16 PM</td>
+					<td class='timestamp'>6:29:45 PM</td>
 					<td class='step-details'>TestCase execution finished.</td>
 				</tr>
 			</tbody>
@@ -407,15 +423,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
-						<span class='test-name'>ApiValidateTest::validLoginTest</span>
-						<span class='test-time'>Jan 31, 2023 06:07:16 PM</span>
+						<span class='test-name'>ApiValidateTest::UpdatePlaceApiTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:45 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 31, 2023 06:07:16 PM</span>
-	<span class='label end-time'>Jan 31, 2023 06:07:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+903ms</span>
+	<span class='label start-time'>Feb 1, 2023 06:29:45 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+306ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -435,44 +451,128 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:16 PM</td>
-					<td class='step-details'>Description: Valid Login Scenario with username and password.</td>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:46 PM</td>
+					<td class='step-details'>UpdatePlace response is ={"msg":"Address successfully updated"}</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'>loginTokenResponse is = {"token":"d4db790dbe1983c"}</td>
+					<td class='timestamp'>6:29:46 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method UpdatePlaceApiTest Successes </b></span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:46 PM</td>
+					<td class='step-details'>TestCase execution finished.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>ApiValidateTest::GetPlaceApiTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 1, 2023 06:29:46 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+694ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Regression</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AnilKumar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:48 PM</td>
+					<td class='step-details'>GetPlace response is ={"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"Summer Walk, Africa","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'>Description: Valid Login Scenario with username and password.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'>Asserting response code</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'>Asserting response value not empty case</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'>Asserting response value not null case</td>
+					<td class='timestamp'>6:29:48 PM</td>
+					<td class='step-details'>GetPlace response of address value is =Summer Walk, Africa</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
-					<td class='step-details'><span class='label white-text green'><b>Test Method validLoginTest Successes </b></span></td>
+					<td class='timestamp'>6:29:48 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method GetPlaceApiTest Successes </b></span></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>6:07:17 PM</td>
+					<td class='timestamp'>6:29:48 PM</td>
+					<td class='step-details'>TestCase execution finished.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>ApiValidateTest::DeletePlaceApiTest</span>
+						<span class='test-time'>Feb 1, 2023 06:29:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 1, 2023 06:29:48 PM</span>
+	<span class='label end-time'>Feb 1, 2023 06:29:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+250ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Regression</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AnilKumar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:49 PM</td>
+					<td class='step-details'>UpdatePlace response is ={"status":"OK"}</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:29:49 PM</td>
+					<td class='step-details'><span class='label white-text green'><b>Test Method DeletePlaceApiTest Successes </b></span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>6:29:49 PM</td>
 					<td class='step-details'>TestCase execution finished.</td>
 				</tr>
 			</tbody>
@@ -534,13 +634,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>Regression</span>
 						<span class='category-status right'>
-							<span class='label pass'>5</span>
+							<span class='label pass'>6</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 5</span>
-							
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -555,28 +656,38 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 31, 2023 06:07:04 PM</td>
-										<td class='linked' test-id='1'>ApiValidateTest::AddPlaceApiTest</td>
+										<td>Feb 1, 2023 06:29:34 PM</td>
+										<td class='linked' test-id='1'>ApiValidateTest::AddPlaceApiWithPojoTest</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 31, 2023 06:07:11 PM</td>
-										<td class='linked' test-id='2'>ApiValidateTest::AddPlaceApiWithPojoTest</td>
+										<td>Feb 1, 2023 06:29:37 PM</td>
+										<td class='linked' test-id='2'>ApiValidateTest::invalidLoginTest</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 1, 2023 06:29:41 PM</td>
+										<td class='linked' test-id='3'>ApiValidateTest::validLoginTest</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 31, 2023 06:07:12 PM</td>
-										<td class='linked' test-id='3'>ApiValidateTest::DeletePlaceApiTest</td>
+										<td>Feb 1, 2023 06:29:44 PM</td>
+										<td class='linked' test-id='4'>ApiValidateTest::AddPlaceApiTest</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 31, 2023 06:07:13 PM</td>
-										<td class='linked' test-id='4'>ApiValidateTest::invalidLoginTest</td>
+										<td>Feb 1, 2023 06:29:45 PM</td>
+										<td class='linked' test-id='5'>ApiValidateTest::UpdatePlaceApiTest</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 31, 2023 06:07:16 PM</td>
-										<td class='linked' test-id='5'>ApiValidateTest::validLoginTest</td>
+										<td>Feb 1, 2023 06:29:46 PM</td>
+										<td class='linked' test-id='6'>ApiValidateTest::GetPlaceApiTest</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 1, 2023 06:29:48 PM</td>
+										<td class='linked' test-id='7'>ApiValidateTest::DeletePlaceApiTest</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -624,13 +735,14 @@
                             <div class='author-heading'>
                                 <span class='author-name'>AnilKumar</span>
                                 <span class='author-status right'>
-                                        <span class='label pass'>5</span>
+                                        <span class='label pass'>6</span>
+                                        <span class='label fail'>1</span>
 						        </span>
                             </div>
                             <div class='author-content hide'>
                                 <div class='author-status-counts'>
-                                    <span class='label green accent-4 white-text'>Passed: 5</span>
-                                    
+                                    <span class='label green accent-4 white-text'>Passed: 6</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
                                     
                                 </div>
 
@@ -645,28 +757,38 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Jan 31, 2023 06:07:04 PM</td>
-                                                <td class='linked' test-id='1'>ApiValidateTest::AddPlaceApiTest</td>
+                                                <td>Feb 1, 2023 06:29:34 PM</td>
+                                                <td class='linked' test-id='1'>ApiValidateTest::AddPlaceApiWithPojoTest</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Jan 31, 2023 06:07:11 PM</td>
-                                                <td class='linked' test-id='2'>ApiValidateTest::AddPlaceApiWithPojoTest</td>
+                                                <td>Feb 1, 2023 06:29:37 PM</td>
+                                                <td class='linked' test-id='2'>ApiValidateTest::invalidLoginTest</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Feb 1, 2023 06:29:41 PM</td>
+                                                <td class='linked' test-id='3'>ApiValidateTest::validLoginTest</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Jan 31, 2023 06:07:12 PM</td>
-                                                <td class='linked' test-id='3'>ApiValidateTest::DeletePlaceApiTest</td>
+                                                <td>Feb 1, 2023 06:29:44 PM</td>
+                                                <td class='linked' test-id='4'>ApiValidateTest::AddPlaceApiTest</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Jan 31, 2023 06:07:13 PM</td>
-                                                <td class='linked' test-id='4'>ApiValidateTest::invalidLoginTest</td>
+                                                <td>Feb 1, 2023 06:29:45 PM</td>
+                                                <td class='linked' test-id='5'>ApiValidateTest::UpdatePlaceApiTest</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Jan 31, 2023 06:07:16 PM</td>
-                                                <td class='linked' test-id='5'>ApiValidateTest::validLoginTest</td>
+                                                <td>Feb 1, 2023 06:29:46 PM</td>
+                                                <td class='linked' test-id='6'>ApiValidateTest::GetPlaceApiTest</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Feb 1, 2023 06:29:48 PM</td>
+                                                <td class='linked' test-id='7'>ApiValidateTest::DeletePlaceApiTest</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                         </tbody>
@@ -694,31 +816,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>26</div>
+					<div class='panel-lead'>31</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 31, 2023 06:07:03 PM</div>
+					<div class='panel-lead'>Feb 1, 2023 06:29:33 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 31, 2023 06:07:17 PM</div>
+			 		<div class='panel-lead'>Feb 1, 2023 06:29:49 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 14s+806ms</div>
+					<div class='panel-lead'>0h 0m 15s+816ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -755,11 +877,11 @@
 						</tr>
 						<tr>
 							<td>Regression</td>
-							<td>5</td>
-							<td>0</td>
+							<td>6</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									85.714%
 							</td>
 						</tr>
 					</table>
@@ -775,22 +897,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 5,
-				failParent: 0,
+				passParent: 6,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 14,
-				failChild: 0,
+				passChild: 16,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 12,
-				exceptionsChild: 0,
+				infoChild: 14,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -3,7 +3,7 @@ package tests;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
-import utils.XmlReader;
+import utils.selenium.XmlReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

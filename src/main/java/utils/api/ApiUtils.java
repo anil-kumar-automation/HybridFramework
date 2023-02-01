@@ -26,28 +26,53 @@ public class ApiUtils {
     Response resp;
 
 
-
-
-    public void init(String url, HttpOperation method , String ResourceName) throws FileNotFoundException {
+    public void init(String url, HttpOperation method, String ResourceName) throws FileNotFoundException {
         this.url = url;
         this.method = method;
         reqSpec = given();
-        if(ResourceName.equalsIgnoreCase("login")) {
-            loggingJsonforlogin();
+        if (ResourceName.equalsIgnoreCase("auth")) {
+            authApiLogs();
+        } else if (ResourceName.equalsIgnoreCase("addPlace")) {
+            AddPlaceApiLogs();
         }
-        else {
-            loggingJsonforaddPlace();
+        else if (ResourceName.equalsIgnoreCase("updatePlace")) {
+            UpdatePlaceApiLogs();
+        }
+        else if (ResourceName.equalsIgnoreCase("getPlace")) {
+            getPlaceApiLogs();
+        }
+        else if (ResourceName.equalsIgnoreCase("DeletePlace")) {
+            DeletePlaceApiLogs();
         }
     }
 
-    public void loggingJsonforlogin() throws FileNotFoundException {
+    public void authApiLogs() throws FileNotFoundException {
 
-        PrintStream log = new PrintStream(new FileOutputStream("loggingApi.txt")); //this is help to print logs to mentioned file
+        PrintStream log = new PrintStream(new FileOutputStream("authApiInfo.txt")); //this is help to print logs to mentioned file
         reqSpec = reqSpec.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
     }
-    public void loggingJsonforaddPlace() throws FileNotFoundException {
 
-        PrintStream log = new PrintStream(new FileOutputStream("addPlaceApi.txt")); //this is help to print logs to mentioned file
+    public void AddPlaceApiLogs() throws FileNotFoundException {
+
+        PrintStream log = new PrintStream(new FileOutputStream("addPlaceApiInfo.txt")); //this is help to print logs to mentioned file
+        reqSpec = reqSpec.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
+    }
+
+    public void UpdatePlaceApiLogs() throws FileNotFoundException {
+
+        PrintStream log = new PrintStream(new FileOutputStream("updatePlaceApiInfo.txt")); //this is help to print logs to mentioned file
+        reqSpec = reqSpec.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
+    }
+
+    public void getPlaceApiLogs() throws FileNotFoundException {
+
+        PrintStream log = new PrintStream(new FileOutputStream("GetPlaceApiInfo.txt")); //this is help to print logs to mentioned file
+        reqSpec = reqSpec.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
+    }
+
+    public void DeletePlaceApiLogs() throws FileNotFoundException {
+
+        PrintStream log = new PrintStream(new FileOutputStream("DeletePlaceApiInfo.txt")); //this is help to print logs to mentioned file
         reqSpec = reqSpec.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
     }
 
@@ -87,7 +112,7 @@ public class ApiUtils {
         reqSpec.body(body);
     }
 
-    public void setBodySerialize( Object body) {
+    public void setBodySerialize(Object body) {
         reqSpec.body(body);
     }
 
@@ -159,23 +184,6 @@ public class ApiUtils {
         }
 
         return this;
-    }
-
-    public void assertIt(List<List<Object>> data) {
-        for (List<Object> li : data) {
-            switch (((ValidatorOperation) li.get(2)).toString()) {
-                case "EQUALS":
-                    resp.then().body(((String) li.get(0)), equalTo((String) li.get(1)));
-                    break;
-
-                case "KEY_PRESENTS":
-                    resp.then().body(((String) li.get(0)), hasKey((String) li.get(1)));
-                    break;
-
-                case "HAS_ALL":
-                    break;
-            }
-        }
     }
 
     public ApiUtils assertIt(int code) {

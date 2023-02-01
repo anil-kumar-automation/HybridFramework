@@ -15,12 +15,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import page.SnapdealScenarios;
-import utils.CommonActions;
+import utils.selenium.CommonActions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import static utils.Log.info1;
+import static utils.selenium.Log.info1;
 
 
 public class SnapdealScenariosTest {

@@ -1,8 +1,8 @@
 package controllers;
 
 import org.testng.annotations.DataProvider;
-import utils.DBConnectionBuilder;
-import utils.DBUtils;
+import utils.selenium.DBConnectionBuilder;
+import utils.selenium.DBUtils;
 
 import java.sql.SQLException;
 

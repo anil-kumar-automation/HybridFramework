@@ -1,9 +1,8 @@
 package controllers;
 
 import org.testng.annotations.DataProvider;
-import utils.ExcelUtils;
+import utils.selenium.ExcelUtils;
 import java.io.File;
-import java.lang.reflect.Method;
 
 
 public class ExcelDataProvider {

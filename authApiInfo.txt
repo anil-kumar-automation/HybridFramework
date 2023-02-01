@@ -20,10 +20,10 @@ Connection: keep-alive
 X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
 Content-Length: 27
-Etag: W/"1b-CqJE1F6KgqH1OV4AxuPQGj5DE6c"
-Date: Tue, 31 Jan 2023 12:37:30 GMT
+Etag: W/"1b-/jzpcG0TIEFmM0k5KAP92gb/VDA"
+Date: Wed, 01 Feb 2023 12:59:57 GMT
 Via: 1.1 vegur
 
 {
-    "token": "d4db790dbe1983c"
+    "token": "8a9d67666a52db6"
 }

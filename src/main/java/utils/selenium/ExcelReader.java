@@ -1,4 +1,4 @@
-package utils;
+package utils.selenium;
 
 
 import oracle.security.crypto.util.InvalidFormatException;

@@ -1,4 +1,4 @@
-package utils;
+package utils.selenium;
 
 import BrowserFactory.DriverFactory;
 import org.openqa.selenium.*;

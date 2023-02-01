@@ -8,13 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.CommonActions;
-import utils.JsonRead;
+import utils.selenium.CommonActions;
+import utils.selenium.JsonRead;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Collections;
 
 public class EfromAdditionSoftwareRequestPageJson {
     WebDriver driver;

@@ -1,4 +1,4 @@
-package utils;
+package utils.selenium;
 
 
 import com.aventstack.extentreports.Status;

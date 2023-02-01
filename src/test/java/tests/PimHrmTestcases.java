@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import page.AddEmployeeForHrmPage;
 import page.LoginForHrmPage;
-import utils.CommonActions;
+import utils.selenium.CommonActions;
 
 import java.awt.*;
 import java.io.IOException;

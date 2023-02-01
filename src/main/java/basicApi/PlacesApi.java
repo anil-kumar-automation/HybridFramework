@@ -25,7 +25,7 @@ public class PlacesApi extends ApiUtils {
         APIResources AddPlaceResource = APIResources.valueOf("AddPlaceAPI");
         System.out.println("AddPlace end point api = " + AddPlaceResource.getResource());
         initBase("baseUrl");
-        init(AddPlaceResource.getResource(), HttpOperation.POST, "print");
+        init(AddPlaceResource.getResource(), HttpOperation.POST, "addPlace");
         //init("/maps/api/place/add/json", HttpOperation.POST,"print");
         setQueryParam("key", "qaclick123");
         setHeader("Content-Type", "application/json");
@@ -40,7 +40,7 @@ public class PlacesApi extends ApiUtils {
         APIResources UpdatePlaceResource = APIResources.valueOf("updatePlaceAPI");
         System.out.println("UpdatePlace end point api = " + UpdatePlaceResource.getResource());
         initBase("baseUrl");
-        init(UpdatePlaceResource.getResource(), HttpOperation.PUT, "print");
+        init(UpdatePlaceResource.getResource(), HttpOperation.PUT, "updatePlace");
         setQueryParam("key", "qaclick123");
         setHeader("Content-Type", "application/json");
         setBody("{\n" +
@@ -59,7 +59,7 @@ public class PlacesApi extends ApiUtils {
         APIResources GetPlaceResource = APIResources.valueOf("getPlaceAPI");
         System.out.println("GetPlace end point api = " + GetPlaceResource.getResource());
         initBase("baseUrl");
-        init(GetPlaceResource.getResource(), HttpOperation.GET, "print");
+        init(GetPlaceResource.getResource(), HttpOperation.GET, "GetPlace");
         setQueryParam("key", "qaclick123");
         setQueryParam("place_id", placeId);
         setHeader("Content-Type", "application/json");
@@ -73,7 +73,7 @@ public class PlacesApi extends ApiUtils {
         APIResources UpdatePlaceResource = APIResources.valueOf("deletePlaceAPI");
         System.out.println("GetPlace end point api = " + UpdatePlaceResource.getResource());
         initBase("baseUrl");
-        init(UpdatePlaceResource.getResource(), HttpOperation.DELETE, "print");
+        init(UpdatePlaceResource.getResource(), HttpOperation.DELETE, "deletePlace");
         setQueryParam("key", "qaclick123");
         setHeader("Content-Type", "application/json");
         setBody("{\n" +

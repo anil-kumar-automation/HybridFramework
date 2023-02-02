@@ -1,5 +1,5 @@
 # HybridFramework with RestAssured API Testing Automation Framework
-This Test Automation Framework is created using Java + Selenium Web Driver + TestNG + RestAssured. Maven is used for dependency management and continuous development, it uses RestAssured -API testing library, TestNG - Third-party free library for Running tests, and for Reporting, Extent Reports (library for interactive and detailed reports for tests). This framework can be used for any Restful application to create API tests
+This Test Automation Framework is created using Java + Selenium Web Driver + TestNG + RestAssured. Maven is used for dependency management and continuous development, it uses RestAssured -API testing library, TestNG - Third-party free library for Running tests, and for Reporting, Extent Reports (library for interactive and detailed reports for tests). This framework can be used for any web & Restful application to create Web Scenario's test and API tests as well.
 
 
 # Contents
@@ -22,9 +22,9 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 
 # Framework Details<a name="FrameworkDetails"></a>
 #### Prerequisites<a name="prerequisites"></a>
-> *	Java jdk-1.8 or higher
-*	Apache Maven 3 or higher
-* IDE for execution (Eclipse or Intellij)
+> *   Java jdk-1.8 or higher
+> *   Apache Maven 3 or higher
+> *   IDE for execution (Eclipse or Intellij)
 
 #### Framework - What and Why?<a name="ww"></a>
 > it can be used across different web based applications.

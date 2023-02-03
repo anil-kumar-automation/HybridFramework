@@ -38,13 +38,20 @@ With this framework in place, whenever we need to automate a web based applicati
 
 # Packages<a name="package"></a>
 #### Main Package<a name="main"></a>
-> `src/main/java/` is the core package of Framework and it has various sub-packages dedicatedly for various API testing functionalities. All sub-package details are mentioned in the following section.
+> `src/main/java/` is the core package of Framework and it has various sub-packages dedicatedly for various functionalities like `browser capabilities`,`all utils package`,`controllers`,`listeners`,`page`,`pojoClasses`,`ApiUtils`,SeleniumUtils,. All sub-package details are mentioned in the following section.
+> `src/main/resources/` is the core package of Framework and it has various sub-packages dedicatedly for configuration with all properties are available this packge
 
 #### Test Package<a name="test"></a>
 > `src/test/java/` is the actual test package and the sub package `tests` holds all test classes (TestNG) related to multiple application like [ Efrom ,Orange Hrm , Snapdeal ] 
+
 > * `OrangeHRM​ (OrangeHRM is a human resources management system designed to streamline and simplify HR processes)​`
 > * `E-Forms​ (E-Forms is an Zensar Technologies Internal platform, where the end users will request for the software/Hardware requirements)​`
 > * `Snapdeal​ (Snapdeal is an e-commerce website, where end users will purchase goods online at their comfort)`
+> * `ApiWorkflowTest (it's validate all kind of api calls with post,get,put,delete methods)`
+
+>  `src/test/resources/` 
+
+> * `mentioned all json files, excel files, xml files in the test resources folder`
 
 #### Reports<a name="reports"></a>
 > With the Extent library, we can create interactive and detailed reports for our API test results. We can add events, tags, devices, authors or any other relevant information we decide is essential to create an informative and stunning report. Test Reports can be found in `workingDir/Reports/ExtentReport.html`

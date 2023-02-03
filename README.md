@@ -12,10 +12,6 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 	* [Main Package](#main)
 	* [Test Package](#test)
 	* [Reports](#reports)
-* [Simple Example Test](#example)
-	* [1) Create a base API](#1)
-	* [2) Write an Actual Test](#2)
-	* [3) Extent HTML report](#3)
 
 
 # Framework Details<a name="FrameworkDetails"></a>

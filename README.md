@@ -91,20 +91,20 @@ With this framework in place, whenever we need to automate a web based applicati
 	- api
 	    - APIResources.java
 	    - ApiUtils.java
-        - Helper.java
-		- HttpOperation.java
-		- ValidatorOperation.java
-	- selenium
+            - Helper.java
+	    - HttpOperation.java
+	    - ValidatorOperation.java
+        - selenium
 	    - CommonAction.java
 	    - DBConnectionBuilder.java
-        - DButils.java
-		- ExcelReader.java
-		- ExcelUtils.java
-		- ExplicitWaiting.java
-		- JsonRead.java
-		- Log.java
-		- Robot
-		- XmlReader
+            - DButils.java
+            - ExcelReader.java
+	    - ExcelUtils.java
+	    - ExplicitWaiting.java
+	    - JsonRead.java
+	    - Log.java
+	    - Robot
+	    - XmlReader
 
 `src/test/resources/`
 - configuration

@@ -29,8 +29,8 @@ With this framework in place, whenever we need to automate a web based applicati
 > This project uses a standard Maven Java project with standard java folder structure and POM.xml
 
 #### Properties<a name="properties"></a>
-> `src/main/resources/configuration/constants.properties` is a simple config properties file to store various config's like application URL, DB & credential details
-> `src/main/resources/configuration/constants.properties` is a simple constants properties file to store various constants like Api related details
+> * `src/main/resources/configuration/constants.properties` is a simple config properties file to store various config's like application URL, DB & credential details.
+>  * `src/main/resources/configuration/constants.properties` is a simple constants properties file to store various constants like Api related details.
 
 # Packages<a name="package"></a>
 #### Main Package<a name="main"></a>

@@ -42,7 +42,7 @@ With this framework in place, whenever we need to automate a web based applicati
 > `src/main/resources/` is the core package of Framework and it has various sub-packages dedicatedly for configuration with all properties are available this packge
 
 #### Test Package<a name="test"></a>
-> `src/test/java/` is the actual test package and the sub package `tests` holds all test classes (TestNG) related to multiple application like [ Efrom ,Orange Hrm , Snapdeal ] 
+> `src/test/java/` is the actual test package and the sub package `tests` holds all test classes (TestNG) related to multiple application like Efrom ,Orange Hrm ,Snapdeal.
 > * `OrangeHRM​ (OrangeHRM is a human resources management system designed to streamline and simplify HR processes)​`
 > * `E-Forms​ (E-Forms is an Zensar Technologies Internal platform, where the end users will request for the software/Hardware requirements)​`
 > * `Snapdeal​ (Snapdeal is an e-commerce website, where end users will purchase goods online at their comfort)`

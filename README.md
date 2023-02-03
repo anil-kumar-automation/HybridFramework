@@ -39,7 +39,8 @@ With this framework in place, whenever we need to automate a web based applicati
 # Packages<a name="package"></a>
 #### Main Package<a name="main"></a>
 > `src/main/java/` 
->  * ` this is the core package of Framework and it has various sub-packages dedicatedly for various functionalities like `browser capabilities`,`all utils package`,`controllers`,`listeners`,`page`,`pojoClasses`,`ApiUtils`,SeleniumUtils,. All sub-package details are mentioned in the following section`.
+>  * this is the core package of Framework and it has various sub-packages dedicatedly for various functionalities like browser capabilities, controllers, listeners, page, pojoClasses, ApiUtils, SeleniumUtils. All sub-package details are mentioned in the following section.
+
 > `src/main/resources/` 
 > * this is the core package of Framework and it has various sub-packages dedicatedly for configuration with all properties are available this package`
 

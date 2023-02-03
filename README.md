@@ -38,8 +38,10 @@ With this framework in place, whenever we need to automate a web based applicati
 
 # Packages<a name="package"></a>
 #### Main Package<a name="main"></a>
-> `src/main/java/` is the core package of Framework and it has various sub-packages dedicatedly for various functionalities like `browser capabilities`,`all utils package`,`controllers`,`listeners`,`page`,`pojoClasses`,`ApiUtils`,SeleniumUtils,. All sub-package details are mentioned in the following section.
-> `src/main/resources/` is the core package of Framework and it has various sub-packages dedicatedly for configuration with all properties are available this packge
+> `src/main/java/` 
+>  * ` this is the core package of Framework and it has various sub-packages dedicatedly for various functionalities like `browser capabilities`,`all utils package`,`controllers`,`listeners`,`page`,`pojoClasses`,`ApiUtils`,SeleniumUtils,. All sub-package details are mentioned in the following section`.
+> `src/main/resources/` 
+> * this is the core package of Framework and it has various sub-packages dedicatedly for configuration with all properties are available this package`
 
 #### Test Package<a name="test"></a>
 > `src/test/java/` is the actual test package and the sub package `tests` holds all test classes (TestNG) related to multiple application like Efrom ,Orange Hrm ,Snapdeal.

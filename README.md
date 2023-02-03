@@ -55,7 +55,7 @@ With this framework in place, whenever we need to automate a web based applicati
 
 ## Main Package<a name="main"></a>
 ```
-src/test/java
+src/main/java
 - basicApi
 	 - Auth.java
 	 - PlacesApi.java
@@ -102,7 +102,7 @@ src/test/java
 	    - Robot
 	    - XmlReader
 
-src/test/resources
+src/main/resources
 - configuration
    - config.properties
    - Constants.properties
@@ -121,3 +121,30 @@ src/test/resources
 
 #### ApiUtils.java
 > Its a Java parameter concept type, which is implemented to have a set of different action. Which can be used hole api action and help of this writeing less hands on code  more  it's felxiable for developers.
+
+## Test Package<a name="test"></a>
+```
+src/test/java
+- tests
+     - EfromAdditionSoftwareRequestTest.class
+     - EfromAdditionSoftwareRequestTestJson.class
+     - EfromLogonMultipleSetOfDataTest.class
+     - EfromPrivilegeRequestTest.class
+     - EfromViewStatusTest.class
+     - PimHrmDbTestCases.class
+     - SnapdealScenariosTest.class
+     - XmlTest.class
+     
+- WorkflowApi
+     - ApiValidateTest.class
+	   
+
+src/test/resources
+- payloads 
+    - addplace.json
+    - Data.json.
+- TestData 
+    - document.xlsx
+    - EnterCredentialsTest.xlsx
+- student.xml 
+```

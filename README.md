@@ -57,4 +57,71 @@ With this framework in place, whenever we need to automate a web based applicati
 #### Reports<a name="reports"></a>
 > With the Extent library, we can create interactive and detailed reports for our API test results. We can add events, tags, devices, authors or any other relevant information we decide is essential to create an informative and stunning report. Test Reports can be found in `workingDir/Reports/ExtentReport.html`
 
+## Main Package<a name="main"></a>
+```
+`src/test/java/`
+- basicApi
+	 - Auth.java
+	 - PlacesApi.java
+- BrowserFactory
+	- BrowserCapabilities.Java
+	- DriverFactory
+- controllers
+	- ExcelDataProvider.java
+	- MysqlDataProvider.java
+	- SqlServerDataProvider.java
+	- OracleDataProvider.java
+- listeners
+	- ExtentionUtils.java
+	- ExtentManager.java
+	- ExtentReporter.java
+- page
+	- AddEmployeeForHrmPage.Java
+	- EformPrivilegeRequestPage.java
+	- EformAdditionSoftwareRequestPage.java
+	- EformAdditionSoftwareRequestPageJson.java
+	- LoginEformPage.java
+	- LoginForHrmPage.java
+	- SnapdealScenarios.java
+	- ViewStatusPage.java
+- pojoClasses
+	- Addplace.java
+	- Location
+- Utils
+	- api
+	    - APIResources.java
+	    - ApiUtils.java
+        - Helper.java
+		- HttpOperation.java
+		- ValidatorOperation.java
+	- selenium
+	    - CommonAction.java
+	    - DBConnectionBuilder.java
+        - DButils.java
+		- ExcelReader.java
+		- ExcelUtils.java
+		- ExplicitWaiting.java
+		- JsonRead.java
+		- Log.java
+		- Robot
+		- XmlReader
 
+`src/test/resources/`
+- configuration
+   - config.properties
+   - Constants.properties
+- log4j.properties   
+```
+
+### 1.Utils (api)
+#### HttpOperation.java
+ > Its a Java Enum type, which is implemented to have a set of different HttpOperation constants. Which can be used to create, read, update, and delete (or CRUD) operations, respectively.
+
+#### ValidatorOperation.java
+> Its a Java Enum type, which is implemented to have a set of different ValidatorOperation constants. Which can be used in response json assertions.
+
+#### APIResources.java
+> Its a Java Enum type, which is implemented to have a set of different end point urls constants. Which can be used in parse end point url.
+
+#### ApiUtils.java
+> Its a Java parameter concept type, which is implemented to have a set of different action. Which can be used hole api action and help of this writeing less hands on code  more  it's felxiable for developers.

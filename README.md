@@ -12,8 +12,6 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 	* [Main Package](#main)
 	* [Test Package](#test)
 	* [Reports](#reports)
-* [Installation](#install)
-	* [Steps to follow to setup API automation in local system](#steps)
 * [Simple Example Test](#example)
 	* [1) Create a base API](#1)
 	* [2) Write an Actual Test](#2)

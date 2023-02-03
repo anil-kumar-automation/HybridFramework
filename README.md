@@ -55,7 +55,7 @@ With this framework in place, whenever we need to automate a web based applicati
 
 ## Main Package<a name="main"></a>
 ```
-`src/test/java/`
+* src/test/java
 - basicApi
 	 - Auth.java
 	 - PlacesApi.java
@@ -102,7 +102,7 @@ With this framework in place, whenever we need to automate a web based applicati
 	    - Robot
 	    - XmlReader
 
-`src/test/resources/`
+* src/test/resources
 - configuration
    - config.properties
    - Constants.properties

@@ -152,7 +152,7 @@ The following are some methods provided by this interface:
 ```
 ```
 ### 5. page
-> this all classes are supports page object model with pageFactory where we can find locators all are we put here and writed some automated actions
+> classes are supports page object model with pageFactory where we can find locators we put here and writed some automated actions
 ```
 ```
 ### 6. pojoClasses

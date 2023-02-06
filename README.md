@@ -113,7 +113,8 @@ src/main/resources
 ####  Auth.class
 > in this class ,we are genereated access token through Api utils
 ####  PlacesApi.class
-> validated Ecommerce api calls like post,get,put,delete etc with respective rest-assured methodology
+> validated Ecommerce api calls like post,get,put,delete etc with respective rest-assured methodology.
+```
 
 ```
 ### 2. BrowserFactory
@@ -121,22 +122,23 @@ src/main/resources
 > in this class that is used to set basic properties of browsers such as browser name, browser version, operating systems etc & Every Internet browser has settings you can change, including privacy options, security settings, search engine preferences, autofill and autocomplete behavior, and more. To access your Internet browser settings this option object will be useful.
 ####  DriverFactory.class
 > this class is help to launch respective browser it would be on init_driver() method with user decision.
+```
 
 ```
 ### 3. controllers
 ####  ExcelDataProvider.class
 > this class supports to run with excel test data on Parallel DataProvider, remaining classes support DB with data provider.
+```
 
 ```
 ### 4. listeners
 #### ExtentManager Class:
 > In this class, we created an `ExtentReports` object and it can be reachable via `createInstance()` method. Also, we need to set ExtentReports report HTML file location.
-```
+
 #### ExtentReporter
 > In order to listen to test events such as passed, failed, skipped, etc. we have TestListener class which implements ITestListener.
 
 #### ITestListener
-```
 By using ITestListener, we can change the default behaviour of your test by adding different events to the methods. It also defines a new way of logging or reporting.
 The following are some methods provided by this interface:
 **onStart:** This method is invoked before any test method gets executed. This can be used to get the directory from where the tests are running.
@@ -150,14 +152,17 @@ The following are some methods provided by this interface:
 **onTestSuccess:** This method is invoked when any test method succeeds. This can be used to indicate that the particular test method has successfully finished its execution.
 
 **onTestFailure:** This method is invoked when any test method fails. This can be used to indicate that the particular test method has failed. You can create an event for taking a screenshot which will show where the test has been failed.
+```
 
 ```
 ### 5. page
 > this all classes are supports page object model with pageFactory where we can find locators all are we put here and writed some automated actions
+```
 
 ```
 ### 6. pojoClasses
 The POJO class is created to use the objects in other Java Programs. The major advantage of the POJO class is that we will not have to create objects every time in other Java programs. Simply we can access the objects by using the get() and set() methods. we are implemented this approach on AddPlace.class
+```
 
 ```
 ### 7.Utils 
@@ -177,6 +182,7 @@ The POJO class is created to use the objects in other Java Programs. The major a
 #### Utils.Selenium
 > under this package all Selenium,excel,Db,Json,Xml,logs,synchronization utils are availble where it will be useful just extend the class either create object and passing it.
 
+```
 
 ## Test Package<a name="test"></a>
 ```

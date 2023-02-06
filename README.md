@@ -203,3 +203,8 @@ src/test/resources
     - EnterCredentialsTest.xlsx
 - student.xml 
 ```
+### 1. tests
+> in this package ,writed automate testcases on method level with testng and executed.
+### 2. WorkflowApi
+> in this package ,validated all api calls and executed.
+```

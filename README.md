@@ -204,7 +204,7 @@ src/test/resources
 - student.xml 
 ```
 ### 1. tests
-> in this package ,writed automate testcases on method level with testng and executed.
+> in this package ,writed automate testcases on method priority level with testng. we can get data/object/method from main packge and executed
 ### 2. WorkflowApi
-> in this package ,validated all api calls and executed.
+> in this package ,validated all api calls we can get data/object/method from main packge and executed.
 ```

@@ -161,7 +161,7 @@ The following are some methods provided by this interface:
 
 ```
 ### 6. pojoClasses
-The POJO class is created to use the objects in other Java Programs. The major advantage of the POJO class is that we will not have to create objects every time in other Java programs. Simply we can access the objects by using the get() and set() methods. we are implemented this approach on AddPlace.class
+>The POJO class is created to use the objects in other Java Programs. The major advantage of the POJO class is that we will not have to create objects every time in other Java programs. Simply we can access the objects by using the get() and set() methods. we are implemented this approach on AddPlace.class
 ```
 
 ```
@@ -182,7 +182,6 @@ The POJO class is created to use the objects in other Java Programs. The major a
 #### Utils.Selenium
 > under this package all Selenium,excel,Db,Json,Xml,logs,synchronization utils are availble where it will be useful just extend the class either create object and passing it.
 
-```
 
 ## Test Package<a name="test"></a>
 ```

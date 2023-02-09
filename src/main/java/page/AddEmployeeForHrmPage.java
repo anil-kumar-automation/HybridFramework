@@ -153,8 +153,8 @@ public class AddEmployeeForHrmPage  {
     }
 
     public void SelectCheckboxAndSave() {
-        CommonActions.clickingOnWebElement(smokerCheckbox, 2);
-        CommonActions.clickingOnWebElement(saveButtonOnPersonalDetails, 2);
+        CommonActions.clickingOnWebElement(smokerCheckbox, 8);
+        CommonActions.clickingOnWebElement(saveButtonOnPersonalDetails, 8);
     }
 }
 

@@ -37,7 +37,7 @@ public class SnapdealScenariosTest {
     public void launch() throws IOException {
         ca = new CommonActions();
         df =new DriverFactory();
-        df.init_driver("edge");
+        df.init_driver("chrome");
         ca.navigateSanpdealurl();
     }
 

@@ -1,7 +1,0 @@
-2023-02-09 09:53:25,412  INFO [TestNG-test=Test-1] DriverFactory:44 - browser name is: edge
-2023-02-09 09:53:25,414  INFO [TestNG-test=Test-1] DriverFactory:45 - launching edge browser
-2023-02-09 09:53:41,852  INFO [TestNG-test=Test-1] PimHrmTestcases:28 - entering Orange HRM application URL
-2023-02-09 09:53:44,067  INFO [TestNG-test=Test-1] PimHrmTestcases:28 - entering credential on Orange HRM application
-2023-02-09 09:53:48,045  INFO [TestNG-test=Test-1] PimHrmTestcases:28 - clicking PIM On Orange HRM application
-2023-02-09 09:53:50,659  INFO [TestNG-test=Test-1] PimHrmTestcases:28 - clicking AddEmployee On Orange HRM application
-2023-02-09 09:53:53,453  INFO [TestNG-test=Test-1] PimHrmTestcases:28 - entering Orange HRM application details as First Name,lastName, middleName and click save button

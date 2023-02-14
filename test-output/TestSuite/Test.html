@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/9/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 09 09:53:16 IST 2023</td>
+<td>Started on:</td><td>Tue Feb 14 12:28:31 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37979 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16688 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,65 +75,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.PimHrmTestcases.launch()'><b>launch</b><br>Test class: tests.PimHrmTestcases</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;oxd-input oxd-input--active orangehrm-firstname&quot; name=&quot;firstName&quot; placeholder=&quot;First Name&quot; data-v-844e87dc=&quot;&quot;&gt; is not clickable at point (691, 271). Other element would receive the click: &lt;div class=&quot;oxd-form-loader&quot; data-v-2027e1a1=&quot;&quot;&gt;...&lt;/div&gt;
-  (Session info: MicrosoftEdge=109.0.1518.70)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [6b771a27312316f6807912e5c8315f29, clickElement {id=e060360a-de2e-4035-9a07-cc0372949841}]
-Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 109.0.1518.70, ms:edgeOptions: {debuggerAddress: localhost:64504}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\SK66921\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64504/devtoo..., se:cdpVersion: 109.0.1518.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (6b771a27312316f6807912e5c8315f29)] -&gt; xpath: //input[@placeholder=&apos;First Name&apos;]]
-Session ID: 6b771a27312316f6807912e5c8315f29
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at utils.CommonActions.sendKeysWebElement(CommonActions.java:81)
+<td title='tests.PimHrmTestcases.AddPageAction()'><b>AddPageAction</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.sendKeysWebElement(CommonActions.java:70)
 	at page.AddEmployeeForHrmPage.AddEmployeeActions(AddEmployeeForHrmPage.java:107)
-	at tests.PimHrmTestcases.launch(PimHrmTestcases.java:54)
+	at tests.PimHrmTestcases.AddPageAction(PimHrmTestcases.java:68)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1001248788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1001248788'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;oxd-input oxd-input--active orangehrm-firstname&quot; name=&quot;firstName&quot; placeholder=&quot;First Name&quot; data-v-844e87dc=&quot;&quot;&gt; is not clickable at point (691, 271). Other element would receive the click: &lt;div class=&quot;oxd-form-loader&quot; data-v-2027e1a1=&quot;&quot;&gt;...&lt;/div&gt;
-  (Session info: MicrosoftEdge=109.0.1518.70)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [6b771a27312316f6807912e5c8315f29, clickElement {id=e060360a-de2e-4035-9a07-cc0372949841}]
-Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 109.0.1518.70, ms:edgeOptions: {debuggerAddress: localhost:64504}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\SK66921\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64504/devtoo..., se:cdpVersion: 109.0.1518.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (6b771a27312316f6807912e5c8315f29)] -&gt; xpath: //input[@placeholder=&apos;First Name&apos;]]
-Session ID: 6b771a27312316f6807912e5c8315f29
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at utils.CommonActions.sendKeysWebElement(CommonActions.java:81)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace60162485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace60162485'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.sendKeysWebElement(CommonActions.java:70)
 	at page.AddEmployeeForHrmPage.AddEmployeeActions(AddEmployeeForHrmPage.java:107)
-	at tests.PimHrmTestcases.launch(PimHrmTestcases.java:54)
+	at tests.PimHrmTestcases.AddPageAction(PimHrmTestcases.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -148,8 +108,295 @@ Session ID: 6b771a27312316f6807912e5c8315f29
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
-<td>37</td>
-<td>tests.PimHrmTestcases@106cc338</td></tr>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.DropdownAction()'><b>DropdownAction</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.dropdown(AddEmployeeForHrmPage.java:126)
+	at tests.PimHrmTestcases.DropdownAction(PimHrmTestcases.java:84)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1118505870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1118505870'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.dropdown(AddEmployeeForHrmPage.java:126)
+	at tests.PimHrmTestcases.DropdownAction(PimHrmTestcases.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.PersonalGenderSmoker()'><b>PersonalGenderSmoker</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:87)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:37)
+	at com.sun.proxy.$Proxy15.iterator(Unknown Source)
+	at utils.CommonActions.selectRadioButtonValue(CommonActions.java:170)
+	at page.AddEmployeeForHrmPage.SelectRadioButton(AddEmployeeForHrmPage.java:152)
+	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:98)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace946433849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace946433849'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:87)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:37)
+	at com.sun.proxy.$Proxy15.iterator(Unknown Source)
+	at utils.CommonActions.selectRadioButtonValue(CommonActions.java:170)
+	at page.AddEmployeeForHrmPage.SelectRadioButton(AddEmployeeForHrmPage.java:152)
+	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.SelectData()'><b>SelectData</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.setData(AddEmployeeForHrmPage.java:145)
+	at tests.PimHrmTestcases.SelectData(PimHrmTestcases.java:91)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940098351", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940098351'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.setData(AddEmployeeForHrmPage.java:145)
+	at tests.PimHrmTestcases.SelectData(PimHrmTestcases.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.clickAddPageAction()'><b>clickAddPageAction</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.clickAddEmployee(AddEmployeeForHrmPage.java:85)
+	at tests.PimHrmTestcases.clickAddPageAction(PimHrmTestcases.java:59)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace356895527", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace356895527'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.clickAddEmployee(AddEmployeeForHrmPage.java:85)
+	at tests.PimHrmTestcases.clickAddPageAction(PimHrmTestcases.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.clickPimAction()'><b>clickPimAction</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.clickPIM(AddEmployeeForHrmPage.java:80)
+	at tests.PimHrmTestcases.clickPimAction(PimHrmTestcases.java:51)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2119725739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2119725739'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:52)
+	at page.AddEmployeeForHrmPage.clickPIM(AddEmployeeForHrmPage.java:80)
+	at tests.PimHrmTestcases.clickPimAction(PimHrmTestcases.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>3</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.login()'><b>login</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.sendKeysWebElement(CommonActions.java:70)
+	at page.LoginForHrmPage.setLogindetail(LoginForHrmPage.java:28)
+	at tests.PimHrmTestcases.login(PimHrmTestcases.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace700571763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace700571763'><pre>java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:88)
+	at utils.CommonActions.sendKeysWebElement(CommonActions.java:70)
+	at page.LoginForHrmPage.setLogindetail(LoginForHrmPage.java:28)
+	at tests.PimHrmTestcases.login(PimHrmTestcases.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.quit()'><b>quit</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.NullPointerException
+	at utils.CommonActions.tearDown(CommonActions.java:178)
+	at tests.PimHrmTestcases.quit(PimHrmTestcases.java:118)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace579138753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace579138753'><pre>java.lang.NullPointerException
+	at utils.CommonActions.tearDown(CommonActions.java:178)
+	at tests.PimHrmTestcases.quit(PimHrmTestcases.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.scrolling()'><b>scrolling</b><br>Test class: tests.PimHrmTestcases</td>
+<td><div><pre>java.lang.NullPointerException
+	at utils.CommonActions.scrollDown(CommonActions.java:103)
+	at page.AddEmployeeForHrmPage.scrool(AddEmployeeForHrmPage.java:121)
+	at tests.PimHrmTestcases.scrolling(PimHrmTestcases.java:76)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace128550175", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace128550175'><pre>java.lang.NullPointerException
+	at utils.CommonActions.scrollDown(CommonActions.java:103)
+	at page.AddEmployeeForHrmPage.scrool(AddEmployeeForHrmPage.java:121)
+	at tests.PimHrmTestcases.scrolling(PimHrmTestcases.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>3</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.PimHrmTestcases.launch()'><b>launch</b><br>Test class: tests.PimHrmTestcases</td>
+<td></td>
+<td>10</td>
+<td>tests.PimHrmTestcases@15713d56</td></tr>
 </table><p>
 </body>
 </html>

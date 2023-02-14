@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -7,38 +7,43 @@
 </head>
 <body>
 <table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">TestSuite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,979</td><td></td><td></td></tr>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Dynamic Test Suite</th></tr>
+<tr><td><a href="#t0">Dynamic Test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">91,099</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.PimHrmTestcases</td><td><a href="#m0">launch</a></td><td rowspan="1">1675916596671</td><td rowspan="1">37954</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Dynamic Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dynamic Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.PimHrmTestcases</td><td><a href="#m0">PersonalGenderSmoker</a></td><td rowspan="1">1676372402369</td><td rowspan="1">8402</td></tr><tr class="failedodd"><td rowspan="1">tests.SnapdealScenariosTest</td><td><a href="#m1">BluetoothItemWithEdgeBrowser</a></td><td rowspan="1">1676372384527</td><td rowspan="1">71586</td></tr><tr><th colspan="4">Dynamic Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">tests.PimHrmTestcases</td><td><a href="#m2">AddPageAction</a></td><td rowspan="1">1676372388412</td><td rowspan="1">947</td></tr><tr class="passedeven"><td><a href="#m3">DropdownAction</a></td><td rowspan="1">1676372396179</td><td rowspan="1">2073</td></tr><tr class="passedeven"><td><a href="#m4">SelectData</a></td><td rowspan="1">1676372398253</td><td rowspan="1">4115</td></tr><tr class="passedeven"><td><a href="#m5">clickAddPageAction</a></td><td rowspan="1">1676372385798</td><td rowspan="1">2614</td></tr><tr class="passedeven"><td><a href="#m6">clickPimAction</a></td><td rowspan="1">1676372379817</td><td rowspan="1">5980</td></tr><tr class="passedeven"><td><a href="#m7">launch</a></td><td rowspan="1">1676372366467</td><td rowspan="1">12240</td></tr><tr class="passedeven"><td><a href="#m8">login</a></td><td rowspan="1">1676372378712</td><td rowspan="1">1105</td></tr><tr class="passedeven"><td><a href="#m9">quit</a></td><td rowspan="1">1676372410771</td><td rowspan="1">1679</td></tr><tr class="passedeven"><td><a href="#m10">scrolling</a></td><td rowspan="1">1676372389360</td><td rowspan="1">6818</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.PimHrmTestcases#launch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;oxd-input oxd-input--active orangehrm-firstname&quot; name=&quot;firstName&quot; placeholder=&quot;First Name&quot; data-v-844e87dc=&quot;&quot;&gt; is not clickable at point (691, 271). Other element would receive the click: &lt;div class=&quot;oxd-form-loader&quot; data-v-2027e1a1=&quot;&quot;&gt;...&lt;/div&gt;
-  (Session info: MicrosoftEdge=109.0.1518.70)
+<h2>Dynamic Test</h2><h3 id="m0">tests.PimHrmTestcases#PersonalGenderSmoker</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [6b771a27312316f6807912e5c8315f29, clickElement {id=e060360a-de2e-4035-9a07-cc0372949841}]
-Capabilities {acceptInsecureCerts: true, browserName: msedge, browserVersion: 109.0.1518.70, ms:edgeOptions: {debuggerAddress: localhost:64504}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\SK66921\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64504/devtoo..., se:cdpVersion: 109.0.1518.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (6b771a27312316f6807912e5c8315f29)] -&gt; xpath: //input[@placeholder=&apos;First Name&apos;]]
-Session ID: 6b771a27312316f6807912e5c8315f29
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at utils.CommonActions.sendKeysWebElement(CommonActions.java:81)
-	at page.AddEmployeeForHrmPage.AddEmployeeActions(AddEmployeeForHrmPage.java:107)
-	at tests.PimHrmTestcases.launch(PimHrmTestcases.java:54)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:62)
+	at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
+	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.SnapdealScenariosTest#BluetoothItemWithEdgeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Bluetooth Headphone</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at utils.Log.info1(Log.java:51)
+	at tests.SnapdealScenariosTest.BluetoothItemWithEdgeBrowser(SnapdealScenariosTest.java:125)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.PimHrmTestcases#AddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.PimHrmTestcases#DropdownAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.PimHrmTestcases#SelectData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.PimHrmTestcases#clickAddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.PimHrmTestcases#clickPimAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.PimHrmTestcases#launch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.PimHrmTestcases#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.PimHrmTestcases#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.PimHrmTestcases#scrolling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

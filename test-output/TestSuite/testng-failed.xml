@@ -5,7 +5,15 @@
     <classes>
       <class name="tests.PimHrmTestcases">
         <methods>
-          <include name="launch"/>
+          <include name="DropdownAction"/>
+          <include name="SelectData"/>
+          <include name="PersonalGenderSmoker"/>
+          <include name="scrolling"/>
+          <include name="AddPageAction"/>
+          <include name="clickAddPageAction"/>
+          <include name="login"/>
+          <include name="quit"/>
+          <include name="clickPimAction"/>
         </methods>
       </class> <!-- tests.PimHrmTestcases -->
     </classes>

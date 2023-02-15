@@ -2,53 +2,53 @@
 <testng-results skipped="0" failed="2" ignored="0" total="11" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Dynamic Test Suite" duration-ms="91099" started-at="2023-02-14T16:29:26 IST" finished-at="2023-02-14T16:30:57 IST">
+  <suite name="Dynamic Test Suite" duration-ms="105574" started-at="2023-02-15T12:00:07 IST" finished-at="2023-02-15T12:01:52 IST">
     <groups>
     </groups>
-    <test name="Dynamic Test" duration-ms="91099" started-at="2023-02-14T16:29:26 IST" finished-at="2023-02-14T16:30:57 IST">
+    <test name="Dynamic Test" duration-ms="105574" started-at="2023-02-15T12:00:07 IST" finished-at="2023-02-15T12:01:52 IST">
       <class name="tests.PimHrmTestcases">
-        <test-method status="PASS" signature="launch()[pri:1, instance:tests.PimHrmTestcases@a87f8ec]" name="launch" duration-ms="12240" started-at="2023-02-14T16:29:26 IST" finished-at="2023-02-14T16:29:38 IST">
+        <test-method status="PASS" signature="launch()[pri:1, instance:tests.PimHrmTestcases@1b7c473a]" name="launch" duration-ms="10464" started-at="2023-02-15T12:00:07 IST" finished-at="2023-02-15T12:00:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="login()[pri:2, instance:tests.PimHrmTestcases@a87f8ec]" name="login" duration-ms="1105" started-at="2023-02-14T16:29:38 IST" finished-at="2023-02-14T16:29:39 IST">
+        <test-method status="PASS" signature="login()[pri:2, instance:tests.PimHrmTestcases@1b7c473a]" name="login" duration-ms="1098" started-at="2023-02-15T12:00:17 IST" finished-at="2023-02-15T12:00:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clickPimAction()[pri:3, instance:tests.PimHrmTestcases@a87f8ec]" name="clickPimAction" duration-ms="5980" started-at="2023-02-14T16:29:39 IST" finished-at="2023-02-14T16:29:45 IST">
+        <test-method status="PASS" signature="clickPimAction()[pri:3, instance:tests.PimHrmTestcases@1b7c473a]" name="clickPimAction" duration-ms="5984" started-at="2023-02-15T12:00:18 IST" finished-at="2023-02-15T12:00:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickPimAction -->
-        <test-method status="PASS" signature="clickAddPageAction()[pri:4, instance:tests.PimHrmTestcases@a87f8ec]" name="clickAddPageAction" duration-ms="2614" started-at="2023-02-14T16:29:45 IST" finished-at="2023-02-14T16:29:48 IST">
+        <test-method status="PASS" signature="clickAddPageAction()[pri:4, instance:tests.PimHrmTestcases@1b7c473a]" name="clickAddPageAction" duration-ms="2873" started-at="2023-02-15T12:00:24 IST" finished-at="2023-02-15T12:00:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickAddPageAction -->
-        <test-method status="PASS" signature="AddPageAction()[pri:5, instance:tests.PimHrmTestcases@a87f8ec]" name="AddPageAction" duration-ms="947" started-at="2023-02-14T16:29:48 IST" finished-at="2023-02-14T16:29:49 IST">
+        <test-method status="PASS" signature="AddPageAction()[pri:5, instance:tests.PimHrmTestcases@1b7c473a]" name="AddPageAction" duration-ms="686" started-at="2023-02-15T12:00:27 IST" finished-at="2023-02-15T12:00:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddPageAction -->
-        <test-method status="PASS" signature="scrolling()[pri:6, instance:tests.PimHrmTestcases@a87f8ec]" name="scrolling" duration-ms="6818" started-at="2023-02-14T16:29:49 IST" finished-at="2023-02-14T16:29:56 IST">
+        <test-method status="PASS" signature="scrolling()[pri:6, instance:tests.PimHrmTestcases@1b7c473a]" name="scrolling" duration-ms="6580" started-at="2023-02-15T12:00:28 IST" finished-at="2023-02-15T12:00:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scrolling -->
-        <test-method status="PASS" signature="DropdownAction()[pri:7, instance:tests.PimHrmTestcases@a87f8ec]" name="DropdownAction" duration-ms="2073" started-at="2023-02-14T16:29:56 IST" finished-at="2023-02-14T16:29:58 IST">
+        <test-method status="PASS" signature="DropdownAction()[pri:7, instance:tests.PimHrmTestcases@1b7c473a]" name="DropdownAction" duration-ms="1267" started-at="2023-02-15T12:00:35 IST" finished-at="2023-02-15T12:00:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DropdownAction -->
-        <test-method status="PASS" signature="SelectData()[pri:8, instance:tests.PimHrmTestcases@a87f8ec]" name="SelectData" duration-ms="4115" started-at="2023-02-14T16:29:58 IST" finished-at="2023-02-14T16:30:02 IST">
+        <test-method status="PASS" signature="SelectData()[pri:8, instance:tests.PimHrmTestcases@1b7c473a]" name="SelectData" duration-ms="3182" started-at="2023-02-15T12:00:36 IST" finished-at="2023-02-15T12:00:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectData -->
-        <test-method status="FAIL" signature="PersonalGenderSmoker()[pri:9, instance:tests.PimHrmTestcases@a87f8ec]" name="PersonalGenderSmoker" duration-ms="8402" started-at="2023-02-14T16:30:02 IST" finished-at="2023-02-14T16:30:10 IST">
+        <test-method status="FAIL" signature="PersonalGenderSmoker()[pri:9, instance:tests.PimHrmTestcases@1b7c473a]" name="PersonalGenderSmoker" duration-ms="8207" started-at="2023-02-15T12:00:39 IST" finished-at="2023-02-15T12:00:47 IST">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (74fec6c74062239338f02c0c900ed9be)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (74fec6c74062239338f02c0c900ed9be)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: driver.version: unknown
@@ -69,26 +69,37 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at tests.ExcelTestRunner.main(ExcelTestRunner.java:62)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PersonalGenderSmoker -->
-        <test-method status="PASS" signature="quit()[pri:10, instance:tests.PimHrmTestcases@a87f8ec]" name="quit" duration-ms="1679" started-at="2023-02-14T16:30:10 IST" finished-at="2023-02-14T16:30:12 IST">
+        <test-method status="PASS" signature="quit()[pri:10, instance:tests.PimHrmTestcases@1b7c473a]" name="quit" duration-ms="1184" started-at="2023-02-15T12:00:47 IST" finished-at="2023-02-15T12:00:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- tests.PimHrmTestcases -->
       <class name="tests.SnapdealScenariosTest">
-        <test-method status="PASS" signature="launch()[pri:0, instance:tests.SnapdealScenariosTest@344f4dea]" name="launch" is-config="true" duration-ms="18028" started-at="2023-02-14T16:29:26 IST" finished-at="2023-02-14T16:29:44 IST">
+        <test-method status="PASS" signature="launch()[pri:0, instance:tests.SnapdealScenariosTest@16ce702d]" name="launch" is-config="true" duration-ms="29312" started-at="2023-02-15T12:00:48 IST" finished-at="2023-02-15T12:01:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="FAIL" signature="BluetoothItemWithEdgeBrowser(java.lang.String)[pri:0, instance:tests.SnapdealScenariosTest@344f4dea]" name="BluetoothItemWithEdgeBrowser" duration-ms="71586" started-at="2023-02-14T16:29:44 IST" data-provider="excel-data" finished-at="2023-02-14T16:30:56 IST">
+        <test-method status="FAIL" signature="BluetoothItemWithEdgeBrowser(java.lang.String)[pri:0, instance:tests.SnapdealScenariosTest@16ce702d]" name="BluetoothItemWithEdgeBrowser" duration-ms="33161" started-at="2023-02-15T12:01:18 IST" data-provider="excel-data" finished-at="2023-02-15T12:01:51 IST">
           <params>
             <param index="0">
               <value>
@@ -122,7 +133,7 @@ at java.lang.Thread.run(Thread.java:745)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BluetoothItemWithEdgeBrowser -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.SnapdealScenariosTest@344f4dea]" name="teardown" is-config="true" duration-ms="1413" started-at="2023-02-14T16:30:56 IST" finished-at="2023-02-14T16:30:57 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.SnapdealScenariosTest@16ce702d]" name="teardown" is-config="true" duration-ms="1510" started-at="2023-02-15T12:01:51 IST" finished-at="2023-02-15T12:01:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 14 16:29:26 IST 2023</td>
+<td>Started on:</td><td>Wed Feb 15 12:00:07 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>91 seconds (91099 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105574 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,7 +76,7 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.PimHrmTestcases.PersonalGenderSmoker()'><b>PersonalGenderSmoker</b><br>Test class: tests.PimHrmTestcases</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (74fec6c74062239338f02c0c900ed9be)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: driver.version: unknown
@@ -85,11 +85,10 @@ Driver info: driver.version: unknown
 	at utils.CommonActions.clickingOnWebElement(CommonActions.java:62)
 	at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
 	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1711439859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1711439859'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at tests.ExcelTestRunner.main(ExcelTestRunner.java:62)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1681730990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1681730990'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (74fec6c74062239338f02c0c900ed9be)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: driver.version: unknown
@@ -110,12 +109,23 @@ Driver info: driver.version: unknown
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at tests.ExcelTestRunner.main(ExcelTestRunner.java:62)
 </pre></div></td>
 <td>8</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 <tr>
 <td title='tests.SnapdealScenariosTest.BluetoothItemWithEdgeBrowser()'><b>BluetoothItemWithEdgeBrowser</b><br>Test class: tests.SnapdealScenariosTest<br>Parameters: Bluetooth Headphone</td>
 <td><div><pre>java.lang.NullPointerException
@@ -127,8 +137,8 @@ Driver info: driver.version: unknown
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20721918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20721918'><pre>java.lang.NullPointerException
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1435874024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1435874024'><pre>java.lang.NullPointerException
 	at utils.Log.info1(Log.java:51)
 	at tests.SnapdealScenariosTest.BluetoothItemWithEdgeBrowser(SnapdealScenariosTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -147,8 +157,8 @@ Driver info: driver.version: unknown
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
-<td>71</td>
-<td>tests.SnapdealScenariosTest@344f4dea</td></tr>
+<td>33</td>
+<td>tests.SnapdealScenariosTest@16ce702d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -158,50 +168,50 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.PimHrmTestcases.quit()'><b>quit</b><br>Test class: tests.PimHrmTestcases</td>
-<td></td>
-<td>1</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
-<tr>
 <td title='tests.PimHrmTestcases.clickPimAction()'><b>clickPimAction</b><br>Test class: tests.PimHrmTestcases</td>
 <td></td>
 <td>5</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 <tr>
 <td title='tests.PimHrmTestcases.AddPageAction()'><b>AddPageAction</b><br>Test class: tests.PimHrmTestcases</td>
 <td></td>
 <td>0</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
-<tr>
-<td title='tests.PimHrmTestcases.scrolling()'><b>scrolling</b><br>Test class: tests.PimHrmTestcases</td>
-<td></td>
-<td>6</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
-<tr>
-<td title='tests.PimHrmTestcases.launch()'><b>launch</b><br>Test class: tests.PimHrmTestcases</td>
-<td></td>
-<td>12</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
-<tr>
-<td title='tests.PimHrmTestcases.DropdownAction()'><b>DropdownAction</b><br>Test class: tests.PimHrmTestcases</td>
-<td></td>
-<td>2</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 <tr>
 <td title='tests.PimHrmTestcases.SelectData()'><b>SelectData</b><br>Test class: tests.PimHrmTestcases</td>
 <td></td>
-<td>4</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>3</td>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.launch()'><b>launch</b><br>Test class: tests.PimHrmTestcases</td>
+<td></td>
+<td>10</td>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.DropdownAction()'><b>DropdownAction</b><br>Test class: tests.PimHrmTestcases</td>
+<td></td>
+<td>1</td>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.quit()'><b>quit</b><br>Test class: tests.PimHrmTestcases</td>
+<td></td>
+<td>1</td>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 <tr>
 <td title='tests.PimHrmTestcases.login()'><b>login</b><br>Test class: tests.PimHrmTestcases</td>
 <td></td>
 <td>1</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 <tr>
 <td title='tests.PimHrmTestcases.clickAddPageAction()'><b>clickAddPageAction</b><br>Test class: tests.PimHrmTestcases</td>
 <td></td>
 <td>2</td>
-<td>tests.PimHrmTestcases@a87f8ec</td></tr>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
+<tr>
+<td title='tests.PimHrmTestcases.scrolling()'><b>scrolling</b><br>Test class: tests.PimHrmTestcases</td>
+<td></td>
+<td>6</td>
+<td>tests.PimHrmTestcases@1b7c473a</td></tr>
 </table><p>
 </body>
 </html>

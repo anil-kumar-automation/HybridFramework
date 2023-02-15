@@ -181,35 +181,6 @@
           <div class="suite-Dynamic_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.PimHrmTestcases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PersonalGenderSmoker">
-                  </a> <!-- PersonalGenderSmoker -->
-                  <span class="method-name">PersonalGenderSmoker</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (02078924d4d20dcfdf6b661e8a08b4e9)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at utils.CommonActions.clickingOnWebElement(CommonActions.java:62)
-	at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
-	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-... Removed 12 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Dynamic_Test_Suite-class-failed -->
-          <div class="suite-Dynamic_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
               <span class="class-name">tests.SnapdealScenariosTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -229,6 +200,34 @@ Driver info: driver.version: unknown
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 ... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Dynamic_Test_Suite-class-failed -->
+          <div class="suite-Dynamic_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.PimHrmTestcases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PersonalGenderSmoker">
+                  </a> <!-- PersonalGenderSmoker -->
+                  <span class="method-name">PersonalGenderSmoker</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (74fec6c74062239338f02c0c900ed9be)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 8 second(s) with 2000 milliseconds interval)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at utils.CommonActions.clickingOnWebElement(CommonActions.java:62)
+	at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
+	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at tests.ExcelTestRunner.main(ExcelTestRunner.java:62)
+... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -313,21 +312,21 @@ Driver info: driver.version: unknown
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Dynamic Test Suite&quot; parallel=&quot;classes&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Dynamic Test&quot; parallel=&quot;classes&quot;&gt;
+&lt;suite name=&quot;Dynamic Test Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Dynamic Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.PimHrmTestcases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;PersonalGenderSmoker&quot;/&gt;
           &lt;include name=&quot;clickAddPageAction&quot;/&gt;
-          &lt;include name=&quot;AddPageAction&quot;/&gt;
-          &lt;include name=&quot;scrolling&quot;/&gt;
-          &lt;include name=&quot;SelectData&quot;/&gt;
+          &lt;include name=&quot;PersonalGenderSmoker&quot;/&gt;
           &lt;include name=&quot;login&quot;/&gt;
+          &lt;include name=&quot;AddPageAction&quot;/&gt;
+          &lt;include name=&quot;SelectData&quot;/&gt;
+          &lt;include name=&quot;clickPimAction&quot;/&gt;
           &lt;include name=&quot;DropdownAction&quot;/&gt;
           &lt;include name=&quot;launch&quot;/&gt;
+          &lt;include name=&quot;scrolling&quot;/&gt;
           &lt;include name=&quot;quit&quot;/&gt;
-          &lt;include name=&quot;clickPimAction&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- tests.PimHrmTestcases --&gt;
       &lt;class name=&quot;tests.SnapdealScenariosTest&quot;&gt;
@@ -378,47 +377,47 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'BluetoothItemWithEdgeBrowser')
 data.setCell(0, 2, 'tests.SnapdealScenariosTest')
-data.setCell(0, 3, 71586);
+data.setCell(0, 3, 33161);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'launch')
 data.setCell(1, 2, 'tests.PimHrmTestcases')
-data.setCell(1, 3, 12240);
+data.setCell(1, 3, 10464);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'PersonalGenderSmoker')
 data.setCell(2, 2, 'tests.PimHrmTestcases')
-data.setCell(2, 3, 8402);
+data.setCell(2, 3, 8207);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'scrolling')
 data.setCell(3, 2, 'tests.PimHrmTestcases')
-data.setCell(3, 3, 6818);
+data.setCell(3, 3, 6580);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'clickPimAction')
 data.setCell(4, 2, 'tests.PimHrmTestcases')
-data.setCell(4, 3, 5980);
+data.setCell(4, 3, 5984);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'SelectData')
 data.setCell(5, 2, 'tests.PimHrmTestcases')
-data.setCell(5, 3, 4115);
+data.setCell(5, 3, 3182);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'clickAddPageAction')
 data.setCell(6, 2, 'tests.PimHrmTestcases')
-data.setCell(6, 3, 2614);
+data.setCell(6, 3, 2873);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'DropdownAction')
 data.setCell(7, 2, 'tests.PimHrmTestcases')
-data.setCell(7, 3, 2073);
+data.setCell(7, 3, 1267);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'quit')
 data.setCell(8, 2, 'tests.PimHrmTestcases')
-data.setCell(8, 3, 1679);
+data.setCell(8, 3, 1184);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'login')
 data.setCell(9, 2, 'tests.PimHrmTestcases')
-data.setCell(9, 3, 1105);
+data.setCell(9, 3, 1098);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'AddPageAction')
 data.setCell(10, 2, 'tests.PimHrmTestcases')
-data.setCell(10, 3, 947);
+data.setCell(10, 3, 686);
 window.suiteTableData['Dynamic_Test_Suite']= { tableData: data, tableDiv: 'times-div-Dynamic_Test_Suite'}
 return data;
 }
@@ -454,72 +453,60 @@ return data;
                 <span class="method-name">launch</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SnapdealScenariosTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launch</span>
-                <span class="method-start">30 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.PimHrmTestcases</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">12245 ms</span>
+                <span class="method-start">10467 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickPimAction</span>
-                <span class="method-start">13350 ms</span>
+                <span class="method-start">11566 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SnapdealScenariosTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">BluetoothItemWithEdgeBrowser(Bluetooth Headphone)</span>
-                <span class="method-start">18060 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.PimHrmTestcases</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickAddPageAction</span>
-                <span class="method-start">19331 ms</span>
+                <span class="method-start">17551 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">AddPageAction</span>
-                <span class="method-start">21945 ms</span>
+                <span class="method-start">20424 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">scrolling</span>
-                <span class="method-start">22893 ms</span>
+                <span class="method-start">21111 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DropdownAction</span>
-                <span class="method-start">29712 ms</span>
+                <span class="method-start">27692 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SelectData</span>
-                <span class="method-start">31786 ms</span>
+                <span class="method-start">28960 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">PersonalGenderSmoker</span>
-                <span class="method-start">35902 ms</span>
+                <span class="method-start">32143 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">quit</span>
-                <span class="method-start">44304 ms</span>
+                <span class="method-start">40350 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SnapdealScenariosTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launch</span>
+                <span class="method-start">41560 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">BluetoothItemWithEdgeBrowser(Bluetooth Headphone)</span>
+                <span class="method-start">70874 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">89646 ms</span>
+                <span class="method-start">104036 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

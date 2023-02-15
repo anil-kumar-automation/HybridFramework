@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Dynamic Test Suite]" parallel="classes">
-  <test thread-count="5" name="Dynamic Test(failed)" parallel="classes">
+<suite name="Failed suite [Dynamic Test Suite]">
+  <test thread-count="5" name="Dynamic Test(failed)">
     <classes>
-      <class name="tests.PimHrmTestcases">
-        <methods>
-          <include name="PersonalGenderSmoker"/>
-        </methods>
-      </class> <!-- tests.PimHrmTestcases -->
       <class name="tests.SnapdealScenariosTest">
         <methods>
           <include name="teardown"/>
@@ -15,6 +10,11 @@
           <include name="BluetoothItemWithEdgeBrowser" invocation-numbers="0"/>
         </methods>
       </class> <!-- tests.SnapdealScenariosTest -->
+      <class name="tests.PimHrmTestcases">
+        <methods>
+          <include name="PersonalGenderSmoker"/>
+        </methods>
+      </class> <!-- tests.PimHrmTestcases -->
     </classes>
   </test> <!-- Dynamic Test(failed) -->
 </suite> <!-- Failed suite [Dynamic Test Suite] -->

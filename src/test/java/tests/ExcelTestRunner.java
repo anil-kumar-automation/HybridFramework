@@ -1,10 +1,10 @@
 package tests;
 
-import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -23,11 +23,10 @@ import org.testng.xml.XmlTest;
 
 
 public class ExcelTestRunner {
-
     public static void main(String[] args) throws ClassNotFoundException {
-        String excelPath ="C:\\Users\\SK66921\\Documents\\Git\\HybridFramework\\src\\test\\resources\\TestData\\DynamicMulti.xlsx";
-        // Read the class names from the Excel sheet
-        List<String> classNames = ExcelUtils.getClassNamesFromExcelSheet(excelPath,"Sheet1");
+        // Read the class names and execution flag from the Excel sheet
+        List<String> classNames = ExcelUtils.getClassNamesFromExcelSheet();
+        List<String> executionFlags = ExcelUtils.getExecutionFlagsFromExcelSheet();
 
         // Create TestNG object
         TestNG testng = new TestNG();
@@ -38,15 +37,15 @@ public class ExcelTestRunner {
         // Add the TestListenerAdapter to TestNG
         testng.addListener(tla);
 
-        // Create a new test suite and classes running in parallel
+        // Create a new test suite
         XmlSuite suite = new XmlSuite();
         suite.setName("Dynamic Test Suite");
-        suite.setParallel(XmlSuite.ParallelMode.CLASSES);
+       // suite.setParallel();
 
         // Create a new test with the specified class names
         XmlTest test = new XmlTest(suite);
         test.setName("Dynamic Test");
-        test.setXmlClasses(getXmlClasses(classNames));
+        test.setXmlClasses(getXmlClasses(classNames, executionFlags));
 
         // Add the test to the suite
         suite.setTests(new ArrayList<XmlTest>() {{
@@ -78,7 +77,6 @@ public class ExcelTestRunner {
         for (ITestResult result : failedTests) {
             System.out.println(result.getName() + " failed");
         }
-
         System.out.println("\nSkipped Tests:");
         for (ITestResult result : skippedTests) {
             System.out.println(result.getName() + " skipped");
@@ -87,49 +85,78 @@ public class ExcelTestRunner {
 
     /**
      * Get a list of XmlClasses for the specified class names.
+     * Only include classes that have execution flag set to "Yes".
      */
-    private static List<XmlClass> getXmlClasses(List<String> classNames) throws ClassNotFoundException {
+    private static List<XmlClass> getXmlClasses(List<String> classNames, List<String> executionFlags) throws ClassNotFoundException {
         List<XmlClass> xmlClasses = new ArrayList<>();
-        for (String className : classNames) {
-            XmlClass xmlClass = new XmlClass(className);
-            List<XmlInclude> xmlIncludes = new ArrayList<>();
-            Method[] methods = Class.forName(className).getMethods();
-            for (Method method : methods) {
-                if (method.isAnnotationPresent(Test.class)) {
-                    Test annotation = method.getAnnotation(Test.class);
-                    if (annotation != null) {
-                        int priority = annotation.priority();
-                        XmlInclude xmlInclude = new XmlInclude(method.getName(), priority);
-                        xmlIncludes.add(xmlInclude);
+        for (int i = 0; i < classNames.size(); i++) {
+            String className = classNames.get(i);
+            String executionFlag = executionFlags.get(i);
+            if (executionFlag.equalsIgnoreCase("Yes")) {
+                XmlClass xmlClass = new XmlClass(className);
+                List<XmlInclude> xmlIncludes = new ArrayList<>();
+                Method[] methods = Class.forName(className).getMethods();
+                for (Method method : methods) {
+                    if (method.isAnnotationPresent(Test.class)) {
+                        Test annotation = method.getAnnotation(Test.class);
+                        if (annotation != null) {
+                            int priority = annotation.priority();
+                            XmlInclude xmlInclude = new XmlInclude(method.getName(), priority);
+                            xmlIncludes.add(xmlInclude);
+                        }
                     }
                 }
+                xmlClass.setIncludedMethods(xmlIncludes);
+                xmlClasses.add(xmlClass);
             }
-            xmlClass.setIncludedMethods(xmlIncludes);
-            xmlClasses.add(xmlClass);
         }
         return xmlClasses;
     }
 }
+
+
+
 class ExcelUtils {
-    public static List<String> getClassNamesFromExcelSheet(String fileName, String sheetName) {
+    private static final String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/TestData/ExecutionFlagsMultiTests.xlsx";
+
+    public static List<String> getClassNamesFromExcelSheet() {
         List<String> classNames = new ArrayList<>();
-        try {
-            FileInputStream inputStream = new FileInputStream(new File(fileName));
+        try (FileInputStream inputStream = new FileInputStream(EXCEL_FILE_PATH)) {
             Workbook workbook = WorkbookFactory.create(inputStream);
-            Sheet sheet = workbook.getSheet(sheetName);
-            Iterator<Row> rowIterator = sheet.rowIterator();
-            while (rowIterator.hasNext()) {
-                Row row = rowIterator.next();
+            Sheet sheet = workbook.getSheetAt(0);
+            for (Row row : sheet) {
                 Cell cell = row.getCell(0);
                 if (cell != null) {
-                    String className = cell.getStringCellValue();
-                    classNames.add(className);
+                    classNames.add(cell.getStringCellValue());
                 }
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return classNames;
+    }
+    public static List<String> getExecutionFlagsFromExcelSheet() {
+        List<String> executionFlags = new ArrayList<>();
+        try (FileInputStream inputStream = new FileInputStream(EXCEL_FILE_PATH)) {
+            Workbook workbook = WorkbookFactory.create(inputStream);
+            Sheet sheet = workbook.getSheetAt(0);
+            for (Row row : sheet) {
+                Cell cell = row.getCell(1);
+                if (cell != null) {
+                    String cellValue = cell.getStringCellValue().toLowerCase();
+                    if (cellValue.equals("yes") || cellValue.equals("y")) {
+                        executionFlags.add("Yes");
+                    } else {
+                        executionFlags.add("No");
+                    }
+                } else {
+                    executionFlags.add("No");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return executionFlags;
     }
 }
 

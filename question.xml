@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<question id="1">
+    <answers>
+        <answername>creating automation project for BFSI project</answername>
+        <id>101</id>
+        <postedby>Anil</postedby>
+    </answers>
+    <answers>
+        <answername>implemented marshalling for manage xml contract</answername>
+        <id>102</id>
+        <postedby>Anil</postedby>
+    </answers>
+    <questionname>why we are build marshalling and unmarshalling?</questionname>
+</question>

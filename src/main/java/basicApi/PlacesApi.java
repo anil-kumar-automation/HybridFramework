@@ -29,7 +29,7 @@ public class PlacesApi extends ApiUtils {
         //init("/maps/api/place/add/json", HttpOperation.POST,"print");
         setQueryParam("key", "qaclick123");
         setHeader("Content-Type", "application/json");
-        setBody(GenerateStringFromResource("C:\\Users\\as61837\\Documents\\GitHub\\HybridFrameworkMaster\\src\\test\\resources\\payloads\\AddPlace.json"));
+        setBody(GenerateStringFromResource(System.getProperty("user.dir") + "/src/test/resources/payloads/AddPlace.json"));
         Response response = callIt();
         return response;
     }

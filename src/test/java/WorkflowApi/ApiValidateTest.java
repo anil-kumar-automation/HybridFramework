@@ -20,6 +20,7 @@ import java.io.IOException;
 import static utils.selenium.Log.info1;
 
 
+/** run this class through testng.xml so that extent reports will generating  for api results */
 public class ApiValidateTest {
 
     Response response;

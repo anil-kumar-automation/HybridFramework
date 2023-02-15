@@ -8,7 +8,12 @@ import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pojoClasses.Question;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -25,6 +30,34 @@ public class ApiUtils {
     String url;
     Response resp;
 
+    /** this unmarshal util for validate xml data  from mentioned xml file */
+    public static Object unmarshal(Class<Question> clazz, String xmlFileName) throws JAXBException {
+        File file = new File(xmlFileName);
+        JAXBContext jaxbContext = JAXBContext.newInstance(clazz);
+        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+        Object responseClassObject = jaxbUnmarshaller.unmarshal(file);
+        return responseClassObject;
+    }
+
+
+    /** this util for create xml using pojo objects and converting as a string  */
+    public static String marshal(Object object) throws FileNotFoundException, JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(object.getClass());
+        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        StringWriter stringWriter = new StringWriter();
+        jaxbMarshaller.marshal(object, stringWriter);
+        return stringWriter.toString();
+    }
+
+    /** this util for create xml file based marshaling pojo classes objects */
+    public static void marshalCreateXmlFile(Object object, String xmlname) throws FileNotFoundException, JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(object.getClass());
+        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        jaxbMarshaller.marshal(object, new FileOutputStream(xmlname));
+
+    }
 
     public void init(String url, HttpOperation method, String ResourceName) throws FileNotFoundException {
         this.url = url;

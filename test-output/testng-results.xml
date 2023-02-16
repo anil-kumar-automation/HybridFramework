@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-16T11:46:57 IST" name="Dynamic Test Suite" finished-at="2023-02-16T11:49:27 IST" duration-ms="149760">
+    <groups>
+    </groups>
+    <test started-at="2023-02-16T11:46:57 IST" name="Dynamic Test" finished-at="2023-02-16T11:49:27 IST" duration-ms="149760">
+      <class name="tests.PimHrmTestcases">
+        <test-method signature="launch()[pri:1, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:46:57 IST" name="launch" finished-at="2023-02-16T11:47:45 IST" duration-ms="47744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="login()[pri:2, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:47:45 IST" name="login" finished-at="2023-02-16T11:47:48 IST" duration-ms="2995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="clickPimAction()[pri:3, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:47:48 IST" name="clickPimAction" finished-at="2023-02-16T11:47:54 IST" duration-ms="6665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickPimAction -->
+        <test-method signature="clickAddPageAction()[pri:4, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:47:54 IST" name="clickAddPageAction" finished-at="2023-02-16T11:47:57 IST" duration-ms="2998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAddPageAction -->
+        <test-method signature="AddPageAction()[pri:5, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:47:57 IST" name="AddPageAction" finished-at="2023-02-16T11:47:58 IST" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddPageAction -->
+        <test-method signature="scrolling()[pri:6, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:47:58 IST" name="scrolling" finished-at="2023-02-16T11:48:04 IST" duration-ms="6026" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scrolling -->
+        <test-method signature="DropdownAction()[pri:7, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:48:04 IST" name="DropdownAction" finished-at="2023-02-16T11:48:07 IST" duration-ms="2975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DropdownAction -->
+        <test-method signature="SelectData()[pri:8, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:48:07 IST" name="SelectData" finished-at="2023-02-16T11:48:12 IST" duration-ms="4518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectData -->
+        <test-method signature="PersonalGenderSmoker()[pri:9, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:48:12 IST" name="PersonalGenderSmoker" finished-at="2023-02-16T11:48:14 IST" duration-ms="2204" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (0ec3bcf3bb8d92075e3d290d79e5bf34)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 2 second(s) with 2000 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (0ec3bcf3bb8d92075e3d290d79e5bf34)] -> xpath: //div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input] (tried for 2 second(s) with 2000 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at utils.selenium.CommonActions.clickingOnWebElement(CommonActions.java:62)
+at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
+at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at tests.ExcelTestRunner.main(ExcelTestRunner.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PersonalGenderSmoker -->
+        <test-method signature="quit()[pri:10, instance:tests.PimHrmTestcases@6bff19ff]" started-at="2023-02-16T11:48:14 IST" name="quit" finished-at="2023-02-16T11:48:16 IST" duration-ms="1764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.PimHrmTestcases -->
+      <class name="tests.SnapdealScenariosTest">
+        <test-method is-config="true" signature="launch()[pri:0, instance:tests.SnapdealScenariosTest@3068b369]" started-at="2023-02-16T11:48:16 IST" name="launch" finished-at="2023-02-16T11:48:55 IST" duration-ms="39043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="BluetoothItemWithEdgeBrowser(java.lang.String)[pri:0, instance:tests.SnapdealScenariosTest@3068b369]" started-at="2023-02-16T11:48:55 IST" name="BluetoothItemWithEdgeBrowser" data-provider="excel-data" finished-at="2023-02-16T11:49:22 IST" duration-ms="27511" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bluetooth Headphone]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at utils.selenium.Log.info1(Log.java:51)
+at tests.SnapdealScenariosTest.BluetoothItemWithEdgeBrowser(SnapdealScenariosTest.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BluetoothItemWithEdgeBrowser -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.SnapdealScenariosTest@3068b369]" started-at="2023-02-16T11:49:22 IST" name="teardown" finished-at="2023-02-16T11:49:27 IST" duration-ms="4254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.SnapdealScenariosTest -->
+    </test> <!-- Dynamic Test -->
+  </suite> <!-- Dynamic Test Suite -->
+</testng-results>

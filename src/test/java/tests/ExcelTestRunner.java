@@ -1,6 +1,17 @@
 package tests;
 
-import org.apache.poi.ss.usermodel.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+
+import java.util.List;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -9,12 +20,6 @@ import org.testng.xml.XmlClass;
 import org.testng.xml.XmlInclude;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class ExcelTestRunner {
@@ -35,7 +40,8 @@ public class ExcelTestRunner {
         // Create a new test suite
         XmlSuite suite = new XmlSuite();
         suite.setName("Dynamic Test Suite");
-       // suite.setParallel();
+        suite.addListener("listeners.ExtentReporter");
+        suite.setParallel(XmlSuite.ParallelMode.CLASSES);
 
         // Create a new test with the specified class names
         XmlTest test = new XmlTest(suite);
@@ -109,17 +115,31 @@ public class ExcelTestRunner {
     }
 }
 
-
 class ExcelUtils {
-    private static final String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/TestData/ExecutionFlagsMultiTests.xlsx";
+    private static final String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/TestData/DynamicTestsMulti.xlsx";
 
     public static List<String> getClassNamesFromExcelSheet() {
         List<String> classNames = new ArrayList<>();
         try (FileInputStream inputStream = new FileInputStream(EXCEL_FILE_PATH)) {
             Workbook workbook = WorkbookFactory.create(inputStream);
             Sheet sheet = workbook.getSheetAt(0);
+            Row header = sheet.getRow(0);
+            int classNameIndex = -1;
+            for (int i = 0; i < header.getLastCellNum(); i++) {
+                Cell cell = header.getCell(i);
+                if (cell != null && cell.getStringCellValue().equalsIgnoreCase("TestCaseClasses")) {
+                    classNameIndex = i;
+                    break;
+                }
+            }
+            if (classNameIndex == -1) {
+                throw new RuntimeException("Header \"TestCaseClasses\" not found in the Excel sheet.");
+            }
             for (Row row : sheet) {
-                Cell cell = row.getCell(0);
+                if (row.getRowNum() == 0) {
+                    continue;
+                }
+                Cell cell = row.getCell(classNameIndex);
                 if (cell != null) {
                     classNames.add(cell.getStringCellValue());
                 }
@@ -129,13 +149,29 @@ class ExcelUtils {
         }
         return classNames;
     }
+
     public static List<String> getExecutionFlagsFromExcelSheet() {
         List<String> executionFlags = new ArrayList<>();
         try (FileInputStream inputStream = new FileInputStream(EXCEL_FILE_PATH)) {
             Workbook workbook = WorkbookFactory.create(inputStream);
             Sheet sheet = workbook.getSheetAt(0);
+            Row header = sheet.getRow(0);
+            int executionFlagIndex = -1;
+            for (int i = 0; i < header.getLastCellNum(); i++) {
+                Cell cell = header.getCell(i);
+                if (cell != null && cell.getStringCellValue().equalsIgnoreCase("ExecutionFlags")) {
+                    executionFlagIndex = i;
+                    break;
+                }
+            }
+            if (executionFlagIndex == -1) {
+                throw new RuntimeException("Header \"Execution\" not found in the Excel sheet.");
+            }
             for (Row row : sheet) {
-                Cell cell = row.getCell(1);
+                if (row.getRowNum() == 0) {
+                    continue;
+                }
+                Cell cell = row.getCell(executionFlagIndex);
                 if (cell != null) {
                     String cellValue = cell.getStringCellValue().toLowerCase();
                     if (cellValue.equals("yes") || cellValue.equals("y")) {
@@ -153,6 +189,7 @@ class ExcelUtils {
         return executionFlags;
     }
 }
+
 
 
 

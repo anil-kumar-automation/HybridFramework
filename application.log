@@ -1,0 +1,6 @@
+2023-02-22 12:03:25,575  INFO [main] EformLogin:23 - ****************************** Starting test cases execution  *****************************************
+2023-02-22 12:03:32,606  INFO [main] DriverFactory:44 - browser name is: chrome
+2023-02-22 12:03:32,606  INFO [main] DriverFactory:45 - launching chrome browser
+2023-02-22 12:03:34,717  INFO [main] EformLogin:27 - entering eform application URL
+2023-02-22 12:03:38,272  INFO [main] EformLogin:35 - successfully entered credentials
+2023-02-22 12:06:52,244  INFO [main] EformLogin:96 - Browser is closed

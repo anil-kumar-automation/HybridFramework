@@ -21,12 +21,20 @@ public class LoginEformPage {
     @FindBy(xpath = "//input[@placeholder='Password']")
     WebElement Password;
     /* it's finding Log in button element in eform Application */
-    @FindBy(xpath = "//button[normalize-space()='Sign in']")
+    @FindBy(xpath = "//button[contains(text(),'Sign in')]")
     WebElement submit;
     /* it is used to close the pop-up in eform Application */
     @FindBy(xpath = "//div[@class='modal-footer border-top-0']/child::button[1]")
     WebElement closeform;
 
+    @FindBy(xpath = "//tbody/tr[1]/td[7]/a[1]")
+    WebElement history1;
+
+    @FindBy(xpath = "//tbody/tr[5]/td[7]/a[1]")
+    WebElement history2;
+
+    @FindBy(xpath = "//button[contains(text(),'Ok')]")
+    WebElement okButton;
 
     //Constructor to get the multiple data sets to automate.
     public LoginEformPage(WebDriver rDriver) {
@@ -53,8 +61,32 @@ public class LoginEformPage {
         CommonActions.sendKeysWebElement(uname, prop.getProperty("username"));
         Thread.sleep(2000);
         CommonActions.sendKeysWebElement(Password, prop.getProperty("password"));
+        Thread.sleep(1000);
         CommonActions.clickingOnWebElement(submit, 1);
     }
+
+    public void scrollHistory1(){
+        CommonActions.clickingOnWebElement(history1, 12);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void scrollHistory2(){
+        CommonActions.clickingOnWebElement(history2,14);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void clickingOnOkButton(){
+        CommonActions.clickingOnWebElement(okButton,6);
+    }
+
 
     public void logInAndClosePopUp() {
         CommonActions.clickingOnWebElement(closeform, 3);

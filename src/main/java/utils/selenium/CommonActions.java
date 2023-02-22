@@ -46,6 +46,8 @@ public class CommonActions {
         DriverFactory.getDriver().get(url);
     }
 
+
+
     /* To click a certain Web Element */
     public static void clickingOnWebElement(WebElement element, long waitTimeInSeconds) {
         //Declare and initialise a fluent wait

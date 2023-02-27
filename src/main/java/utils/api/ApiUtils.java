@@ -62,7 +62,7 @@ public class ApiUtils {
     public void init(String url, HttpOperation method, String ResourceName) throws FileNotFoundException {
         this.url = url;
         this.method = method;
-        reqSpec = given();
+        reqSpec = given().relaxedHTTPSValidation();
         if (ResourceName.equalsIgnoreCase("auth")) {
             authApiLogs();
         } else if (ResourceName.equalsIgnoreCase("addPlace")) {

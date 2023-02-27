@@ -62,7 +62,7 @@ public class AddEmployeeForHrmPage  {
     @FindBy(xpath = "//span[@class='oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input']")
     List<WebElement> GenderRadiobutton;
 
-    @FindBy(xpath = "//div[@class='oxd-input-group oxd-input-field-bottom-space'][1]/div[2]/div[@class='oxd-checkbox-wrapper']/label/input")
+    @FindBy(xpath = "(//span[contains(@class,'label-right oxd-checkbox-input')])[1]")
     WebElement smokerCheckbox;
 
     @FindBy(xpath = "//form[@class='oxd-form']/div[5]/button[@type='submit']")
@@ -108,7 +108,7 @@ public class AddEmployeeForHrmPage  {
         CommonActions.sendKeysWebElement(MiddleName, prop.getProperty("mname"));
         CommonActions.sendKeysWebElement(LastName, prop.getProperty("lname"));
 
-        CommonActions.clickingOnWebElement(Save, 3);
+        CommonActions.clickingOnWebElement(Save, 5);
     }
 
     public void AddEmployeeActionsDb(String fName, String mName,String lName) throws InterruptedException {

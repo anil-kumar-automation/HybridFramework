@@ -17,9 +17,6 @@ public class PimHrmTestcases {
     public LoginForHrmPage loginForHrm;
     public AddEmployeeForHrmPage aep;
 
-    /*public PimHrmTestcases() {
-    }*/
-
     private static Logger Log = (Logger) LogManager.getLogger(PimHrmTestcases.class);
 
     //private static Logger Log = Logger.getLogger(PimHrmTestcases.class);
@@ -29,9 +26,11 @@ public class PimHrmTestcases {
     }
 
     @Test(priority = 1)
-    public void launch() throws IOException {
+    @Parameters("browser")
+    public void launch(String browser) throws IOException {
         df = new DriverFactory();
-        df.init_driver("edge");
+        df.init_driver(browser);
+        //df.init_driver("chrome");
         CommonActions.navigateOrangeHrmmurl();
         info("entering Orange HRM application URL");
         //log.info("entering Orange HRM application URL");
@@ -58,7 +57,7 @@ public class PimHrmTestcases {
         aep = new AddEmployeeForHrmPage(DriverFactory.getDriver());
         aep.clickAddEmployee();
         info("clicking AddEmployee On Orange HRM application");
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
 
@@ -104,18 +103,6 @@ public class PimHrmTestcases {
 
     @Test(priority = 10)
     public void quit() {
-        /*if(result.getStatus()==result.FAILURE || result.getStatus()==result.SKIP) {
-            String screenshotPath = util.captureScreenshot(driver, result.getName());
-            result.setAttribute("screenshotPath", screenshotPath); //sets the value the variable/attribute screenshotPath as the path of the sceenshot
-        }*/
-       /*if(result.getStatus()==ITestResult.FAILURE)
-        {
-            String temp= getScreenshot(DriverFactory.getDriver());
-
-            test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-        }
-        extent.flush();
-*/
         CommonActions.tearDown();
         info("closing Orange HRM application browser");
     }

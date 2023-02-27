@@ -11,12 +11,12 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "place_id": "20a4ee30673ed9aa7d53a23b65bc9c26",
+    "place_id": "6cd0afd509857d7cc50965940d6e0783",
     "address": "Summer Walk, Africa",
     "key": "qaclick123"
 }
 HTTP/1.1 200 OK
-Date: Wed, 15 Feb 2023 12:44:25 GMT
+Date: Thu, 23 Feb 2023 13:31:01 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST

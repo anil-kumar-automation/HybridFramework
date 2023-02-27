@@ -7,15 +7,10 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import org.testng.annotations.Test;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlInclude;
 import org.testng.xml.XmlSuite;
@@ -24,9 +19,10 @@ import org.testng.xml.XmlTest;
 
 public class ExcelTestRunner {
     public static void main(String[] args) throws ClassNotFoundException {
-        // Read the class names and execution flag from the Excel sheet
+        // Read the class names, execution flags, and browsers from the Excel sheet
         List<String> classNames = ExcelUtils.getClassNamesFromExcelSheet();
         List<String> executionFlags = ExcelUtils.getExecutionFlagsFromExcelSheet();
+        List<String> browsers = ExcelUtils.getBrowserNamesFromExcelSheet();
 
         // Create TestNG object
         TestNG testng = new TestNG();
@@ -40,15 +36,19 @@ public class ExcelTestRunner {
         // Create a new test suite
         XmlSuite suite = new XmlSuite();
         suite.setName("Dynamic Test Suite");
+
+        //Adding listeners to listen to the test results
         suite.addListener("listeners.ExtentReporter");
+
+        //Setting parallel execution for the test classes
         suite.setParallel(XmlSuite.ParallelMode.CLASSES);
 
         // Create a new test with the specified class names
         XmlTest test = new XmlTest(suite);
         test.setName("Dynamic Test");
-        test.setXmlClasses(getXmlClasses(classNames, executionFlags));
+        test.setXmlClasses(getXmlClasses(classNames, executionFlags, browsers));
 
-        // Add the test to the suite
+        // Add the tests to the suite
         suite.setTests(new ArrayList<XmlTest>() {{
             add(test);
         }});
@@ -63,7 +63,7 @@ public class ExcelTestRunner {
         // Run the tests
         testng.run();
 
-        // Get the results
+        // Get the results of the test cases
         List<ITestResult> passedTests = tla.getPassedTests();
         List<ITestResult> failedTests = tla.getFailedTests();
         List<ITestResult> skippedTests = tla.getSkippedTests();
@@ -87,36 +87,40 @@ public class ExcelTestRunner {
     /**
      * Get a list of XmlClasses for the specified class names.
      * Only include classes that have execution flag set to "Yes".
+     * Pass the browser value to the @Parameter("browser") annotation.
      */
-    private static List<XmlClass> getXmlClasses(List<String> classNames, List<String> executionFlags) throws ClassNotFoundException {
+    private static List<XmlClass> getXmlClasses(List<String> classNames, List<String> executionFlags, List<String> browsers)
+            throws ClassNotFoundException {
         List<XmlClass> xmlClasses = new ArrayList<>();
         for (int i = 0; i < classNames.size(); i++) {
             String className = classNames.get(i);
-            String executionFlag = executionFlags.get(i);
-            if (executionFlag.equalsIgnoreCase("Yes")) {
-                XmlClass xmlClass = new XmlClass(className);
+            if (executionFlags.get(i).equalsIgnoreCase("Yes")) {
+                XmlClass xmlClass = new XmlClass(Class.forName(classNames.get(i)));
                 List<XmlInclude> xmlIncludes = new ArrayList<>();
                 Method[] methods = Class.forName(className).getMethods();
                 for (Method method : methods) {
-                    if (method.isAnnotationPresent(Test.class)) {
-                        Test annotation = method.getAnnotation(Test.class);
-                        if (annotation != null) {
-                            int priority = annotation.priority();
-                            XmlInclude xmlInclude = new XmlInclude(method.getName(), priority);
-                            xmlIncludes.add(xmlInclude);
-                        }
+                    if (method.getAnnotation(org.testng.annotations.Test.class) != null) {
+                        String methodName = method.getName();
+                        int priority = method.getAnnotation(org.testng.annotations.Test.class).priority();
+                        XmlInclude xmlInclude = new XmlInclude(methodName, priority);
+                        xmlIncludes.add(xmlInclude);
                     }
                 }
                 xmlClass.setIncludedMethods(xmlIncludes);
+                if (i < browsers.size()) {
+                    xmlClass.getLocalParameters().put("browser", browsers.get(i));
+                }
                 xmlClasses.add(xmlClass);
             }
         }
         return xmlClasses;
     }
+
+
 }
 
 class ExcelUtils {
-    private static final String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/TestData/DynamicTestsMulti.xlsx";
+    private static final String EXCEL_FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/TestData/Dynamic_Multi.xlsx";
 
     public static List<String> getClassNamesFromExcelSheet() {
         List<String> classNames = new ArrayList<>();
@@ -188,6 +192,34 @@ class ExcelUtils {
         }
         return executionFlags;
     }
+    public static List<String> getBrowserNamesFromExcelSheet() {
+        List<String> browserNames = new ArrayList<>();
+        try {
+            // Open the Excel sheet
+            FileInputStream file = new FileInputStream(EXCEL_FILE_PATH);
+            Workbook workbook = WorkbookFactory.create(file);
+            Sheet sheet = workbook.getSheetAt(0);
+
+            // Get the browser names from the specified column in the sheet
+            int browserColumnIndex = 2; // Change this to the index of the browser name column in your sheet
+            for (Row row : sheet) {
+                Cell cell = row.getCell(browserColumnIndex);
+                if (cell != null ) {
+                    String browserName = cell.getStringCellValue().trim();
+                    if (!browserName.isEmpty()) {
+                        browserNames.add(browserName);
+                    }
+                }
+            }
+
+            // Close the Excel sheet
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return browserNames;
+    }
+
 }
 
 

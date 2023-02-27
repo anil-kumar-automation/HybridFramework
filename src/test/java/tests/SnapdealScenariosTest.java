@@ -10,10 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import page.SnapdealScenarios;
 import utils.selenium.CommonActions;
 
@@ -34,10 +31,11 @@ public class SnapdealScenariosTest {
      * TC_01, TC_02 :This method is used to navigate respective BROWSER & URL
      */
     @BeforeMethod
-    public void launch() throws IOException {
+    @Parameters("browser")
+    public void launch(String browser) throws IOException {
         ca = new CommonActions();
         df =new DriverFactory();
-        df.init_driver("edge");
+        df.init_driver(browser);
         ca.navigateSanpdealurl();
     }
 

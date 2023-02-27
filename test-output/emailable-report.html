@@ -9,40 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Dynamic Test Suite</th></tr>
-<tr><td><a href="#t0">Dynamic Test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">149,760</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Dynamic Test</a></td><td class="num">11</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">56,087</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Dynamic Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dynamic Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.PimHrmTestcases</td><td><a href="#m0">PersonalGenderSmoker</a></td><td rowspan="1">1676528292186</td><td rowspan="1">2204</td></tr><tr class="failedodd"><td rowspan="1">tests.SnapdealScenariosTest</td><td><a href="#m1">BluetoothItemWithEdgeBrowser</a></td><td rowspan="1">1676528335256</td><td rowspan="1">27511</td></tr><tr><th colspan="4">Dynamic Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">tests.PimHrmTestcases</td><td><a href="#m2">AddPageAction</a></td><td rowspan="1">1676528277788</td><td rowspan="1">875</td></tr><tr class="passedeven"><td><a href="#m3">DropdownAction</a></td><td rowspan="1">1676528284692</td><td rowspan="1">2975</td></tr><tr class="passedeven"><td><a href="#m4">SelectData</a></td><td rowspan="1">1676528287667</td><td rowspan="1">4518</td></tr><tr class="passedeven"><td><a href="#m5">clickAddPageAction</a></td><td rowspan="1">1676528274789</td><td rowspan="1">2998</td></tr><tr class="passedeven"><td><a href="#m6">clickPimAction</a></td><td rowspan="1">1676528268124</td><td rowspan="1">6665</td></tr><tr class="passedeven"><td><a href="#m7">launch</a></td><td rowspan="1">1676528217377</td><td rowspan="1">47744</td></tr><tr class="passedeven"><td><a href="#m8">login</a></td><td rowspan="1">1676528265128</td><td rowspan="1">2995</td></tr><tr class="passedeven"><td><a href="#m9">quit</a></td><td rowspan="1">1676528294390</td><td rowspan="1">1764</td></tr><tr class="passedeven"><td><a href="#m10">scrolling</a></td><td rowspan="1">1676528278664</td><td rowspan="1">6026</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Dynamic Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dynamic Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">tests.PimHrmTestcases</td><td><a href="#m0">AddPageAction</a></td><td rowspan="1">1677487197516</td><td rowspan="1">742</td></tr><tr class="passedeven"><td><a href="#m1">DropdownAction</a></td><td rowspan="1">1677487205212</td><td rowspan="1">1867</td></tr><tr class="passedeven"><td><a href="#m2">PersonalGenderSmoker</a></td><td rowspan="1">1677487211260</td><td rowspan="1">2348</td></tr><tr class="passedeven"><td><a href="#m3">SelectData</a></td><td rowspan="1">1677487207080</td><td rowspan="1">4177</td></tr><tr class="passedeven"><td><a href="#m4">clickAddPageAction</a></td><td rowspan="1">1677487192908</td><td rowspan="1">4607</td></tr><tr class="passedeven"><td><a href="#m5">clickPimAction</a></td><td rowspan="1">1677487186486</td><td rowspan="1">6421</td></tr><tr class="passedeven"><td><a href="#m6">launch</a></td><td rowspan="1">1677487167033</td><td rowspan="1">16526</td></tr><tr class="passedeven"><td><a href="#m7">login</a></td><td rowspan="1">1677487183584</td><td rowspan="1">2898</td></tr><tr class="passedeven"><td><a href="#m8">quit</a></td><td rowspan="1">1677487213610</td><td rowspan="1">2113</td></tr><tr class="passedeven"><td><a href="#m9">scrolling</a></td><td rowspan="1">1677487198260</td><td rowspan="1">6950</td></tr><tr class="passedodd"><td rowspan="1">tests.SnapdealScenariosTest</td><td><a href="#m10">BluetoothItemWithEdgeBrowser</a></td><td rowspan="1">1677487185003</td><td rowspan="1">36538</td></tr></tbody>
 </table>
-<h2>Dynamic Test</h2><h3 id="m0">tests.PimHrmTestcases#PersonalGenderSmoker</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[EdgeDriver: msedge on WINDOWS (0ec3bcf3bb8d92075e3d290d79e5bf34)] -&gt; xpath: //div[@class=&apos;oxd-input-group oxd-input-field-bottom-space&apos;][1]/div[2]/div[@class=&apos;oxd-checkbox-wrapper&apos;]/label/input] (tried for 2 second(s) with 2000 milliseconds interval)
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at utils.selenium.CommonActions.clickingOnWebElement(CommonActions.java:62)
-	at page.AddEmployeeForHrmPage.SelectCheckboxAndSave(AddEmployeeForHrmPage.java:156)
-	at tests.PimHrmTestcases.PersonalGenderSmoker(PimHrmTestcases.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at tests.ExcelTestRunner.main(ExcelTestRunner.java:58)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.SnapdealScenariosTest#BluetoothItemWithEdgeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Bluetooth Headphone</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utils.selenium.Log.info1(Log.java:51)
-	at tests.SnapdealScenariosTest.BluetoothItemWithEdgeBrowser(SnapdealScenariosTest.java:87)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.PimHrmTestcases#AddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.PimHrmTestcases#DropdownAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.PimHrmTestcases#SelectData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.PimHrmTestcases#clickAddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.PimHrmTestcases#clickPimAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.PimHrmTestcases#launch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.PimHrmTestcases#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">tests.PimHrmTestcases#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">tests.PimHrmTestcases#scrolling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Dynamic Test</h2><h3 id="m0">tests.PimHrmTestcases#AddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.PimHrmTestcases#DropdownAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.PimHrmTestcases#PersonalGenderSmoker</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.PimHrmTestcases#SelectData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.PimHrmTestcases#clickAddPageAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.PimHrmTestcases#clickPimAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.PimHrmTestcases#launch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.PimHrmTestcases#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.PimHrmTestcases#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.PimHrmTestcases#scrolling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.SnapdealScenariosTest#BluetoothItemWithEdgeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Bluetooth Headphone</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

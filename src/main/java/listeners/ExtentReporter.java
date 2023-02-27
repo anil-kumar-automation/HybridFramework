@@ -64,7 +64,7 @@ public class ExtentReporter implements ITestListener {
         String owner;
         String testCategory;
         try {
-            owner = /*result.getMethod().getMethodName()*/ "Anil Kumar";
+            owner = /*result.getMethod().getMethodName()*/ "Sriman";
         } catch (NullPointerException e) {
             owner = "NO_AUTHOR";
         }

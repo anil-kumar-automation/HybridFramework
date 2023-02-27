@@ -32,11 +32,11 @@ public class DriverFactory {
     public WebDriver init_driver(String browser) {
 
 
-        if (browser.equals("chrome")) {
+        if (browser.equalsIgnoreCase("chrome")) {
             tlDriver.set(new ChromeDriver(BrowserCapabilities.getLocalChromeCapabilities()));
-        } else if (browser.equals("edge")) {
+        } else if (browser.equalsIgnoreCase("edge")) {
             tlDriver.set(new EdgeDriver(BrowserCapabilities.getEdgeCapabilitiesWithHeadless()));
-        } else if (browser.equals("firefox")) {
+        } else if (browser.equalsIgnoreCase("firefox")) {
             tlDriver.set(new FirefoxDriver(BrowserCapabilities.getFirefoxCapabilitiesWithHeadless()));
         } else {
             System.out.println("Please pass the correct browser value: " + browser);
@@ -44,7 +44,7 @@ public class DriverFactory {
         log.info("browser name is: " + browser);
         log.info("launching " + browser + " browser");
 
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(14));
         getDriver().manage().deleteAllCookies();
         return getDriver();
     }

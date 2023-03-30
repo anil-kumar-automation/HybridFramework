@@ -49,6 +49,7 @@ public class SnapdealScenariosTest {
     //This method handles the excel - opens it and reads the data from the respective cells using a for-loop & returns it in the form of a string array
     public String[][] getExcelData(String fileName) {
 
+
         String[][] data = null;
         try {
             FileInputStream fis = new FileInputStream(fileName);

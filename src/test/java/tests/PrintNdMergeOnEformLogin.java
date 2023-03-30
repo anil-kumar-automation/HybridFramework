@@ -9,11 +9,11 @@ import utils.pdf_docx_utils.PageFormatUtils;
 import utils.selenium.CommonActions;
 import java.io.IOException;
 
-public class EformLogin {
+public class PrintNdMergeOnEformLogin {
 
     public DriverFactory df;
     public LoginEformPage loginForEform;
-    Logger log = Logger.getLogger(EformLogin.class);
+    Logger log = Logger.getLogger(PrintNdMergeOnEformLogin.class);
 
     /*-----------------------------------Test Scenario TS_01----------------------------------------*/
 
@@ -53,7 +53,7 @@ public class EformLogin {
     @Test(priority = 5)
     public void printAndSaveDocumentTestForHistory1() throws Exception {
         loginForEform = new LoginEformPage(DriverFactory.getDriver());
-        String filePath = "C:\\Users\\SK66921\\Documents\\Git\\HybridFramework\\content1.pdf";
+        String filePath = "C:\\Users\\as61837\\Documents\\GitHub\\HybridFramework\\content1.pdf";
         PageFormatUtils.printAndSave(filePath);
         Thread.sleep(5000);
         loginForEform.clickingOnOkButton();
@@ -71,7 +71,7 @@ public class EformLogin {
 
     @Test(priority = 7)
     public void printAndSaveDocumentTestForHistory2() throws Exception {
-        String filePath = "C:\\Users\\SK66921\\Documents\\Git\\HybridFramework\\content2.pdf";
+        String filePath = "C:\\Users\\as61837\\Documents\\GitHub\\HybridFramework\\content2.pdf";
         PageFormatUtils.printAndSave(filePath);
         Thread.sleep(2000);
     }
